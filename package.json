@@ -4,6 +4,7 @@
   "version": "1.1.0",
   "author": "Wei Gao <wgao19@gmail.com>",
   "dependencies": {
+    "date-fns": "^2.0.0-alpha.27",
     "gatsby": "2.0.91",
     "gatsby-image": "2.0.26",
     "gatsby-plugin-catch-links": "2.0.9",
@@ -14,7 +15,7 @@
     "gatsby-plugin-nprogress": "2.0.7",
     "gatsby-plugin-offline": "2.0.21",
     "gatsby-plugin-react-helmet": "3.0.5",
-    "gatsby-plugin-sharp": "2.0.17",
+    "gatsby-plugin-sharp": "^2.1.1",
     "gatsby-plugin-sitemap": "2.0.4",
     "gatsby-plugin-twitter": "2.0.8",
     "gatsby-remark-autolink-headers": "2.0.12",
@@ -22,7 +23,7 @@
     "gatsby-remark-images": "3.0.1",
     "gatsby-remark-prismjs": "3.2.0",
     "gatsby-remark-responsive-iframe": "2.0.8",
-    "gatsby-source-filesystem": "2.0.16",
+    "gatsby-source-filesystem": "^2.0.37",
     "gatsby-transformer-remark": "2.2.0",
     "gatsby-transformer-sharp": "2.1.10",
     "gatsby-transformer-yaml": "^2.1.12",
@@ -37,6 +38,7 @@
     "url-join": "^4.0.0"
   },
   "devDependencies": {
+    "chalk": "^2.4.2",
     "cli-glob": "^0.1.0",
     "eslint": "^5.12.1",
     "eslint-config-airbnb": "^17.1.0",
@@ -45,7 +47,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.4",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.16.0",
+    "inquirer": "^6.3.1",
+    "json-to-pretty-yaml": "^1.2.2",
+    "prettier": "^1.17.1",
     "remark-cli": "^6.0.1",
     "remark-preset-lint-recommended": "^3.0.1",
     "stylefmt": "^6.0.3",
@@ -69,7 +73,8 @@
     "lint:js": "eslint --ext .js,.jsx .",
     "lint:md": "remark content/posts/",
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
-    "format:js": "prettier '**/*.{js,jsx}' --write"
+    "format:js": "prettier '**/*.{js,jsx}' --write",
+    "create": "node scripts/newpost.js"
   },
   "remarkConfig": {
     "plugins": [

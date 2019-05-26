@@ -1,11 +1,11 @@
 ---
-title: "Style Guide"
+title: 'Style Guide'
 date: 2019-04-26
-author: Curious Cat
+author: মোঃ নাহিদুর রহমান
 category: blog
 tags:
   - gatsby
-cover: ""
+cover: ''
 ---
 
 ## Headers
@@ -83,18 +83,18 @@ Some text to show that the reference links can follow later.
 
 Here's our logo (hover to see the title text):
 
-Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')
 
 Reference-style: ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 2'
 
 ---
 
 ## Code
 
 ```javascript
-var s = "JavaScript syntax highlighting";
+var s = 'JavaScript syntax highlighting';
 alert(s);
 ```
 
