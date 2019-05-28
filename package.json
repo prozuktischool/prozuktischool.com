@@ -63,6 +63,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+    "start": "npm run develop",
     "develop": "gatsby develop",
     "dev": "npm run develop",
     "serve": "gatsby serve",

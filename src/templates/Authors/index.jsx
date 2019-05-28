@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "gatsby";
-import _ from "lodash";
-import Layout from "../../components/Layout";
+import React from 'react';
+import { Link } from 'gatsby';
+import _ from 'lodash';
+import Layout from '../../components/Layout';
 
 export default ({
   data: {
-    allAuthorYaml: { edges: authorNodes }
-  }
+    allAuthorYaml: { edges: authorNodes },
+  },
 }) => (
   <Layout>
     <ul>

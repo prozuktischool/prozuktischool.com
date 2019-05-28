@@ -1,7 +1,7 @@
-const path = require("path");
-const _ = require("lodash");
-const moment = require("moment");
-const siteConfig = require("./data/SiteConfig");
+const path = require('path');
+const _ = require('lodash');
+const moment = require('moment');
+const siteConfig = require('./data/SiteConfig');
 
 const postNodes = [];
 
@@ -26,23 +26,23 @@ function addSiblingNodes(createNodeField) {
     const prevNode = postNodes[prevID];
     createNodeField({
       node: currNode,
-      name: "nextTitle",
-      value: nextNode.frontmatter.title
+      name: 'nextTitle',
+      value: nextNode.frontmatter.title,
     });
     createNodeField({
       node: currNode,
-      name: "nextSlug",
-      value: nextNode.fields.slug
+      name: 'nextSlug',
+      value: nextNode.fields.slug,
     });
     createNodeField({
       node: currNode,
-      name: "prevTitle",
-      value: prevNode.frontmatter.title
+      name: 'prevTitle',
+      value: prevNode.frontmatter.title,
     });
     createNodeField({
       node: currNode,
-      name: "prevSlug",
-      value: prevNode.fields.slug
+      name: 'prevSlug',
+      value: prevNode.fields.slug,
     });
   }
 }
@@ -50,45 +50,45 @@ function addSiblingNodes(createNodeField) {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   let slug;
-  if (node.internal.type === "MarkdownRemark") {
+  if (node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
+      Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
+      Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')
     ) {
       slug = `/${_.kebabCase(node.frontmatter.title)}`;
-    } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
+    } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-    } else if (parsedFilePath.dir === "") {
+    } else if (parsedFilePath.dir === '') {
       slug = `/${parsedFilePath.name}/`;
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
 
-    if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug"))
+    if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')) {
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug'))
         slug = `/${_.kebabCase(node.frontmatter.slug)}`;
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'date')) {
         const date = moment(node.frontmatter.date, siteConfig.dateFromFormat);
         if (!date.isValid)
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
 
         createNodeField({
           node,
-          name: "date",
-          value: date.toISOString()
+          name: 'date',
+          value: date.toISOString(),
         });
       }
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "author")) {
+      if (Object.prototype.hasOwnProperty.call(node.frontmatter, 'author')) {
         createNodeField({
           node,
-          name: "authorId",
-          value: node.frontmatter.author
+          name: 'authorId',
+          value: node.frontmatter.author,
         });
       }
     }
-    createNodeField({ node, name: "slug", value: slug });
+    createNodeField({ node, name: 'slug', value: slug });
     postNodes.push(node);
   }
 };
@@ -96,7 +96,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.setFieldsOnGraphQLNodeType = ({ type, actions }) => {
   const { name } = type;
   const { createNodeField } = actions;
-  if (name === "MarkdownRemark") {
+  if (name === 'MarkdownRemark') {
     addSiblingNodes(createNodeField);
   }
 };
@@ -105,11 +105,12 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const postPage = path.resolve("src/templates/Post/index.jsx");
-    const tagPage = path.resolve("src/templates/Tag/index.jsx");
-    const categoryPage = path.resolve("src/templates/Category/index.jsx");
-    const authorsPage = path.resolve("src/templates/Authors/index.jsx");
-    const authorPage = path.resolve("src/templates/Author/index.jsx");
+    const postPage = path.resolve('src/templates/Post/index.jsx');
+    const tagsPage = path.resolve('src/templates/Tags/index.jsx');
+    const tagPage = path.resolve('src/templates/Tag/index.jsx');
+    const categoryPage = path.resolve('src/templates/Category/index.jsx');
+    const authorsPage = path.resolve('src/templates/Authors/index.jsx');
+    const authorPage = path.resolve('src/templates/Author/index.jsx');
     resolve(
       graphql(
         `
@@ -159,8 +160,8 @@ exports.createPages = ({ graphql, actions }) => {
             path: edge.node.fields.slug,
             component: postPage,
             context: {
-              slug: edge.node.fields.slug
-            }
+              slug: edge.node.fields.slug,
+            },
           });
         });
 
@@ -170,8 +171,8 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/tags/${_.kebabCase(tag)}/`,
             component: tagPage,
             context: {
-              tag
-            }
+              tag,
+            },
           });
         });
 
@@ -181,23 +182,29 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/categories/${_.kebabCase(category)}/`,
             component: categoryPage,
             context: {
-              category
-            }
+              category,
+            },
           });
         });
 
         createPage({
           path: `/authors/`,
-          component: authorsPage
+          component: authorsPage,
         });
+
+        createPage({
+          path: `/tags/`,
+          component: tagsPage,
+        });
+
         const authorList = Array.from(authorSet);
         authorList.forEach(author => {
           createPage({
             path: `/author/${_.kebabCase(author)}/`,
             component: authorPage,
             context: {
-              authorId: author
-            }
+              authorId: author,
+            },
           });
         });
       })
