@@ -1,10 +1,10 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { Link, graphql } from "gatsby";
-import Layout from "../components/Layout";
-import PostListing from "../components/PostListing";
-import SEO from "../components/SEO";
-import config from "../../data/SiteConfig";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import PostListing from '../components/PostListing';
+import SEO from '../components/SEO';
+import config from '../../data/SiteConfig';
 
 class Index extends React.Component {
   render() {
@@ -32,6 +32,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [fields___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
     ) {
       edges {
         node {

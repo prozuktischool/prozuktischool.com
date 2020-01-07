@@ -1,21 +1,22 @@
-import React from "react";
-import _ from "lodash";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import UserInfo from "../../components/UserInfo";
-import PostTags from "../../components/PostTags";
-import SocialLinks from "../../components/SocialLinks";
-import SEO from "../../components/SEO";
-import config from "../../../data/SiteConfig";
-import "../b16-tomorrow-dark.css";
-import "./index.css";
+import React from 'react';
+import _ from 'lodash';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../../components/Layout';
+import UserInfo from '../../components/UserInfo';
+import PostTags from '../../components/PostTags';
+import SocialLinks from '../../components/SocialLinks';
+import SEO from '../../components/SEO';
+import config from '../../../data/SiteConfig';
+import '../b16-tomorrow-dark.css';
+import './index.css';
 
 export default class PostTemplate extends React.Component {
   render() {
     const { slug } = this.props.pageContext;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
+    console.log(post);
     if (!post.id) {
       post.id = slug;
     }
@@ -67,10 +68,6 @@ export const pageQuery = graphql`
         }
       }
       fields {
-        nextTitle
-        nextSlug
-        prevTitle
-        prevSlug
         slug
         date
       }

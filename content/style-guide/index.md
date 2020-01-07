@@ -1,8 +1,9 @@
 ---
 title: 'Style Guide'
-date: 2019-04-26
+date: '2019-04-26'
 author: মোঃ নাহিদুর রহমান
 category: blog
+published: true
 tags:
   - gatsby
 cover: ''

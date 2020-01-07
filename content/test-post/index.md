@@ -2,8 +2,8 @@
 slug: 'test-post'
 title: 'test post'
 author: 'মোঃ নাহিদুর রহমান'
-date: '2019-05-26T04:51:01.521Z'
-published: false
+date: '2019-05-26'
+published: true
 excerpt: 'asdf sdf dasfdas fdsf dasfds sdf asdf'
 tags:
   - 'asdf'

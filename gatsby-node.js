@@ -88,6 +88,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         });
       }
     }
+
+    const date = moment(node.frontmatter.date, 'yyyy-MM-dd');
+    slug = `/${node.frontmatter.date}${slug}`;
     createNodeField({ node, name: 'slug', value: slug });
     postNodes.push(node);
   }
@@ -121,6 +124,7 @@ exports.createPages = ({ graphql, actions }) => {
                   frontmatter {
                     tags
                     category
+                    title
                   }
                   fields {
                     slug
@@ -141,7 +145,8 @@ exports.createPages = ({ graphql, actions }) => {
         const tagSet = new Set();
         const categorySet = new Set();
         const authorSet = new Set();
-        result.data.allMarkdownRemark.edges.forEach(edge => {
+        const posts = result.data.allMarkdownRemark.edges;
+        posts.forEach((edge, index) => {
           if (edge.node.frontmatter.tags) {
             edge.node.frontmatter.tags.forEach(tag => {
               tagSet.add(tag);
@@ -161,6 +166,8 @@ exports.createPages = ({ graphql, actions }) => {
             component: postPage,
             context: {
               slug: edge.node.fields.slug,
+              prev: index === 0 ? null : posts[index - 1].node,
+              next: index === posts.length - 1 ? null : posts[index + 1].node,
             },
           });
         });

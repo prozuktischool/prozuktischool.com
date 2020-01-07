@@ -2,8 +2,8 @@
 slug: 'new-post-'
 title: 'new post '
 author: 'শহীদুল ইসলাম মজুমদার'
-date: '2019-05-26T04:54:26.161Z'
-published: false
+date: '2019-05-26'
+published: true
 excerpt: 'sadf sdfsadfdsafsdafssd dsfsd'
 tags:
   - 'dfas'
