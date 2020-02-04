@@ -66,7 +66,7 @@
     "start": "npm run develop",
     "develop": "gatsby develop",
     "dev": "npm run develop",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/bdTechies/prozuktischool.com.git",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "serve": "gatsby serve",
     "build": "gatsby build",
     "build:pp": "gatsby build --prefix-paths",
