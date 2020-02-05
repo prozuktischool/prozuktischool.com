@@ -7,6 +7,5 @@ deploy:
   provider: script
   script: npm i && npm run deploy
   skip_cleanup: true
-  github_token: $GH_TOKEN
   on:
     branch: master
