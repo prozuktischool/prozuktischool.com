@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import PostListing from '../components/PostListing';
-import SEO from '../components/SEO';
+import SEO from '../views/components/SEO';
 import config from '../../data/SiteConfig';
 
 class Index extends React.Component {

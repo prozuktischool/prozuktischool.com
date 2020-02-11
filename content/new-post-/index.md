@@ -8,6 +8,7 @@ excerpt: 'sadf sdfsadfdsafsdafssd dsfsd'
 tags:
   - 'dfas'
   - 'rrr'
+category: cat1
 cover: ''
 ---
 

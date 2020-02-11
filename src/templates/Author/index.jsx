@@ -1,15 +1,15 @@
-import React from "react";
-import Layout from "../../components/Layout";
+import React from 'react';
+import Layout from '../../components/Layout';
 
 export default ({
   data: {
     authorYaml: { id, bio, twitter },
-    allMarkdownRemark: { edges: postNodes }
-  }
+    allMarkdownRemark: { edges: postNodes },
+  },
 }) => (
   <Layout>
     <div>
-      <h2>{id}</h2>
+      <h2>ID: {id}</h2>
       <a href={`https://twitter.com/${twitter}/`} target="_blank">
         {`@${twitter}`}
       </a>

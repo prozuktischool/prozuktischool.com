@@ -6,17 +6,15 @@ import Layout from '../../components/Layout';
 import UserInfo from '../../components/UserInfo';
 import PostTags from '../../components/PostTags';
 import SocialLinks from '../../components/SocialLinks';
-import SEO from '../../components/SEO';
+import SEO from '../components/SEO';
 import config from '../../../data/SiteConfig';
-import '../b16-tomorrow-dark.css';
-import './index.css';
+import '../styles/themes/material-oceanic.css';
 
 export default class PostTemplate extends React.Component {
   render() {
     const { slug } = this.props.pageContext;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
-    console.log(post);
     if (!post.id) {
       post.id = slug;
     }
