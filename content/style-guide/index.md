@@ -9,6 +9,8 @@ tags:
 cover: ''
 ---
 
+## সাধারণ স্ট্যাটিক সাইট হোস্ট করা
+
 ## Headers
 
 # Look Monkey 🙈
@@ -23,8 +25,6 @@ cover: ''
 
 ###### Look Monkey 🦍🐒🐵🙊🙉🙈
 
----
-
 ## Emphasis
 
 Emphasis, aka italics, with _asterisks_ or _underscores_.
@@ -34,8 +34,6 @@ Strong emphasis, aka bold, with **asterisks** or **underscores**.
 Combined emphasis with **asterisks and _underscores_**.
 
 Strikethrough uses two tildes. ~~Scratch this.~~
-
----
 
 ## Lists
 
@@ -53,8 +51,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 * Or minuses
 
 - Or pluses
-
----
 
 ## Links
 
@@ -78,8 +74,6 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
----
-
 ## Images
 
 Here's our logo (hover to see the title text):
@@ -89,8 +83,6 @@ Inline-style: ![alt text](https://github.com/adam-p/markdown-here/raw/master/src
 Reference-style: ![alt text][logo]
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 2'
-
----
 
 ## Code
 
@@ -109,8 +101,6 @@ No language indicated, so no syntax highlighting.
 But let's throw in a <b>tag</b>.
 ```
 
----
-
 ## Tables
 
 Colons can be used to align columns.
@@ -128,8 +118,6 @@ There must be at least 3 dashes separating each header cell. The outer pipes (|)
 | _Still_  | `renders` | **nicely** |
 | 1        | 2         | 3          |
 
----
-
 ## Blockquotes
 
 > Blockquotes are very handy in email to emulate reply text. This line is part of the same quote.
@@ -137,8 +125,6 @@ There must be at least 3 dashes separating each header cell. The outer pipes (|)
 Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
-
----
 
 ## Inline HTML
 
@@ -149,8 +135,6 @@ Quote break.
   <dt>Markdown in HTML</dt>
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
-
----
 
 ## Line Breaks
 

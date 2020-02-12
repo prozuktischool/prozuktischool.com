@@ -173,5 +173,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`PT Serif`],
+        display: 'swap',
+      },
+    },
+    `gatsby-plugin-styled-components`,
   ],
 };

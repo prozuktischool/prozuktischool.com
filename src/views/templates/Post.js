@@ -9,6 +9,8 @@ import SocialLinks from '../../components/SocialLinks';
 import SEO from '../components/SEO';
 import config from '../../../data/SiteConfig';
 import '../styles/themes/material-oceanic.css';
+import { Text } from '../components';
+import { ArticleLayout } from '../layouts';
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -28,18 +30,20 @@ export default class PostTemplate extends React.Component {
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <h1>{post.title}</h1>
-            <h3>
+          <ArticleLayout>
+            <Text variant="h2" textAlign="center">
+              {post.title}
+            </Text>
+            <Text variant="h6">
               <a href={`/author/${_.kebabCase(post.author.id)}`}>
                 {post.author.id}
               </a>
-            </h3>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            </Text>
+            <Text variant="raw" html={postNode.html} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
             </div>
-          </div>
+          </ArticleLayout>
         </div>
       </Layout>
     );
