@@ -8,8 +8,8 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url('./assets/fonts/fira-code-v5-latin-regular.woff2') format('woff2'),
-         url('./assets/fonts/fira-code-v5-latin-regular.woff') format('woff');
+         url('./assets/fonts/kalpurush.woff2') format('woff2'),
+         url('./assets/fonts/kalpurush.woff') format('woff');
   }
 
   * {
