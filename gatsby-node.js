@@ -89,8 +89,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
     }
 
-    const date = moment(node.frontmatter.date, 'yyyy-MM-dd');
-    slug = `/${node.frontmatter.date}${slug}`;
+    const date = moment(node.frontmatter.date).format('YYYY/MM/DD');
+    slug = `/${date}${slug}`;
     createNodeField({ node, name: 'slug', value: slug });
     postNodes.push(node);
   }
@@ -108,10 +108,11 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const postPage = path.resolve('src/templates/Post/index.jsx');
+    const postPage = path.resolve('src/views/templates/Post.js');
     const tagsPage = path.resolve('src/templates/Tags/index.jsx');
     const tagPage = path.resolve('src/templates/Tag/index.jsx');
     const categoryPage = path.resolve('src/templates/Category/index.jsx');
+    const categoriesPage = path.resolve('src/templates/Categories/index.jsx');
     const authorsPage = path.resolve('src/templates/Authors/index.jsx');
     const authorPage = path.resolve('src/templates/Author/index.jsx');
     resolve(
@@ -202,6 +203,11 @@ exports.createPages = ({ graphql, actions }) => {
         createPage({
           path: `/tags/`,
           component: tagsPage,
+        });
+
+        createPage({
+          path: `/categories/`,
+          component: categoriesPage,
         });
 
         const authorList = Array.from(authorSet);

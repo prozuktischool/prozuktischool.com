@@ -1,22 +1,28 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { Link } from "gatsby";
-import config from "../../../data/SiteConfig";
-import "./index.css";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { ThemeProvider } from 'styled-components';
+import { dark, light } from '../../views/styles/themes';
+import { Link } from 'gatsby';
+import config from '../../../data/SiteConfig';
+import GlobalStyle from '../../views/styles/GlobalStyles';
+import { Text } from '../../views/components';
 
 export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <div>
-        <Helmet>
-          <meta name="description" content={config.siteDescription} />
-        </Helmet>
-        <h1>
-          <Link to="/">{config.siteTitle}</Link>
-        </h1>
-        {children}
-      </div>
+      <ThemeProvider theme={light}>
+        <GlobalStyle />
+        <div>
+          <Helmet>
+            <meta name="description" content={config.siteDescription} />
+          </Helmet>
+          <Text variant="h1" textAlign="center">
+            <Link to="/">{config.siteTitle}</Link>
+          </Text>
+          {children}
+        </div>
+      </ThemeProvider>
     );
   }
 }
