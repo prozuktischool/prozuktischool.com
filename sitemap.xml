@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2019-05-26/dsfasdf-sdfdsaf</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2019-05-26/new-post</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2019-04-26/style-guide</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2019-05-26/test-post</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2017-08-18/johannes-gutenberg-the-birth-of-movable-type</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2019/05/26/dsfasdf-sdfdsaf</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2019/05/26/new-post</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2019/04/26/style-guide</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2019/05/26/test-post</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/2017/08/18/johannes-gutenberg-the-birth-of-movable-type</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/tags/fsaf/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/tags/sdf/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/tags/sdaf/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -16,10 +16,12 @@
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/tags/ddd/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/tags/open-source/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/tags/typography/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/categories/cat-1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/categories/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/categories/typography/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/authors/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/tags/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/categories/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/author/শহীদুল-ইসলাম-মজুমদার/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/author/মোঃ-নাহিদুর-রহমান/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://prozuktischool.com/prozuktischool.com/prozuktischool.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
