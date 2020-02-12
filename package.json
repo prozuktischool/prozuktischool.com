@@ -87,7 +87,7 @@
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "prettier '**/*.{js,jsx}' --write",
     "create": "node scripts/newpost.js",
-    "test": "jest"
+    "test": "jest --update-snapshot"
   },
   "remarkConfig": {
     "plugins": [
