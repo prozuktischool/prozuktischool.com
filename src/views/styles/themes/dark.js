@@ -57,7 +57,7 @@ export default {
     error: '#FA5252',
     success: '#51CF66',
     warning: '#FFD43B',
-    text: '#f8f9fa',
+    text: '#adb5bd',
     background: '#212529',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],

@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
   html, body {
     font-family: 'Kalpurush', 'PT Serif', serif;
     font-size: 20px;
@@ -24,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     background-color: ${({ theme }) => theme.colors.background};
   }
+
   p {
     line-height: 1.65;
     font-size: 1rem;
@@ -46,21 +48,27 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     color: ${({ theme }) => theme.colors.primary3};
   }
+
   h1 {
     font-size: 2.488rem;
   }
+
   h2 {
     font-size: 2.074rem;
   }
+
   h3 {
     font-size: 1.728rem;
   }
+
   h4 {
     font-size: 1.44rem;
   }
+
   h5 {
     font-size: 1.2rem;
   }
+
   h6 {
     font-size: 1rem;
   }
@@ -68,6 +76,32 @@ const GlobalStyle = createGlobalStyle`
   pre {
     border-radius: 8px;
   }
+
+  .header-anchor-icon.before {
+    top: -1px;
+    padding-right: 8px;
+
+  }
+
+  @media only screen and (max-width: 576px) {
+    h1, h2, h3, h4, h5, h6 {
+      .header-anchor-icon.before{
+        svg {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+
+
+  .gatsby-highlight {
+    pre {
+      code {
+        font-family: 'Fira Code', monospace;
+      }
+    }
+  }
+
 `;
 
 export default GlobalStyle;

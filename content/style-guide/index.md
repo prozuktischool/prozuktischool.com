@@ -87,6 +87,7 @@ Reference-style: ![alt text][logo]
 ## Code
 
 ```javascript
+const add = (a, b) => a + b;
 var s = 'JavaScript syntax highlighting';
 alert(s);
 ```
