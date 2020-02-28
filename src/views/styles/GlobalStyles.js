@@ -102,6 +102,13 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .post-meta {
+    svg {
+      position: relative;
+      top: 4px;
+    }
+  }
+
 `;
 
 export default GlobalStyle;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { color, space, typography } from 'styled-system';
+import { color, space, typography, layout, position } from 'styled-system';
 
 const H1 = styled.h1`
   font-size: ${({ theme }) => theme.typography.h1.fontSize};
@@ -12,6 +12,8 @@ const H1 = styled.h1`
   ${color};
   ${space};
   ${typography};
+  ${layout};
+  ${position};
 `;
 const H2 = styled.h2`
   font-size: ${({ theme }) => theme.typography.h2.fontSize};
@@ -22,6 +24,8 @@ const H2 = styled.h2`
   ${color};
   ${space};
   ${typography};
+  ${layout};
+  ${position};
 `;
 const H3 = styled.h3`
   font-size: ${({ theme }) => theme.typography.h3.fontSize};
@@ -32,6 +36,8 @@ const H3 = styled.h3`
   ${color};
   ${space};
   ${typography};
+  ${layout};
+  ${position};
 `;
 const H4 = styled.h4`
   font-size: ${({ theme }) => theme.typography.h4.fontSize};
@@ -42,6 +48,8 @@ const H4 = styled.h4`
   ${color};
   ${space};
   ${typography};
+  ${layout};
+  ${position};
 `;
 const H5 = styled.h5`
   font-size: ${({ theme }) => theme.typography.h5.fontSize};
@@ -52,6 +60,8 @@ const H5 = styled.h5`
   ${color};
   ${space};
   ${typography};
+  ${layout};
+  ${position};
 `;
 
 const H6 = styled.h6`
@@ -63,6 +73,8 @@ const H6 = styled.h6`
   ${color};
   ${space};
   ${typography};
+  ${layout};
+  ${position};
 `;
 
 const P = styled.p`
@@ -74,6 +86,8 @@ const P = styled.p`
   ${color};
   ${space};
   ${typography};
+  ${layout};
+  ${position};
 `;
 
 const Caption = styled.p`
@@ -85,6 +99,8 @@ const Caption = styled.p`
   ${color};
   ${space};
   ${typography};
+  ${layout};
+  ${position};
 `;
 
 const RawHTML = styled.div`

@@ -5,6 +5,7 @@
   "author": "Wei Gao <wgao19@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "bn-number-utils": "^0.2.0",
     "date-fns": "^2.9.0",
     "gatsby": "2.19.15",
     "gatsby-image": "2.2.40",
@@ -35,6 +36,7 @@
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-feather": "^2.0.3",
     "react-helmet": "^5.2.1",
     "react-share": "^4.0.1",
     "react-twitter-widgets": "^1.7.1",

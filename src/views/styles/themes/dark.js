@@ -1,3 +1,10 @@
+const breakpoints = ['576px', '768px', '992px', '1200px'];
+
+breakpoints.sm = breakpoints[0];
+breakpoints.md = breakpoints[1];
+breakpoints.lg = breakpoints[2];
+breakpoints.xl = breakpoints[3];
+
 export default {
   name: 'dark',
   typography: {
@@ -61,11 +68,5 @@ export default {
     background: '#212529',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
-  breakpoints: {
-    xs: 0,
-    sm: 576,
-    md: 768,
-    lg: 992,
-    xl: 1200,
-  },
+  breakpoints,
 };
