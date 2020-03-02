@@ -4,9 +4,13 @@ const jsToYaml = require('json-to-pretty-yaml');
 const prettier = require('prettier');
 const chalk = require('chalk');
 const { format } = require('date-fns');
+const YAML = require('yamljs');
 const log = console.log;
 const error = chalk.bold.red;
 const success = chalk.bold.green.inverse;
+
+const authors = YAML.load('./content/author.yaml');
+const authorList = authors.map(author => author.id);
 
 (async () => {
   const args = process.argv;
@@ -31,7 +35,7 @@ const success = chalk.bold.green.inverse;
         type: 'list',
         name: 'author',
         message: 'Choose an author:',
-        choices: ['মো: নাহিদুর রহমান', 'শহীদুল ইসলাম মজুমদার'],
+        choices: authorList,
       },
     ]);
 
