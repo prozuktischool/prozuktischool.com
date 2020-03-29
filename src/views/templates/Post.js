@@ -10,25 +10,34 @@ import SocialLinks from '../../components/SocialLinks';
 import SEO from '../components/SEO';
 import config from '../../../data/SiteConfig';
 import '../styles/themes/material-oceanic.css';
-import { Box, Divider, Text } from '../components';
+import { Box, Divider, Text, SocialShareIcon } from '../components';
 import { ArticleLayout } from '../layouts';
 
 import { format } from 'date-fns';
 import { bn } from 'date-fns/locale';
 import { convertNumbers } from 'bn-number-utils';
+import SocialShareLinks from '../pages/Post/SocialShareLinks';
+import Facebook from '../assets/icons/facebook.svg';
 
 export default class PostTemplate extends React.Component {
   render() {
     const { slug } = this.props.pageContext;
+    const {
+      site: {
+        siteMetadata: { siteUrl },
+      },
+    } = this.props.data;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
 
     if (!post.id) {
       post.id = slug;
     }
+
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID;
     }
+
     return (
       <Layout>
         <div>
@@ -72,6 +81,7 @@ export default class PostTemplate extends React.Component {
             </Box>
             <Divider />
             <Text variant="raw" html={postNode.html} />
+            <SocialShareLinks title={post.title} link={`${siteUrl}${slug}`} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
             </div>
@@ -85,6 +95,11 @@ export default class PostTemplate extends React.Component {
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead

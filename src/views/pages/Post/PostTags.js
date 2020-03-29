@@ -3,19 +3,14 @@ import styled from 'styled-components';
 import _ from 'lodash';
 import { Link } from 'gatsby';
 import { Text } from '../../components';
+import Hash from '../../assets/icons/hash.svg';
 
 const TagsContainer = styled.div`
   text-align: center;
-  margin-top: 24px;
 
   a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin-right: 8px;
-
-    &::before {
-      content: '#';
-      margin-right: 2px;
-    }
 
     &::after {
       content: ',';
@@ -37,6 +32,7 @@ class PostTags extends Component {
         {tags &&
           tags.map(tag => (
             <Link key={tag} to={`/tags/${_.kebabCase(tag)}`}>
+              <Hash />
               {tag}
             </Link>
           ))}
