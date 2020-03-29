@@ -83,6 +83,10 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
+  ul, ol {
+    padding-left: 16px;
+  }
+
   @media only screen and (max-width: 576px) {
     h1, h2, h3, h4, h5, h6 {
       .header-anchor-icon.before{
