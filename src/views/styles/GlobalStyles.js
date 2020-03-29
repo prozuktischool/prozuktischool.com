@@ -72,9 +72,15 @@ const GlobalStyle = createGlobalStyle`
   h6 {
     font-size: 1rem;
   }
-  
+
   pre {
     border-radius: 8px;
+  }
+
+  :not(pre) > code[class*='language-'] {
+    padding: 0.2em .5em;
+    border-bottom: 4px solid;
+    border-color: ${({ theme }) => theme.colors.primary3};
   }
 
   .header-anchor-icon.before {
@@ -83,8 +89,21 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
-  ul, ol {
-    padding-left: 16px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      &::before {
+        content: '⬗';
+        font-size: 1.2rem;
+        margin-right: 8px;
+        position: relative;
+        top: 2px;
+        color: ${({ theme }) => theme.colors.primary3};
+      }
+    }
   }
 
   @media only screen and (max-width: 576px) {
@@ -96,7 +115,6 @@ const GlobalStyle = createGlobalStyle`
       }
     }
   }
-
 
   .gatsby-highlight {
     pre {

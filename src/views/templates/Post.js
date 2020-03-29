@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import { Calendar, User } from 'react-feather';
 import Layout from '../../components/Layout';
 import UserInfo from '../../components/UserInfo';
-import PostTags from '../../components/PostTags';
+import PostTags from '../pages/Post/PostTags';
 import SocialLinks from '../../components/SocialLinks';
 import SEO from '../components/SEO';
 import config from '../../../data/SiteConfig';
@@ -49,7 +49,8 @@ export default class PostTemplate extends React.Component {
             <Text variant="h2" textAlign="center">
               {post.title}
             </Text>
-            <Divider height={2} />
+            <Divider />
+
             <Box textAlign="center">
               <Box
                 display={{ sm: 'block', md: 'inline' }}
@@ -78,7 +79,7 @@ export default class PostTemplate extends React.Component {
                 </Text>
               </Box>
             </Box>
-            <Divider height={2} />
+            <Divider />
             <Text variant="raw" html={postNode.html} />
             <SocialShareLinks title={post.title} link={`${siteUrl}${slug}`} />
             <div className="post-meta">
