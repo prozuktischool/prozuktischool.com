@@ -7,7 +7,7 @@ import Reddit from '../../assets/icons/reddit.svg';
 import Hackernews from '../../assets/icons/hackernews.svg';
 
 const Container = styled.ul`
-  margin: 32px 0;
+  margin: 32px 0 0 0;
   padding: 0;
   text-align: center;
 
@@ -19,6 +19,12 @@ const Container = styled.ul`
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &::before {
+      content: '';
+      margin: 0;
+      top: 0;
     }
 
     &:hover {

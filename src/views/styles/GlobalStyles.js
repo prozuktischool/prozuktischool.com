@@ -73,8 +73,18 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
   }
 
+  ::selection {
+    color: ${({ theme }) => theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.primary3};
+  }
+
   pre {
     border-radius: 8px;
+  }
+
+  code[class*='language-']::selection, pre[class*='language-']::selection, code[class*='language-'] ::selection, pre[class*='language-'] ::selection {
+    color: ${({ theme }) => theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.primary3};
   }
 
   :not(pre) > code[class*='language-'] {
@@ -118,6 +128,9 @@ const GlobalStyle = createGlobalStyle`
 
   .gatsby-highlight {
     pre {
+      border-bottom: 4px solid;
+      border-color: ${({ theme }) => theme.colors.primary3};
+
       code {
         font-family: 'Fira Code', monospace;
       }
