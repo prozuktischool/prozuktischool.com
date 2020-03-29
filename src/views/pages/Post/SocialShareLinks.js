@@ -59,14 +59,14 @@ const SocialShareLinks = ({ title, link }) => (
     </li>
     <li>
       <SocialShareIcon
-        link={`https://twitter.com/intent/tweet/?text=${title}&amp;url=${link}`}
+        link={`https://news.ycombinator.com/submitlink?u=${link}&amp;t=${title}`}
       >
         <Hackernews />
       </SocialShareIcon>
     </li>
     <li>
       <SocialShareIcon
-        link={`https://twitter.com/intent/tweet/?text=${title}&amp;url=${link}`}
+        link={`https://reddit.com/submit/?url=${link}&amp;resubmit=true&amp;title=${title}`}
       >
         <Reddit />
       </SocialShareIcon>
