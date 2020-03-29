@@ -18,6 +18,7 @@
     "gatsby-plugin-nprogress": "2.1.19",
     "gatsby-plugin-offline": "3.0.34",
     "gatsby-plugin-react-helmet": "3.1.22",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-sitemap": "2.2.27",
     "gatsby-plugin-styled-components": "^3.1.19",
@@ -42,7 +43,8 @@
     "react-twitter-widgets": "^1.7.1",
     "styled-components": "^5.0.1",
     "styled-system": "^5.1.4",
-    "url-join": "^4.0.1"
+    "url-join": "^4.0.1",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "babel-jest": "^25.1.0",
