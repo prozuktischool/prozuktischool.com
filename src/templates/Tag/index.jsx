@@ -1,9 +1,9 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import PostListing from "../../components/PostListing";
-import config from "../../../data/SiteConfig";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../../components/Layout';
+import PostListing from '../../components/PostListing';
+import config from '../../../data/SiteConfig';
 
 export default class TagTemplate extends React.Component {
   render() {
@@ -26,7 +26,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { published: { eq: true }, tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {

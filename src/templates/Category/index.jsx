@@ -1,9 +1,9 @@
-import React from "react";
-import Helmet from "react-helmet";
-import { graphql } from "gatsby";
-import Layout from "../../components/Layout";
-import PostListing from "../../components/PostListing";
-import config from "../../../data/SiteConfig";
+import React from 'react';
+import Helmet from 'react-helmet';
+import { graphql } from 'gatsby';
+import Layout from '../../components/Layout';
+import PostListing from '../../components/PostListing';
+import config from '../../../data/SiteConfig';
 
 export default class CategoryTemplate extends React.Component {
   render() {
@@ -28,7 +28,12 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { category: { eq: $category } } }
+      filter: {
+        frontmatter: {
+          published: { eq: true }
+          categories: { in: [$category] }
+        }
+      }
     ) {
       totalCount
       edges {
@@ -41,7 +46,7 @@ export const pageQuery = graphql`
           timeToRead
           frontmatter {
             title
-            tags
+            categories
             cover
             date
           }
