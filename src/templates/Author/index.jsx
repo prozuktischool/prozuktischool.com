@@ -29,7 +29,12 @@ export default ({
 
 export const pageQuery = graphql`
   query PostsByAuthorId($authorId: String!) {
-    allMarkdownRemark(filter: { fields: { authorId: { eq: $authorId } } }) {
+    allMarkdownRemark(
+      filter: {
+        fields: { authorId: { eq: $authorId } }
+        frontmatter: { published: { eq: true } }
+      }
+    ) {
       edges {
         node {
           id

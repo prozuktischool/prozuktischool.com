@@ -21,6 +21,11 @@ const TagsContainer = styled.div`
         content: '';
       }
     }
+
+    svg {
+      width: 1rem;
+      height: 1rem;
+    }
   }
 `;
 

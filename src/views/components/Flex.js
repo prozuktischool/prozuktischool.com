@@ -9,6 +9,7 @@ import {
 } from 'styled-system';
 
 const Flex = styled.div`
+  display: flex;
   ${space};
   ${layout};
   ${position};

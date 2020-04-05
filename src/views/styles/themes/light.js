@@ -1,3 +1,5 @@
+import languageColors from '../languageColors.json';
+
 const breakpoints = [0, '576px', '768px', '992px', '1200px'];
 
 breakpoints.sm = breakpoints[0];
@@ -74,6 +76,7 @@ export default {
     warning: '#FFD43B',
     text: '#212529',
     background: '#f8f9fa',
+    ...languageColors,
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   breakpoints,
