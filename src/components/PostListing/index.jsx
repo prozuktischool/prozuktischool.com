@@ -14,6 +14,7 @@ class PostListing extends React.Component {
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead,
+        language: postEdge.node.frontmatter.language,
       });
     });
     return postList;
@@ -23,14 +24,14 @@ class PostListing extends React.Component {
     const postList = this.getPostList();
     return (
       <Box maxWidth={960} margin="0 auto">
-        <Flex mx={-2} flexWrap="wrap">
+        <Flex mx={[0, -2]} flexWrap="wrap">
           {/* Your post list here. */
             postList.map(post => (
-              <Box key={post.title} width={[1, 1 / 3]} px={2} py={2}>
+              <Box key={post.title} width={[1, 1 / 3]} px={3} py={3}>
                 <Link to={post.path}>
-                  <SummaryCard language="javascript">{post.title}</SummaryCard>
+                  <SummaryCard language={post.language}>{post.title}</SummaryCard>
                 </Link>
-            </Box>
+              </Box>
           ))}
         </Flex>
       </Box>

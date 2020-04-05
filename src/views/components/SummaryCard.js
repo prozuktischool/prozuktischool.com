@@ -5,43 +5,36 @@ import CardArrow from '../assets/icons/card-arrow.svg';
 import CardArrowOutlined from '../assets/icons/card-arrow-outlined.svg';
 
 const Container = styled(Box)`
-  height: 200px;
+  height: 160px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: ${({ theme }) => theme.colors.dark1};
   color: ${({ theme }) => theme.colors.light1};
   border-radius: 4px;
   position: relative;
   padding: 32px;
+  transition: all ease-in-out 0.2s;
 
-  .card-arrow-top {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-  }
+  background: ${({ theme }) => theme.colors.dark1}
+    linear-gradient(
+      -45deg,
+      ${({ theme, language }) =>
+          language && theme.colors[language]
+            ? theme.colors[language]
+            : theme.colors.primary3}
+        16px,
+      rgba(0, 0, 0, 0.01) 0
+    );
 
-  .card-arrow-bottom {
-    position: absolute;
-    bottom: 4px;
-    right: 16px;
+  &:hover {
+    transform: translateY(-4px);
   }
 `;
 
 const SummaryCard = ({ language, children }) => {
-  return (
-    <Container>
-      <span className="card-arrow-top">
-        <CardArrow />
-      </span>
-      {children}
-      <span className={`card-arrow-bottom color-${language}`}>
-        <CardArrowOutlined />
-      </span>
-    </Container>
-  );
+  return <Container language={language}>{children}</Container>;
 };
 
 export default SummaryCard;
