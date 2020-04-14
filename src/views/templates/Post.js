@@ -39,14 +39,9 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
 
-    console.log(post);
-
     return (
       <Layout>
         <div>
-          <Helmet>
-            <title>{`${post.title} | ${config.siteTitle}`}</title>
-          </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <ArticleLayout>
             <Text variant="h2" textAlign="center">

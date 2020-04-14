@@ -111,11 +111,11 @@ const GlobalStyle = createGlobalStyle`
 
     li {
       &::before {
-        content: '⬗';
+        content: '⟐';
         font-size: 1.2rem;
         margin-right: 8px;
         position: relative;
-        top: 2px;
+        top: 0;
         color: ${({ theme }) => theme.colors.primary3};
       }
     }

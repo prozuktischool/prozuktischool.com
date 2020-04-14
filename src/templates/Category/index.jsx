@@ -1,56 +1,55 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import Layout from '../../components/Layout';
-import PostListing from '../../components/PostListing';
-import config from '../../../data/SiteConfig';
+import PropTypes from 'prop-types';
 
-export default class CategoryTemplate extends React.Component {
-  render() {
-    const { category } = this.props.pageContext;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
-    return (
-      <Layout>
-        <div className="category-container">
-          <Helmet
-            title={`Posts in category "${category}" | ${config.siteTitle}`}
-          />
-          <PostListing postEdges={postEdges} />
-        </div>
-      </Layout>
-    );
-  }
-}
+// Utilities
+import kebabCase from 'lodash/kebabCase';
 
-/* eslint no-undef: "off" */
+// Components
+import { Helmet } from 'react-helmet';
+import { Link, graphql } from 'gatsby';
+
+const CategoriesPage = ({
+  data: {
+    allMarkdownRemark: { group },
+  },
+}) => (
+  <div>
+    <div>
+      <h1>Categoriess</h1>
+      <ul>
+        {group.map(category => (
+          <li key={category.fieldValue}>
+            <Link to={`/categories/${kebabCase(category.fieldValue)}/`}>
+              {category.fieldValue} ({category.totalCount})
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+);
+
+CategoriesPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      group: PropTypes.arrayOf(
+        PropTypes.shape({
+          fieldValue: PropTypes.string.isRequired,
+          totalCount: PropTypes.number.isRequired,
+        }).isRequired
+      ),
+    }),
+  }),
+};
+
+export default CategoriesPage;
+
 export const pageQuery = graphql`
-  query CategoryPage($category: String) {
-    allMarkdownRemark(
-      limit: 1000
-      sort: { fields: [fields___date], order: DESC }
-      filter: {
-        frontmatter: {
-          published: { eq: true }
-          categories: { in: [$category] }
-        }
-      }
-    ) {
-      totalCount
-      edges {
-        node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            categories
-            cover
-            date
-          }
-        }
+  query {
+    allMarkdownRemark(limit: 2000) {
+      group(field: frontmatter___category) {
+        fieldValue
+        totalCount
       }
     }
   }
