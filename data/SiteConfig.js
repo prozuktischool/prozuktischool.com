@@ -1,6 +1,7 @@
 const config = {
   siteTitle: 'প্রযুক্তি স্কুল', // Site title.
   siteTitleShort: 'প্রযুক্তি স্কুল', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteSlogan: 'শিখতে চাই, তাই শেখাই :)', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: 'প্রযুক্তি স্কুল', // Alternative site title for SEO.
   siteLogo: '/logos/logo-1024.png', // Logo used for SEO and manifest.
   siteUrl: 'https://prozuktischool.com/', // Domain of your website without pathPrefix.

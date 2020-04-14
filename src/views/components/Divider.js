@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { space, width, height } from 'styled-system';
+import { space, width, height, layout } from 'styled-system';
 
 const Divider = styled.div`
   background: radial-gradient(
@@ -13,6 +13,7 @@ const Divider = styled.div`
   ${width};
   ${height};
   ${space};
+  ${layout};
 `;
 
 export default Divider;

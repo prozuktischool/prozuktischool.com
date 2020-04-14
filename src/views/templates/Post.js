@@ -29,6 +29,7 @@ export default class PostTemplate extends React.Component {
     } = this.props.data;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
+    post.updatedAt = postNode.fields.updatedAt;
 
     if (!post.id) {
       post.id = slug;
@@ -41,9 +42,6 @@ export default class PostTemplate extends React.Component {
     return (
       <Layout>
         <div>
-          <Helmet>
-            <title>{`${post.title} | ${config.siteTitle}`}</title>
-          </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <ArticleLayout>
             <Text variant="h2" textAlign="center">
@@ -81,6 +79,15 @@ export default class PostTemplate extends React.Component {
             </Box>
             <Divider />
             <Text variant="raw" html={postNode.html} />
+            <Divider display="inline-block" width={`8rem`} />
+            <Text mt={0} variant="caption">
+              সর্বশেষ আপডেট:{' '}
+              {convertNumbers(
+                format(new Date(post.updatedAt), 'MMMM dd, yyyy GGGG', {
+                  locale: bn,
+                })
+              )}
+            </Text>
             <SocialShareLinks title={post.title} link={`${siteUrl}${slug}`} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
@@ -119,6 +126,7 @@ export const pageQuery = graphql`
       fields {
         slug
         date
+        updatedAt
       }
     }
   }

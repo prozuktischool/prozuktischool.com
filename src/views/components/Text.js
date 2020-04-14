@@ -161,6 +161,11 @@ const RawHTML = styled.div`
       margin-top: 1rem;
     }
   }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const Text = ({ variant, theme, children, html, ...props }) => {

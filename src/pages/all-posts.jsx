@@ -14,7 +14,10 @@ class Index extends React.Component {
         <div className="index-container">
           <Helmet title={config.siteTitle} />
           <SEO />
-          <PostListing postEdges={postEdges} limit={6} />
+          <section>
+            <Link to="/authors">All authors</Link>
+          </section>
+          <PostListing postEdges={postEdges} />
         </div>
       </Layout>
     );
@@ -25,7 +28,7 @@ export default Index;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query IndexQuery {
+  query AllPostsQuery {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [fields___date], order: DESC }

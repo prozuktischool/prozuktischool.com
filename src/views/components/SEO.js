@@ -19,7 +19,7 @@ class SEO extends Component {
       image = postMeta.cover;
       postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
     } else {
-      title = config.siteTitle;
+      title = config.siteSlogan;
       description = config.siteDescription;
       image = config.siteLogo;
     }
@@ -67,9 +67,11 @@ class SEO extends Component {
         }
       );
     }
+    title = `${config.siteTitle} ⌇ ${title}`;
     return (
       <Helmet>
         {/* General tags */}
+        <title>{`${title}`}</title>
         <meta name="description" content={description} />
         <meta name="image" content={image} />
 
