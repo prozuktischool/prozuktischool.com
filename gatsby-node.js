@@ -1,6 +1,7 @@
 const path = require('path');
 const _ = require('lodash');
 const moment = require('moment');
+const { execSync } = require('child_process');
 const siteConfig = require('./data/SiteConfig');
 
 const postNodes = [];
@@ -53,6 +54,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === 'MarkdownRemark') {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
+    const gitCommitTime = execSync(
+      `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
+    ).toString();
+    const updatedAt = moment(gitCommitTime || node.frontmatter.date).format(
+      'YYYY-MM-DD'
+    );
+    createNodeField({ node, name: 'updatedAt', value: updatedAt });
+
     if (
       Object.prototype.hasOwnProperty.call(node, 'frontmatter') &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')

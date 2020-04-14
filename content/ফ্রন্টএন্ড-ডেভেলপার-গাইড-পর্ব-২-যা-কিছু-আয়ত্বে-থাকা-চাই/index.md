@@ -7,6 +7,8 @@ published: true
 excerpt: ''
 tags:
   - 'ওয়েব ডেভেলপমেন্ট'
+categories:
+  - 'ওয়েব ডেভেলপমেন্ট'
 cover: ''
 ---
 

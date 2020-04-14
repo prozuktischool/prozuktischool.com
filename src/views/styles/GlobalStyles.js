@@ -73,6 +73,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1rem;
   }
 
+  img {
+    width: 100%;
+    height: auto;
+  }
+
   ::selection {
     color: ${({ theme }) => theme.colors.background};
     background-color: ${({ theme }) => theme.colors.primary3};
