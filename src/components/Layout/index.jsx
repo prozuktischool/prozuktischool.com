@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import {Helmet} from 'react-helmet';
 import { ThemeProvider } from 'styled-components';
 import { dark, light } from '../../views/styles/themes';
 import { Link } from 'gatsby';

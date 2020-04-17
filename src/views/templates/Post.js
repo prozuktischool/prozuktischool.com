@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Helmet from 'react-helmet';
+import {Helmet} from 'react-helmet';
 import { graphql } from 'gatsby';
 import { Calendar, User } from 'react-feather';
 import Layout from '../../components/Layout';
