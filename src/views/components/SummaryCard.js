@@ -16,6 +16,7 @@ const Container = styled(Box)`
   position: relative;
   padding: 32px;
   transition: all ease-in-out 0.2s;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
 
   background: ${({ theme }) => theme.colors.dark1}
     linear-gradient(

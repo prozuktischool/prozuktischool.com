@@ -1,13 +1,13 @@
-import React from 'react';
-import {Helmet} from 'react-helmet';
+import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import { ThemeProvider } from 'styled-components';
 import { dark, light } from '../../views/styles/themes';
 import { Link } from 'gatsby';
 import config from '../../../data/SiteConfig';
 import GlobalStyle from '../../views/styles/GlobalStyles';
-import { Text } from '../../views/components';
+import { MainMenu, Text } from '../../views/components';
 
-export default class MainLayout extends React.Component {
+class MainLayout extends Component {
   render() {
     const { children } = this.props;
     return (
@@ -17,12 +17,12 @@ export default class MainLayout extends React.Component {
           <Helmet>
             <meta name="description" content={config.siteDescription} />
           </Helmet>
-          <Text variant="h1" textAlign="center">
-            <Link to="/">{config.siteTitle}</Link>
-          </Text>
+          <MainMenu />
           {children}
         </div>
       </ThemeProvider>
     );
   }
 }
+
+export default MainLayout;

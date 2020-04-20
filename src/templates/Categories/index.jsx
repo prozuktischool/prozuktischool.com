@@ -1,7 +1,7 @@
 import React from 'react';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import Layout from '../../components/Layout';
+import { MainLayout } from '../../views/layouts';
 import PostListing from '../../components/PostListing';
 import config from '../../../data/SiteConfig';
 
@@ -10,14 +10,14 @@ export default class CategoryTemplate extends React.Component {
     const { category } = this.props.pageContext;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <Layout>
+      <MainLayout>
         <div className="category-container">
           <Helmet
             title={`Posts in category "${category}" | ${config.siteTitle}`}
           />
           <PostListing postEdges={postEdges} />
         </div>
-      </Layout>
+      </MainLayout>
     );
   }
 }

@@ -1,16 +1,16 @@
-import React from 'react';
-import {Helmet} from 'react-helmet';
+import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/Layout';
+import { MainLayout } from '../views/layouts';
 import PostListing from '../components/PostListing';
 import SEO from '../views/components/SEO';
 import config from '../../data/SiteConfig';
 
-class Index extends React.Component {
+class AllPosts extends Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <Layout>
+      <MainLayout>
         <div className="index-container">
           <Helmet title={config.siteTitle} />
           <SEO />
@@ -19,12 +19,12 @@ class Index extends React.Component {
           </section>
           <PostListing postEdges={postEdges} />
         </div>
-      </Layout>
+      </MainLayout>
     );
   }
 }
 
-export default Index;
+export default AllPosts;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`

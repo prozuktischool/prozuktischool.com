@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../../components/Layout';
+import { MainLayout } from '../../views/layouts';
 
 export default ({
   data: {
@@ -7,7 +7,7 @@ export default ({
     allMarkdownRemark: { edges: postNodes },
   },
 }) => (
-  <Layout>
+  <MainLayout>
     <div>
       <h2>ID: {id}</h2>
       <a href={`https://twitter.com/${twitter}/`} target="_blank">
@@ -24,7 +24,7 @@ export default ({
         <a href={post.fields.slug}>{post.frontmatter.title}</a>
       </div>
     ))}
-  </Layout>
+  </MainLayout>
 );
 
 export const pageQuery = graphql`

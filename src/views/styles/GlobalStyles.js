@@ -78,9 +78,9 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
   }
 
-  ::selection {
+  * ::selection {
     color: ${({ theme }) => theme.colors.background};
-    background-color: ${({ theme }) => theme.colors.primary3};
+    background-color: ${({ theme }) => theme.colors.text};
   }
 
   pre {
