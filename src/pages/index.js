@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import { MainLayout } from '../views/layouts';
+import { HeroSection } from '../views/components';
 import PostListing from '../components/PostListing';
 import SEO from '../views/components/SEO';
 import config from '../../data/SiteConfig';
@@ -11,6 +12,7 @@ class Index extends Component {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <MainLayout>
+        <HeroSection />
         <div className="index-container">
           <Helmet title={config.siteTitle} />
           <SEO />

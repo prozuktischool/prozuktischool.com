@@ -1,20 +1,30 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {withTheme} from 'styled-components';
 import { Link } from 'gatsby';
 import Flex from './Flex';
-import LogoLight from '../assets/images/logo-light.svg';
 import LogoDark from '../assets/images/logo-dark.svg';
+import LogoLight from '../assets/images/logo-light.svg';
+import Sun from '../assets/icons/sun.svg';
+import Moon from '../assets/icons/moon.svg';
 
 const MenuContainer = styled.div`
   margin: 0;
   padding: 0;
-  background-color: ${({ theme }) => theme.colors.dark2};
-  box-shadow: 0 2px 4px ${({ theme }) => theme.colors.dark2};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.dark1};
+  background-color: ${({ theme }) => theme.colors.background};
+  box-shadow: 0 0 2px ${({ theme }) => theme.colors.dark2};
+  ${'' /* border-bottom: 1px solid ${({ theme }) => theme.colors.dark1}; */}
 
-  .header-logo {
-    width: 48px;
-    height: 48px;
+  .home-url {
+    display: inline-flex;
+
+    .header-logo {
+      width: 48px;
+      height: 48px;
+    }
+
+    .site-title {
+      line-height: 48px;
+    }
   }
 
   ul {
@@ -32,8 +42,23 @@ const MenuContainer = styled.div`
         width: 100%;
       }
 
+      .theme-toggle {
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+
+        svg {
+          position: relative;
+          top: 6px;
+        }
+      }
+
       &:last-child {
+        margin-left: 4px;
         margin-right: 0;
+        border-left: 1px solid ${({theme}) => theme.colors.dark1};
       }
 
       &::before,
@@ -44,18 +69,18 @@ const MenuContainer = styled.div`
   }
 `;
 
-const MainMenu = () => {
+const MainMenu = ({theme}) => {
   return (
     <MenuContainer>
       <Flex
         maxWidth={960}
         margin="0 auto"
         justifyContent="space-between"
-        pl={2}
-        pr={2}
+        pl={3}
+        pr={3}
       >
-        <Link to="/">
-          <LogoDark className="header-logo" /> <span>প্রযুক্তি স্কুল</span>
+        <Link to="/" className="home-url">
+          {theme.name === 'dark'?  <LogoDark className="header-logo" /> : <LogoLight className="header-logo" />} <span className="site-title">প্রযুক্তি স্কুল</span>
         </Link>
         <ul>
           <li>
@@ -64,10 +89,16 @@ const MainMenu = () => {
           <li>
             <Link to="/all-posts">লেখাসমূহ</Link>
           </li>
+          <li>
+            <button className="theme-toggle">
+              {theme.name === 'dark' ? <Sun /> : <Moon />}
+            </button>
+          </li>
         </ul>
+
       </Flex>
     </MenuContainer>
   );
 };
 
-export default MainMenu;
+export default withTheme(MainMenu);

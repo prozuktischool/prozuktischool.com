@@ -18,9 +18,6 @@ class MainLayout extends Component {
             <meta name="description" content={config.siteDescription} />
           </Helmet>
           <MainMenu />
-          <Text variant="h1" textAlign="center">
-            <Link to="/">{config.siteTitle}</Link>
-          </Text>
           {children}
         </div>
       </ThemeProvider>
