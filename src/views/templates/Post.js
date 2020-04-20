@@ -1,9 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import { Calendar, User } from 'react-feather';
-import Layout from '../../components/Layout';
+import { MainLayout } from '../../views/layouts';
 import UserInfo from '../../components/UserInfo';
 import PostTags from '../pages/Post/PostTags';
 import SocialLinks from '../../components/SocialLinks';
@@ -40,7 +40,7 @@ export default class PostTemplate extends React.Component {
     }
 
     return (
-      <Layout>
+      <MainLayout>
         <div>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <ArticleLayout>
@@ -94,7 +94,7 @@ export default class PostTemplate extends React.Component {
             </div>
           </ArticleLayout>
         </div>
-      </Layout>
+      </MainLayout>
     );
   }
 }

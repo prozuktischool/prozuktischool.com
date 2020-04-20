@@ -1,25 +1,22 @@
-import React from 'react';
-import {Helmet} from 'react-helmet';
+import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/Layout';
+import { MainLayout } from '../views/layouts';
 import PostListing from '../components/PostListing';
 import SEO from '../views/components/SEO';
 import config from '../../data/SiteConfig';
 
-class Index extends React.Component {
+class Index extends Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <Layout>
+      <MainLayout>
         <div className="index-container">
           <Helmet title={config.siteTitle} />
           <SEO />
-          <section>
-            <Link to="/authors">All authors</Link>
-          </section>
-          <PostListing postEdges={postEdges} />
+          <PostListing postEdges={postEdges} limit={6} />
         </div>
-      </Layout>
+      </MainLayout>
     );
   }
 }
@@ -28,7 +25,7 @@ export default Index;
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query AllPostsQuery {
+  query IndexQuery {
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [fields___date], order: DESC }

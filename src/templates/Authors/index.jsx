@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import _ from 'lodash';
-import Layout from '../../components/Layout';
+import { MainLayout } from '../../views/layouts';
 
 export default ({
   data: {
     allAuthorYaml: { edges: authorNodes },
   },
 }) => (
-  <Layout>
+  <MainLayout>
     <ul>
       {authorNodes.map(({ node: author }, index) => (
         <li key={`author-${author.id}`}>
@@ -16,7 +16,7 @@ export default ({
         </li>
       ))}
     </ul>
-  </Layout>
+  </MainLayout>
 );
 
 export const pageQuery = graphql`
