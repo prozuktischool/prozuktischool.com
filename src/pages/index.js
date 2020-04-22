@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import { MainLayout } from '../views/layouts';
-import { HeroSection } from '../views/components';
+import { HeroSection, SectionTitle } from '../views/components';
 import PostListing from '../components/PostListing';
 import SEO from '../views/components/SEO';
 import config from '../../data/SiteConfig';
@@ -13,6 +13,7 @@ class Index extends Component {
     return (
       <MainLayout>
         <HeroSection />
+        <SectionTitle title="সাম্প্রতিক লেখা" />
         <div className="index-container">
           <Helmet title={config.siteTitle} />
           <SEO />

@@ -9,7 +9,7 @@ const HeroContainer = styled.div`
   align-items: center;
   margin-bottom: 32px;
 
-  background-image: url('/assets/images/hero-bg.png');
+  background-image: url('/assets/images/hero-bg.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -30,6 +30,6 @@ const HeroSection = () => {
       <HeroLogo />
     </HeroContainer>
   );
-}
+};
 
 export default HeroSection;

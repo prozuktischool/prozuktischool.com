@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import urljoin from 'url-join';
 import config from '../../../data/SiteConfig';
 
@@ -16,12 +16,12 @@ class SEO extends Component {
       description = postMeta.description
         ? postMeta.description
         : postNode.excerpt;
-      image = postMeta.cover;
+      image = postMeta.cover || config.siteImage;
       postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
     } else {
       title = config.siteSlogan;
       description = config.siteDescription;
-      image = config.siteLogo;
+      image = config.siteImage;
     }
 
     image = urljoin(config.siteUrl, config.pathPrefix, image);
@@ -81,7 +81,7 @@ class SEO extends Component {
         </script>
 
         {/* OpenGraph tags */}
-        <meta property="og:url" content={postSEO ? postURL : blogURL} />
+        <meta property="og:url" content={`${postSEO ? postURL : blogURL}/`} />
         {postSEO ? <meta property="og:type" content="article" /> : null}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

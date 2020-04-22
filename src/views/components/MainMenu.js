@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {withTheme} from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 import { Link } from 'gatsby';
 import Flex from './Flex';
 import LogoDark from '../assets/images/logo-dark.svg';
@@ -12,7 +12,7 @@ const MenuContainer = styled.div`
   padding: 0;
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 0 0 2px ${({ theme }) => theme.colors.dark2};
-  ${'' /* border-bottom: 1px solid ${({ theme }) => theme.colors.dark1}; */}
+  border-bottom: 1px solid ${({ theme }) => theme.colors.dark1};
 
   .home-url {
     display: inline-flex;
@@ -48,7 +48,6 @@ const MenuContainer = styled.div`
         outline: none;
         cursor: pointer;
 
-
         svg {
           position: relative;
           top: 6px;
@@ -58,7 +57,7 @@ const MenuContainer = styled.div`
       &:last-child {
         margin-left: 4px;
         margin-right: 0;
-        border-left: 1px solid ${({theme}) => theme.colors.dark1};
+        border-left: 1px solid ${({ theme }) => theme.colors.dark1};
       }
 
       &::before,
@@ -69,7 +68,7 @@ const MenuContainer = styled.div`
   }
 `;
 
-const MainMenu = ({theme}) => {
+const MainMenu = ({ theme }) => {
   return (
     <MenuContainer>
       <Flex
@@ -80,7 +79,12 @@ const MainMenu = ({theme}) => {
         pr={3}
       >
         <Link to="/" className="home-url">
-          {theme.name === 'dark'?  <LogoDark className="header-logo" /> : <LogoLight className="header-logo" />} <span className="site-title">প্রযুক্তি স্কুল</span>
+          {theme.name === 'dark' ? (
+            <LogoDark className="header-logo" />
+          ) : (
+            <LogoLight className="header-logo" />
+          )}{' '}
+          <span className="site-title">প্রযুক্তি স্কুল</span>
         </Link>
         <ul>
           <li>
@@ -95,7 +99,6 @@ const MainMenu = ({theme}) => {
             </button>
           </li>
         </ul>
-
       </Flex>
     </MenuContainer>
   );
