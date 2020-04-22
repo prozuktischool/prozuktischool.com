@@ -1,5 +1,6 @@
 import React from 'react';
 import { MainLayout } from '../../views/layouts';
+import { Box, Text } from '../../views/components';
 
 export default ({
   data: {
@@ -8,22 +9,27 @@ export default ({
   },
 }) => (
   <MainLayout>
-    <div>
-      <h2>ID: {id}</h2>
-      <a href={`https://twitter.com/${twitter}/`} target="_blank">
-        {`@${twitter}`}
-      </a>
-      <p>
+    <Box maxWidth={960} margin="0 auto" padding={{ xs: 3, sm: 4 }}>
+      <Text variant="h4">লেখক: {id}</Text>
+      <Text>
+        Twitter:{' '}
+        <a href={`https://twitter.com/${twitter}/`} target="_blank">
+          {`@${twitter}`}
+        </a>
+      </Text>
+      <Text>
         <em>{bio}</em>
-      </p>
-    </div>
-    <hr />
-    <p>{`Posted by ${id}: `}</p>
-    {postNodes.map(({ node: post }, idx) => (
-      <div key={post.id}>
-        <a href={post.fields.slug}>{post.frontmatter.title}</a>
-      </div>
-    ))}
+      </Text>
+      <hr />
+      <Text>{`${id} এর লেখাসমূহ: `}</Text>
+      <ul>
+        {postNodes.map(({ node: post }, idx) => (
+          <li key={post.id}>
+            <a href={post.fields.slug}>{post.frontmatter.title}</a>
+          </li>
+        ))}
+      </ul>
+    </Box>
   </MainLayout>
 );
 

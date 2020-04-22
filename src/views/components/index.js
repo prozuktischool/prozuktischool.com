@@ -3,6 +3,7 @@ export { default as Divider } from './Divider';
 export { default as Flex } from './Flex';
 export { default as HeroSection } from './HeroSection';
 export { default as MainMenu } from './MainMenu';
+export { default as SectionTitle } from './SectionTitle';
 export { default as SEO } from './SEO';
 export { default as SocialShareIcon } from './SocialShareIcon';
 export { default as SummaryCard } from './SummaryCard';

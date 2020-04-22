@@ -88,7 +88,7 @@ export default class PostTemplate extends React.Component {
                 })
               )}
             </Text>
-            <SocialShareLinks title={post.title} link={`${siteUrl}${slug}`} />
+            <SocialShareLinks title={post.title} link={`${siteUrl}${slug}/`} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
             </div>
