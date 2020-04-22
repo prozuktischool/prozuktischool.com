@@ -5,7 +5,7 @@ const config = {
   siteTitleAlt: 'প্রযুক্তি স্কুল', // Alternative site title for SEO.
   siteLogo: '/logos/logo-1024.png', // Logo used for SEO and manifest.
   siteUrl: 'https://prozuktischool.com/', // Domain of your website without pathPrefix.
-  pathPrefix: '/prozuktischool.com', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription:
     'বাংলা ভাষাভাষী মানুষদের জন্য প্রযুক্তি শেখার ও শেখানোর পাঠশালা', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
