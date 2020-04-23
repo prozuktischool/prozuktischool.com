@@ -76,7 +76,10 @@ const Footer = ({ theme }) => {
         pr={3}
       >
         <Text textAlign="center" display="block" width="100%">
-          লেখস্বত্ব &copy; {`${convertNumbers(new Date().getFullYear())} `}
+          লেখস্বত্ব &copy;{' '}
+          {`${convertNumbers(2016)} - ${convertNumbers(
+            new Date().getFullYear()
+          )} `}
           <a href="https://prozuktischool.com/">প্রযুক্তি স্কুল</a>
         </Text>
       </Flex>
