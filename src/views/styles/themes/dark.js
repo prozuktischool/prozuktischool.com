@@ -68,7 +68,7 @@ export default {
     error: '#FA5252',
     success: '#51CF66',
     warning: '#FFD43B',
-    text: '#adb5bd',
+    text: '#f8f9fa',
     background: '#212529',
     ...languageColors,
   },

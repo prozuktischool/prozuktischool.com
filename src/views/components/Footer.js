@@ -1,18 +1,15 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
-import { Link } from 'gatsby';
+import { convertNumbers } from 'bn-number-utils';
 import Flex from './Flex';
-import LogoDark from '../assets/images/logo-dark.svg';
-import LogoLight from '../assets/images/logo-light.svg';
-import Sun from '../assets/icons/sun.svg';
-import Moon from '../assets/icons/moon.svg';
+import Text from './Text';
 
 const MenuContainer = styled.div`
-  margin: 0;
+  margin: 32px 0 0 0;
   padding: 0;
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 0 0 2px ${({ theme }) => theme.colors.dark2};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.dark1};
+  border-top: 1px solid ${({ theme }) => theme.colors.dark1};
 
   .home-url {
     display: inline-flex;
@@ -68,7 +65,7 @@ const MenuContainer = styled.div`
   }
 `;
 
-const MainMenu = ({ theme }) => {
+const Footer = ({ theme }) => {
   return (
     <MenuContainer>
       <Flex
@@ -78,30 +75,13 @@ const MainMenu = ({ theme }) => {
         pl={3}
         pr={3}
       >
-        <Link to="/" className="home-url">
-          {theme.name === 'dark' ? (
-            <LogoDark className="header-logo" />
-          ) : (
-            <LogoLight className="header-logo" />
-          )}{' '}
-          <span className="site-title">প্রযুক্তি স্কুল</span>
-        </Link>
-        <ul>
-          <li>
-            <Link to="/">নীড়পাতা</Link>
-          </li>
-          <li>
-            <Link to="/all-posts">লেখাসমূহ</Link>
-          </li>
-          {/* <li>
-            <button className="theme-toggle">
-              {theme.name === 'dark' ? <Sun /> : <Moon />}
-            </button>
-          </li> */}
-        </ul>
+        <Text textAlign="center" display="block" width="100%">
+          লেখস্বত্ব &copy; {`${convertNumbers(new Date().getFullYear())} `}
+          <a href="https://prozuktischool.com/">প্রযুক্তি স্কুল</a>
+        </Text>
       </Flex>
     </MenuContainer>
   );
 };
 
-export default withTheme(MainMenu);
+export default withTheme(Footer);

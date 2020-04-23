@@ -56,7 +56,7 @@ export default class PostTemplate extends React.Component {
                 className="post-meta"
               >
                 <User />
-                <Text variant="h6" display="inline-box" ml={2}>
+                <Text variant="h6" display="inline-box" ml={2} mb={{ xs: 0 }}>
                   <a href={`/author/${_.kebabCase(post.author.id)}`}>
                     {post.author.id}
                   </a>
