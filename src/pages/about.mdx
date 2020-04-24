@@ -1,5 +1,9 @@
 import { Helmet } from 'react-helmet';
 import { Box, Divider, SEO, Text } from '../views/components';
+import authorData from '../../content/author.yaml';
+
+<!-- import YAML from 'yamljs';
+const authors = YAML.parse(authorData); -->
 
 <SEO pageTitle="পরিচিতি" />
 <Box maxWidth={960} margin="0 auto" padding={{ xs: 3, sm: 4 }}>
@@ -14,5 +18,16 @@ import { Box, Divider, SEO, Text } from '../views/components';
 আসালামু আলাইকুম। আমি আপনাদের মেজবান শহীদুল ইসলাম মজুমদার। প্রযুক্তি স্কুলের বিভিন্ন বিষয়ের সমন্বয় এবং আপনাদের সামান্য খাতির যত্নের কাজ আমিই করে থাকি। পেশায় আমি একজন সফটওয়্যার প্রকৌশলী এবং পড়াশুনা করেছি কম্পিউটার বিজ্ঞান ও প্রকৌশল বিষয়ে ব্র্যাক বিশ্ববিদ্যালয় থেকে। কাজ এবং আলসেমির মাঝেই অল্প-স্বল্প সময় দেয়ার চেষ্টা করি এখানে। কথায় বলে, বেকার মানুষের ব্যস্ততা বেশি। অফিসের পর তো বেকারই থাকি। তাই ব্যস্ততাও অনেক বেশি। যে কারণে প্রযুক্তি স্কুল এতদিনে যতদূর যাওয়ার কথা তার ধারে কাছেও যায়নি।
 
 ### আমাদের অন্যান্য মেজবানগণ
+
+<ul>
+  {authorData.map(
+    (author, index) =>
+      index !== 0 && (
+        <li key={index}>
+          <a href={`author/${author.id}`}>{author.id}</a>
+        </li>
+      )
+  )}
+</ul>
 
 </Box>
