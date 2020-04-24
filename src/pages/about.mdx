@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet';
 import { Box, Divider, SEO, Text } from '../views/components';
-import authorData from '../../content/author.yaml';
+import AuthorList from '../views/pages/Authors/AuthorList';
+
+import authors from '../../content/author.yaml';
 
 <!-- import YAML from 'yamljs';
 const authors = YAML.parse(authorData); -->
@@ -19,15 +21,8 @@ const authors = YAML.parse(authorData); -->
 
 ### আমাদের অন্যান্য মেজবানগণ
 
-<ul>
-  {authorData.map(
-    (author, index) =>
-      index !== 0 && (
-        <li key={index}>
-          <a href={`author/${author.id}`}>{author.id}</a>
-        </li>
-      )
-  )}
-</ul>
+<AuthorList
+  authors={authors.filter((author) => author.id !== 'শহীদুল ইসলাম মজুমদার')}
+/>{' '}
 
 </Box>

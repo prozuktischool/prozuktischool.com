@@ -118,11 +118,11 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const postPage = path.resolve('src/views/pages/Post/index.js');
+    const authorsPage = path.resolve('src/views/pages/Authors/index.js');
     const tagsPage = path.resolve('src/templates/Tags/index.jsx');
     const tagPage = path.resolve('src/templates/Tag/index.jsx');
     const categoryPage = path.resolve('src/templates/Category/index.jsx');
     const categoriesPage = path.resolve('src/templates/Categories/index.jsx');
-    const authorsPage = path.resolve('src/templates/Authors/index.jsx');
     const authorPage = path.resolve('src/templates/Author/index.jsx');
     resolve(
       graphql(

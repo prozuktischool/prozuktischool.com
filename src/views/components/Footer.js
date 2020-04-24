@@ -1,60 +1,46 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
 import { convertNumbers } from 'bn-number-utils';
+import { Link } from 'gatsby';
+
 import Flex from './Flex';
 import Text from './Text';
+import Divider from './Divider';
 
 const MenuContainer = styled.div`
-  margin: 32px 0 0 0;
-  padding: 0;
+  margin: 64px 0 0 0;
+  padding: 32px 0 0 0;
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 0 0 2px ${({ theme }) => theme.colors.dark2};
   border-top: 1px solid ${({ theme }) => theme.colors.dark1};
 
-  .home-url {
+  ul.mini-site-map {
     display: inline-flex;
-
-    .header-logo {
-      width: 48px;
-      height: 48px;
-    }
-
-    .site-title {
-      line-height: 48px;
-    }
-  }
-
-  ul {
-    list-style: none;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 32px;
 
     li {
-      margin-right: 8px;
+      padding: 4px 8px 0 0;
+      border-bottom: 1px solid ${({ theme }) => theme.colors.dark1};
+      border-top: 1px solid ${({ theme }) => theme.colors.dark1};
+      border-right: 1px dashed ${({ theme }) => theme.colors.dark1};
+      border-left: 1px dashed ${({ theme }) => theme.colors.dark1};
 
-      a {
-        display: inline-box;
-        height: 100%;
-        width: 100%;
+      &:nth-child(2n) {
+        border-bottom: 1px solid ${({ theme }) => theme.colors.dark1};
+        border-top: 1px solid ${({ theme }) => theme.colors.dark1};
+        position: relative;
+        top: 22px;
       }
 
-      .theme-toggle {
-        background: none;
-        border: none;
-        outline: none;
-        cursor: pointer;
-
-        svg {
-          position: relative;
-          top: 6px;
-        }
+      &:first-child {
+        border-left: none;
       }
 
       &:last-child {
-        margin-left: 4px;
-        margin-right: 0;
-        border-left: 1px solid ${({ theme }) => theme.colors.dark1};
+        border-right: none;
+        border-left: 1px dashed ${({ theme }) => theme.colors.dark1};
       }
 
       &::before,
@@ -68,6 +54,25 @@ const MenuContainer = styled.div`
 const Footer = ({ theme }) => {
   return (
     <MenuContainer>
+      <Flex
+        maxWidth={960}
+        margin="0 auto"
+        justifyContent="space-between"
+        pl={3}
+        pr={3}
+      >
+        <ul className="mini-site-map">
+          <li>
+            <Link to="/about">পরিচিতি</Link>
+          </li>
+          <li>
+            <Link to="/contact">যোগাযোগ</Link>
+          </li>
+          <li>
+            <Link to="/contribution-guide">নির্দেশনা</Link>
+          </li>
+        </ul>
+      </Flex>
       <Flex
         maxWidth={960}
         margin="0 auto"
