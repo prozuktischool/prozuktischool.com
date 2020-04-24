@@ -5,8 +5,8 @@ import config from '../../../data/SiteConfig';
 
 class SEO extends Component {
   render() {
-    const { postNode, postPath, postSEO } = this.props;
-    let title;
+    const { postNode, postPath, postSEO, pageTitle } = this.props;
+    let title = pageTitle;
     let description;
     let image;
     let postURL;
@@ -19,7 +19,7 @@ class SEO extends Component {
       image = postMeta.cover || config.siteImage;
       postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
     } else {
-      title = config.siteSlogan;
+      title = title || config.siteSlogan;
       description = config.siteDescription;
       image = config.siteImage;
     }

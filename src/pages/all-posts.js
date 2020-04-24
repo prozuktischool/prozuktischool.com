@@ -13,10 +13,7 @@ class AllPosts extends Component {
       <MainLayout>
         <div className="index-container">
           <Helmet title={config.siteTitle} />
-          <SEO />
-          <section>
-            <Link to="/authors">All authors</Link>
-          </section>
+          <SEO pageTitle="লেখাসমূহ" />
           <PostListing postEdges={postEdges} />
         </div>
       </MainLayout>

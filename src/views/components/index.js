@@ -1,6 +1,7 @@
 export { default as Box } from './Box';
 export { default as Divider } from './Divider';
 export { default as Flex } from './Flex';
+export { default as Footer } from './Footer';
 export { default as HeroSection } from './HeroSection';
 export { default as MainMenu } from './MainMenu';
 export { default as SectionTitle } from './SectionTitle';

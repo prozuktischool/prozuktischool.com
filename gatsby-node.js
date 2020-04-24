@@ -117,12 +117,12 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
-    const postPage = path.resolve('src/views/templates/Post.js');
+    const postPage = path.resolve('src/views/pages/Post/index.js');
+    const authorsPage = path.resolve('src/views/pages/Authors/index.js');
     const tagsPage = path.resolve('src/templates/Tags/index.jsx');
     const tagPage = path.resolve('src/templates/Tag/index.jsx');
     const categoryPage = path.resolve('src/templates/Category/index.jsx');
     const categoriesPage = path.resolve('src/templates/Categories/index.jsx');
-    const authorsPage = path.resolve('src/templates/Authors/index.jsx');
     const authorPage = path.resolve('src/templates/Author/index.jsx');
     resolve(
       graphql(
@@ -145,7 +145,7 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           /* eslint no-console: "off" */
           console.log(result.errors);
@@ -158,7 +158,7 @@ exports.createPages = ({ graphql, actions }) => {
         const posts = result.data.allMarkdownRemark.edges;
         posts.forEach((edge, index) => {
           if (edge.node.frontmatter.tags) {
-            edge.node.frontmatter.tags.forEach(tag => {
+            edge.node.frontmatter.tags.forEach((tag) => {
               tagSet.add(tag);
             });
           }
@@ -183,7 +183,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         const tagList = Array.from(tagSet);
-        tagList.forEach(tag => {
+        tagList.forEach((tag) => {
           createPage({
             path: `/tags/${_.kebabCase(tag)}/`,
             component: tagPage,
@@ -194,7 +194,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
+        categoryList.forEach((category) => {
           createPage({
             path: `/categories/${_.kebabCase(category)}/`,
             component: categoryPage,
@@ -220,7 +220,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         const authorList = Array.from(authorSet);
-        authorList.forEach(author => {
+        authorList.forEach((author) => {
           createPage({
             path: `/author/${_.kebabCase(author)}/`,
             component: authorPage,

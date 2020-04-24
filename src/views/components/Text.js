@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 import { color, space, typography, layout, position } from 'styled-system';
 
 const H1 = styled.h1`
-  font-size: ${({ theme }) => theme.typography.h1.fontSize};
-  line-height: ${({ theme }) => theme.typography.h1.lineHeight};
-  font-weight: ${({ theme }) => theme.typography.h1.fontWeight};
   color: ${({ theme }) => theme.colors.text};
-  margin: 1rem 0;
   ${color};
   ${space};
   ${typography};
@@ -16,11 +12,7 @@ const H1 = styled.h1`
   ${position};
 `;
 const H2 = styled.h2`
-  font-size: ${({ theme }) => theme.typography.h2.fontSize};
-  line-height: ${({ theme }) => theme.typography.h2.lineHeight};
-  font-weight: ${({ theme }) => theme.typography.h2.fontWeight};
   color: ${({ theme }) => theme.colors.text};
-  margin: 1rem 0;
   ${color};
   ${space};
   ${typography};
@@ -28,11 +20,7 @@ const H2 = styled.h2`
   ${position};
 `;
 const H3 = styled.h3`
-  font-size: ${({ theme }) => theme.typography.h3.fontSize};
-  line-height: ${({ theme }) => theme.typography.h3.lineHeight};
-  font-weight: ${({ theme }) => theme.typography.h3.fontWeight};
   color: ${({ theme }) => theme.colors.text};
-  margin: 1rem 0;
   ${color};
   ${space};
   ${typography};
@@ -40,11 +28,7 @@ const H3 = styled.h3`
   ${position};
 `;
 const H4 = styled.h4`
-  font-size: ${({ theme }) => theme.typography.h4.fontSize};
-  line-height: ${({ theme }) => theme.typography.h4.lineHeight};
-  font-weight: ${({ theme }) => theme.typography.h4.fontWeight};
   color: ${({ theme }) => theme.colors.text};
-  margin: 1rem 0;
   ${color};
   ${space};
   ${typography};
@@ -52,11 +36,7 @@ const H4 = styled.h4`
   ${position};
 `;
 const H5 = styled.h5`
-  font-size: ${({ theme }) => theme.typography.h5.fontSize};
-  line-height: ${({ theme }) => theme.typography.h5.lineHeight};
-  font-weight: ${({ theme }) => theme.typography.h5.fontWeight};
   color: ${({ theme }) => theme.colors.text};
-  margin: 1rem 0;
   ${color};
   ${space};
   ${typography};
@@ -65,11 +45,7 @@ const H5 = styled.h5`
 `;
 
 const H6 = styled.h6`
-  font-size: ${({ theme }) => theme.typography.h6.fontSize};
-  line-height: ${({ theme }) => theme.typography.h6.lineHeight};
-  font-weight: ${({ theme }) => theme.typography.h6.fontWeight};
   color: ${({ theme }) => theme.colors.text};
-  margin: 1rem 0;
   ${color};
   ${space};
   ${typography};
@@ -78,11 +54,7 @@ const H6 = styled.h6`
 `;
 
 const P = styled.p`
-  font-size: ${({ theme }) => theme.typography.body.fontSize};
-  line-height: ${({ theme }) => theme.typography.body.lineHeight};
-  font-weight: ${({ theme }) => theme.typography.body.fontWeight};
   color: ${({ theme }) => theme.colors.text};
-  margin: 1rem 0;
   ${color};
   ${space};
   ${typography};
@@ -91,11 +63,8 @@ const P = styled.p`
 `;
 
 const Caption = styled.p`
-  font-size: ${({ theme }) => theme.typography.caption.fontSize};
-  line-height: ${({ theme }) => theme.typography.caption.lineHeight};
-  font-weight: ${({ theme }) => theme.typography.caption.fontWeight};
+  font-size: calc(14px + (18 - 14) * ((100vw - 400px) / (1600 - 400)));
   color: ${({ theme }) => theme.colors.text};
-  margin: 1rem 0;
   ${color};
   ${space};
   ${typography};
@@ -121,8 +90,8 @@ const RawHTML = styled.div`
       );
       height: 4px;
       position: relative;
-      top: 0;
-      left: 0;
+      top: -10px;
+      left: -2px;
       bottom: 0;
       right: 0;
       width: auto;

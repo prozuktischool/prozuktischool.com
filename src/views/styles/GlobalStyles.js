@@ -20,16 +20,20 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     font-family: 'Kalpurush', 'PT Serif', serif;
-    font-size: 20px;
-    line-height: 1.65;
+    // font-size: 20px;
+    font-size: calc(16px + (20 - 16) * ((100vw - 400px) / (1600 - 400)));
+    line-height: calc(16px + 1.2vw);
     color: ${({ theme }) => theme.colors.text};
     background-color: ${({ theme }) => theme.colors.background};
+
+    @media only screen and (max-width: 576px) {
+      font-size: calc(18px + (24 - 18) * ((100vw - 400px) / (1600 - 400)));
+      line-height: calc(24px + 1.2vw);
+    }
   }
 
   p {
-    line-height: 1.65;
-    font-size: 1rem;
-    margin: 1rem 0;
+    margin: calc(16px + 1.05vw) 0;
   }
 
   a {
@@ -43,34 +47,47 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5,
   h6 {
-    margin: 1rem 0;
-    line-height: 1.65;
-    font-weight: 700;
+    margin: calc(16px + 1.05vw) 0;
+    font-weight: 400;
     color: ${({ theme }) => theme.colors.primary3};
   }
 
+  h1, h2, h3 {
+    @media only screen and (max-width: 576px) {
+      line-height: calc(32px + 1.2vw);
+    }
+  }
+
+  h4, h5, h6 {
+    line-height: calc(18px + .2vw);
+
+    @media only screen and (max-width: 576px) {
+      line-height: calc(20px + 1.2vw);
+    }
+  }
+
   h1 {
-    font-size: 2.488rem;
+    font-size: 1.912rem;
   }
 
   h2 {
-    font-size: 2.074rem;
+    font-size: 1.616rem;
   }
 
   h3 {
-    font-size: 1.728rem;
+    font-size: 1.471rem;
   }
 
   h4 {
-    font-size: 1.44rem;
+    font-size: 1.3rem;
   }
 
   h5 {
-    font-size: 1.2rem;
+    font-size: 1.243rem;
   }
 
   h6 {
-    font-size: 1rem;
+    font-size: 1.132rem;
   }
 
   img {
@@ -122,6 +139,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media only screen and (max-width: 576px) {
+
     h1, h2, h3, h4, h5, h6 {
       .header-anchor-icon.before{
         svg {
@@ -129,6 +147,8 @@ const GlobalStyle = createGlobalStyle`
         }
       }
     }
+
+
   }
 
   .gatsby-highlight {

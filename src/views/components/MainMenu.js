@@ -93,11 +93,11 @@ const MainMenu = ({ theme }) => {
           <li>
             <Link to="/all-posts">লেখাসমূহ</Link>
           </li>
-          <li>
+          {/* <li>
             <button className="theme-toggle">
               {theme.name === 'dark' ? <Sun /> : <Moon />}
             </button>
-          </li>
+          </li> */}
         </ul>
       </Flex>
     </MenuContainer>
