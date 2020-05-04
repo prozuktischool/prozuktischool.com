@@ -1,7 +1,7 @@
 import React from 'react';
-
+import { graphql, Link } from 'gatsby';
 import { MainLayout } from '../../layouts';
-import { Box, Text } from '../../components';
+import { Box, NoticeBox, Text } from '../../components';
 
 import AuthorList from './AuthorList';
 
@@ -22,6 +22,12 @@ const Authors = ({
       >
         <Text variant="h4">লেখকগণ:</Text>
         <AuthorList authors={authors} />
+        <NoticeBox variant="notice">
+          <Text>
+            আপনিও লিখতে চান?{' '}
+            <Link to="/contribution-guide">এখানে বিস্তারিত দেখুন</Link>
+          </Text>
+        </NoticeBox>
       </Box>
     </MainLayout>
   );
