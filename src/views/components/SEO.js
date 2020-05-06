@@ -69,7 +69,7 @@ class SEO extends Component {
     }
     title = `${config.siteTitle} ⌇ ${title}`;
     return (
-      <Helmet>
+      <Helmet htmlAttributes={{ lang: 'bn' }}>
         {/* General tags */}
         <title>{`${title}`}</title>
         <meta name="description" content={description} />
