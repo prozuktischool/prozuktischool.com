@@ -12,16 +12,6 @@ const TagsContainer = styled.div`
     font-size: 1rem;
     margin-right: 8px;
 
-    &::after {
-      content: ',';
-    }
-
-    &:last-child {
-      &::after {
-        content: '';
-      }
-    }
-
     svg {
       width: 1rem;
       height: 1rem;
@@ -35,7 +25,7 @@ class PostTags extends Component {
     return (
       <TagsContainer>
         {tags &&
-          tags.map(tag => (
+          tags.map((tag) => (
             <Link key={tag} to={`/tags/${_.kebabCase(tag)}`}>
               <Hash />
               {tag}

@@ -28,18 +28,18 @@ class PostListing extends React.Component {
     const postList = this.getPostList();
 
     return (
-      <Box maxWidth={960} margin="0 auto">
-        <Flex mx={[0, -2]} flexWrap="wrap">
-          {/* Your post list here. */
-          postList.map(post => (
+      <Flex mx={[0, -2]} flexWrap="wrap">
+        {
+          /* Your post list here. */
+          postList.map((post) => (
             <Box key={post.title} width={[1, 1 / 3]} px={3} py={3}>
               <Link to={post.path}>
                 <SummaryCard language={post.language}>{post.title}</SummaryCard>
               </Link>
             </Box>
-          ))}
-        </Flex>
-      </Box>
+          ))
+        }
+      </Flex>
     );
   }
 }
