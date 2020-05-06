@@ -11,7 +11,7 @@ const config = {
     'বাংলা ভাষাভাষী মানুষদের জন্য প্রযুক্তি শেখার ও শেখানোর পাঠশালা', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
   siteFBAppID: '', // FB Application ID for using app insights
-  googleAnalyticsID: '', // GA tracking ID.
+  googleAnalyticsID: 'UA-129538625-1', // GA tracking ID.
   postDefaultCategoryID: 'Blog', // Default category for posts.
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
   dateFormat: 'DD/MM/YYYY', // Date format for display.
