@@ -38,7 +38,8 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.primary3};
+    color: ${({ theme }) =>
+      theme.name === 'light' ? theme.colors.primary3 : theme.colors.primary1};
   }
 
   h1,
