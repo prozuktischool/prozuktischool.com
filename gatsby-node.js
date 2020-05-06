@@ -2,6 +2,7 @@ const path = require('path');
 const _ = require('lodash');
 const moment = require('moment');
 const { execSync } = require('child_process');
+const { paginate } = require('gatsby-awesome-pagination');
 const siteConfig = require('./data/SiteConfig');
 
 const postNodes = [];
@@ -180,6 +181,14 @@ exports.createPages = ({ graphql, actions }) => {
               next: index === posts.length - 1 ? null : posts[index + 1].node,
             },
           });
+        });
+
+        paginate({
+          createPage,
+          items: posts,
+          itemsPerPage: 3,
+          pathPrefix: '/posts',
+          component: path.resolve('src/views/pages/Archive/index.js'),
         });
 
         const tagList = Array.from(tagSet);

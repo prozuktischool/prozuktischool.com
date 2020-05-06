@@ -4,6 +4,8 @@ export { default as Flex } from './Flex';
 export { default as Footer } from './Footer';
 export { default as HeroSection } from './HeroSection';
 export { default as MainMenu } from './MainMenu';
+export { default as NoticeBox } from './NoticeBox';
+export { default as Pager } from './Pager';
 export { default as SectionTitle } from './SectionTitle';
 export { default as SEO } from './SEO';
 export { default as SocialShareIcon } from './SocialShareIcon';

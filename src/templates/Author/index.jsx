@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import { MainLayout } from '../../views/layouts';
 import { Box, Text } from '../../views/components';
 

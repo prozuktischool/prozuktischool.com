@@ -91,7 +91,7 @@ const MainMenu = ({ theme }) => {
             <Link to="/">নীড়পাতা</Link>
           </li>
           <li>
-            <Link to="/all-posts">লেখাসমূহ</Link>
+            <Link to="/posts">লেখাসমূহ</Link>
           </li>
           {/* <li>
             <button className="theme-toggle">

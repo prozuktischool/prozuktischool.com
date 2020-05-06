@@ -138,6 +138,48 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  div.notice-box {
+    background-color: ${({ theme }) => theme.colors.dark1};
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+
+    p, h1, h2, h3, h4, h5, h6 {
+      color: ${({ theme }) => theme.colors.light1};
+      font-size: 1.2rem;
+    }
+
+    a {
+      color: ${({ theme }) => theme.colors.success};
+    }
+
+    &::before {
+      content: '';
+      width: 64px;
+      height: 64px;
+      display: block;
+      background-color: ${({ theme }) => theme.colors.primary3};
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &.notice {
+      &::before {
+        background-image: url('/assets/images/bell.svg');
+      }
+    }
+    &.tips {
+      &::before {
+        background-image: url('/assets/images/lightbulb-flash.svg');
+      }
+    }
+  }
+
   @media only screen and (max-width: 576px) {
 
     h1, h2, h3, h4, h5, h6 {

@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import { MainLayout } from '../views/layouts';
 import { HeroSection, SectionTitle } from '../views/components';
 import PostListing from '../components/PostListing';
-import SEO from '../views/components/SEO';
+import { Box, SEO } from '../views/components';
 import config from '../../data/SiteConfig';
 
 class Index extends Component {
@@ -14,11 +14,11 @@ class Index extends Component {
       <MainLayout>
         <HeroSection />
         <SectionTitle title="সাম্প্রতিক লেখা" />
-        <div className="index-container">
+        <Box maxWidth={960} margin="0 auto">
           <Helmet title={config.siteTitle} />
           <SEO />
           <PostListing postEdges={postEdges} limit={6} />
-        </div>
+        </Box>
       </MainLayout>
     );
   }
