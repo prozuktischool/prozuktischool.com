@@ -125,6 +125,7 @@ exports.createPages = ({ graphql, actions }) => {
     const categoryPage = path.resolve('src/templates/Category/index.jsx');
     const categoriesPage = path.resolve('src/templates/Categories/index.jsx');
     const authorPage = path.resolve('src/templates/Author/index.jsx');
+    const seriesPage = path.resolve('src/views/pages/Series/index.js');
     resolve(
       graphql(
         `
@@ -136,6 +137,7 @@ exports.createPages = ({ graphql, actions }) => {
                     tags
                     category
                     title
+                    series
                   }
                   fields {
                     slug
@@ -156,6 +158,7 @@ exports.createPages = ({ graphql, actions }) => {
         const tagSet = new Set();
         const categorySet = new Set();
         const authorSet = new Set();
+        const seriesSet = new Set();
         const posts = result.data.allMarkdownRemark.edges;
         posts.forEach((edge, index) => {
           if (edge.node.frontmatter.tags) {
@@ -170,6 +173,10 @@ exports.createPages = ({ graphql, actions }) => {
 
           if (edge.node.fields.authorId) {
             authorSet.add(edge.node.fields.authorId);
+          }
+
+          if (edge.node.frontmatter.series) {
+            seriesSet.add(edge.node.frontmatter.series);
           }
 
           createPage({
@@ -235,6 +242,17 @@ exports.createPages = ({ graphql, actions }) => {
             component: authorPage,
             context: {
               authorId: author,
+            },
+          });
+        });
+
+        const seriesList = Array.from(seriesSet);
+        seriesList.forEach((series) => {
+          createPage({
+            path: `/series/${_.kebabCase(series)}/`,
+            component: seriesPage,
+            context: {
+              series: series,
             },
           });
         });

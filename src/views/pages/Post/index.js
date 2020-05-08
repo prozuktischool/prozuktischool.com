@@ -77,6 +77,16 @@ class PostTemplate extends React.Component {
             </Box>
             <Divider />
             <Text variant="raw" html={postNode.html} />
+            {post.series && (
+              <>
+                <Text my={0} pt={3} variant="h6">
+                  সিরিজ:{' '}
+                  <a href={`/series/${_.kebabCase(post.series)}`}>
+                    {post.series}
+                  </a>
+                </Text>
+              </>
+            )}
             <Divider display="inline-block" width={`8rem`} />
             <Text mt={0} variant="caption">
               সর্বশেষ আপডেট:{' '}
@@ -86,6 +96,7 @@ class PostTemplate extends React.Component {
                 })
               )}
             </Text>
+
             <SocialShareLinks title={post.title} link={`${siteUrl}${slug}/`} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
@@ -115,6 +126,7 @@ export const pageQuery = graphql`
         date
         category
         tags
+        series
         author {
           id
           bio
