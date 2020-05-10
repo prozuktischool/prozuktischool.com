@@ -193,7 +193,7 @@ exports.createPages = ({ graphql, actions }) => {
         paginate({
           createPage,
           items: posts,
-          itemsPerPage: 3,
+          itemsPerPage: 12,
           pathPrefix: '/posts',
           component: path.resolve('src/views/pages/Archive/index.js'),
         });
