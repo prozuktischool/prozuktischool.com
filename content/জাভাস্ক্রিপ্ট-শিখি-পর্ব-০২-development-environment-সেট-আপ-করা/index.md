@@ -8,6 +8,7 @@ excerpt: ''
 tags:
   - 'জাভাস্ক্রিপ্ট'
   - 'প্রোগ্রামিং'
+series: 'জাভাস্ক্রিপ্ট শিখি'
 language: 'JavaScript'
 cover: ''
 ---

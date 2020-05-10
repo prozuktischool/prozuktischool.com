@@ -10,12 +10,12 @@ const error = chalk.bold.red;
 const success = chalk.bold.green.inverse;
 
 const authors = YAML.load('./content/author.yaml');
-const authorList = authors.map(author => author.id);
+const authorList = authors.map((author) => author.id);
 
 (async () => {
   const args = process.argv;
   if (args.length < 3) {
-    const { title, excerpt, tags, author } = await inquirer.prompt([
+    const { title, excerpt, tags, author, series } = await inquirer.prompt([
       {
         type: 'input',
         name: 'title',
@@ -32,6 +32,11 @@ const authorList = authors.map(author => author.id);
         message: 'Tags (comma separated):',
       },
       {
+        type: 'input',
+        name: 'series',
+        message: 'Series:',
+      },
+      {
         type: 'list',
         name: 'author',
         message: 'Choose an author:',
@@ -45,12 +50,12 @@ const authorList = authors.map(author => author.id);
       .toLowerCase();
     const createdOn = new Date();
     const year = createdOn.getFullYear();
-    const month = `${
-      createdOn.getMonth() + 1 < 10 ? '0' : ''
-    }${createdOn.getMonth() + 1}`;
+    const month = `${createdOn.getMonth() + 1 < 10 ? '0' : ''}${
+      createdOn.getMonth() + 1
+    }`;
     const day = `${createdOn.getDate() < 10 ? '0' : ''}${createdOn.getDate()}`;
     const blogPostFolder = `./content/${slug}`;
-    const tagsList = tags.split(',').map(t => t.trim());
+    const tagsList = tags.split(',').map((t) => t.trim());
 
     if (!fs.existsSync(blogPostFolder)) {
       fs.mkdirSync(blogPostFolder, {
@@ -62,9 +67,10 @@ const authorList = authors.map(author => author.id);
       slug,
       title,
       author,
+      excerpt,
+      series,
       date: format(createdOn, 'yyyy-MM-dd', {}),
       published: false,
-      excerpt: excerpt,
       tags: tagsList,
       cover: '',
     });

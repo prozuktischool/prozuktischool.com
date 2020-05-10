@@ -1,26 +1,30 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Box from './Box';
+import Button from './Button';
+import Flex from './Flex';
 
 const Pager = ({ pageContext }) => {
   const { previousPagePath, nextPagePath } = pageContext;
+
   return (
-    <nav style={{ display: 'flex', justifyContent: 'space-between' }}>
-      <div>
+    <Flex display="flex" justifyContent="center" mt={4} p={{ xs: 3, sm: 2 }}>
+      <Box mr={3}>
         {previousPagePath && (
           <Link to={previousPagePath}>
-            <button>← নতুন লেখা</button>
+            <Button>⯇ নতুন লেখা</Button>
           </Link>
         )}
-      </div>
+      </Box>
 
-      <div style={{ justifySelf: 'flex-end' }}>
+      <Box>
         {nextPagePath && (
           <Link to={nextPagePath}>
-            <button>আগের লেখা →</button>
+            <Button>আগের লেখা ⯈</Button>
           </Link>
         )}
-      </div>
-    </nav>
+      </Box>
+    </Flex>
   );
 };
 
