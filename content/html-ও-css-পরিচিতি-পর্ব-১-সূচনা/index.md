@@ -1,7 +1,7 @@
 ---
 slug: 'html-ও-css-পরিচিতি-পর্ব-১-সূচনা'
 title: 'HTML ও CSS পরিচিতি - পর্ব ১ - সূচনা'
-author: 'শহীদুল ইসলাম মজুমদার'
+author: 'sh4hids'
 date: '2017-03-09'
 published: true
 excerpt: ''

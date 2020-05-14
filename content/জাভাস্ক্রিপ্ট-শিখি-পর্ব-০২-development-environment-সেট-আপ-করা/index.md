@@ -1,7 +1,7 @@
 ---
 slug: 'জাভাস্ক্রিপ্ট-শিখি-পর্ব-০২-development-environment-সেট-আপ-করা'
 title: 'জাভাস্ক্রিপ্ট শিখি - পর্ব ০২ - Development Environment সেট আপ করা'
-author: 'শহীদুল ইসলাম মজুমদার'
+author: 'sh4hids'
 date: '2018-11-21'
 published: true
 excerpt: ''

@@ -39,6 +39,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          fullName
           bio
           twitter
         }

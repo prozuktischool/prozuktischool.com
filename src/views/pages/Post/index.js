@@ -55,8 +55,8 @@ class PostTemplate extends React.Component {
               >
                 <User />
                 <Text variant="h6" display="inline-box" ml={2} mb={{ xs: 0 }}>
-                  <a href={`/author/${_.kebabCase(post.author.id)}`}>
-                    {post.author.id}
+                  <a href={`/authors/${post.author.id}`}>
+                    {post.author.fullName}
                   </a>
                 </Text>
               </Box>
@@ -129,6 +129,7 @@ export const pageQuery = graphql`
         series
         author {
           id
+          fullName
           bio
           twitter
         }
