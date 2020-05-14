@@ -237,7 +237,7 @@ const Container = styled.div`
   }
 `;
 
-const FourOFour = ({ title }) => {
+const FourOFour = () => {
   return (
     <ThemeProvider theme={dark}>
       <GlobalStyle />
@@ -251,12 +251,12 @@ const FourOFour = ({ title }) => {
         </div>
         <div className="compass_container">
           <div className="outside_circle">
-            <div className="center"></div>
+            <div className="center" />
             <div className="outside_filling">
-              <div className="top_point"></div>
-              <div className="bottom_point"></div>
-              <div className="left_point"></div>
-              <div className="right_point"></div>
+              <div className="top_point" />
+              <div className="bottom_point" />
+              <div className="left_point" />
+              <div className="right_point" />
             </div>
             <div className="inner_circle">
               <div className="inner_filling">
@@ -266,16 +266,18 @@ const FourOFour = ({ title }) => {
                 <span>প</span>
                 <div className="needle">
                   <div className="top_needle">
-                    <div className="needle_inside"></div>
+                    <div className="needle_inside" />
                   </div>
-                  <div className="bottom_needle"></div>
+                  <div className="bottom_needle" />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <Text className="not_north" variant="h2">
-          সাইটে ফিরে যেতে <Link to="/">এখানে</Link> ক্লিক করুন।
+          সাইটে ফিরে যেতে
+          <Link to="/">এখানে</Link>
+          ক্লিক করুন।
         </Text>
       </Container>
     </ThemeProvider>
