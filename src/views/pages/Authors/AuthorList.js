@@ -7,7 +7,7 @@ const AuthorList = ({ authors = [] }) => {
     <ul>
       {authors.map((author, index) => (
         <li key={index}>
-          <Link to={`/author/${_.kebabCase(author.id)}`}>{author.id}</Link>
+          <Link to={`/authors/${author.id}`}>{author.fullName}</Link>
         </li>
       ))}
     </ul>
