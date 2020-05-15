@@ -1,29 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { ThemeProvider } from 'styled-components';
-import { dark, light } from '../../views/styles/themes';
-import { Link } from 'gatsby';
-import config from '../../../data/SiteConfig';
-import GlobalStyle from '../../views/styles/GlobalStyles';
-import { Footer, MainMenu, Text } from '../../views/components';
+import { connect } from 'react-redux';
+import SiteConfig from '../../../data/SiteConfig';
+import { Footer, MainMenu } from '../components';
+import * as themes from '../styles/themes';
+import GlobalStyle from '../styles/GlobalStyles';
 
-class MainLayout extends Component {
-  render() {
-    const { children } = this.props;
-    return (
-      <ThemeProvider theme={dark}>
-        <GlobalStyle />
-        <>
-          <Helmet>
-            <meta name="description" content={config.siteDescription} />
-          </Helmet>
-          <MainMenu />
-          {children}
-          <Footer />
-        </>
-      </ThemeProvider>
-    );
-  }
-}
+const MainLayout = (props) => {
+  const { children, theme } = props;
 
-export default MainLayout;
+  return (
+    <ThemeProvider theme={themes[theme.name]}>
+      <GlobalStyle />
+      <>
+        <Helmet>
+          <meta name="description" content={SiteConfig.siteDescription} />
+        </Helmet>
+        <MainMenu />
+        {children}
+        <Footer />
+      </>
+    </ThemeProvider>
+  );
+};
+
+const mapStateToProps = ({ config }) => ({
+  theme: config.theme,
+});
+
+export default connect(mapStateToProps)(MainLayout);
