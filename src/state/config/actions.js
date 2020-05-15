@@ -11,26 +11,3 @@ export const toggleTheme = (theme) => {
     payload: config,
   };
 };
-
-//
-// export const updateLead = (id, data) => ({
-//   type: types.UPDATE_LEAD,
-//   meta: {
-//     async: true,
-//     blocking: true,
-//     path: `/leads/${id}`,
-//     method: "PUT",
-//     body: data
-//   }
-// });
-//
-// export const completeLead = (id, data) => ({
-//   type: types.COMPLETE_LEAD,
-//   meta: {
-//     async: true,
-//     blocking: true,
-//     path: `/leads/${id}/complete`,
-//     method: "PUT",
-//     body: data
-//   }
-// });
