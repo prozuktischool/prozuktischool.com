@@ -1,7 +1,7 @@
 {
   "name": "prozuktischool",
   "description": "An open source blog platform for Bangali technology lovers",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Shahidul Islam Majumder <hello@shahid.pro>",
   "dependencies": {
     "@mdx-js/mdx": "^1.6.1",
