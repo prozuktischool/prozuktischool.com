@@ -1,24 +1,24 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
-import { MainLayout } from '../../views/layouts';
-import PostListing from '../../components/PostListing';
-import config from '../../../data/SiteConfig';
+import { convertNumbers } from 'bn-number-utils';
+import { MainLayout } from '../../layouts';
+import { PostList, SEO, Text } from '../../components';
 
-export default class TagTemplate extends React.Component {
-  render() {
-    const { tag } = this.props.pageContext;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
-    return (
-      <MainLayout>
-        <div className="tag-container">
-          <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-          <PostListing postEdges={postEdges} />
-        </div>
-      </MainLayout>
-    );
-  }
-}
+const TagTemplate = ({ pageContext, data }) => {
+  const { tag } = pageContext;
+  const postNodes = data.allMarkdownRemark.edges;
+
+  return (
+    <MainLayout variant="fixed">
+      <SEO pageTitle={tag} />
+      <Text variant="h4">
+        {`ট্যাগ: ${tag} (${convertNumbers(postNodes.length)}
+টি লেখা)`}
+      </Text>
+      <PostList postNodes={postNodes} />
+    </MainLayout>
+  );
+};
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
@@ -48,3 +48,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default TagTemplate;

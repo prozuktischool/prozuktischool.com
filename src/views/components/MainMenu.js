@@ -1,6 +1,8 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { connect } from 'react-redux';
+import { configActions } from '../../state/config';
 import Flex from './Flex';
 import LogoDark from '../assets/images/logo-dark.svg';
 import LogoLight from '../assets/images/logo-light.svg';
@@ -68,7 +70,7 @@ const MenuContainer = styled.div`
   }
 `;
 
-const MainMenu = ({ theme }) => {
+const MainMenu = ({ theme, toggleTheme }) => {
   return (
     <MenuContainer>
       <Flex
@@ -83,7 +85,7 @@ const MainMenu = ({ theme }) => {
             <LogoDark className="header-logo" />
           ) : (
             <LogoLight className="header-logo" />
-          )}{' '}
+          )}
           <span className="site-title">প্রযুক্তি স্কুল</span>
         </Link>
         <ul>
@@ -93,15 +95,30 @@ const MainMenu = ({ theme }) => {
           <li>
             <Link to="/posts">লেখাসমূহ</Link>
           </li>
-          {/* <li>
-            <button className="theme-toggle">
+          <li>
+            <button
+              className="theme-toggle"
+              type="button"
+              title={theme.name === 'dark' ? 'Toggle Light' : 'Toggle Dark'}
+              onClick={() => {
+                toggleTheme(theme.name === 'dark' ? 'light' : 'dark');
+              }}
+            >
               {theme.name === 'dark' ? <Sun /> : <Moon />}
             </button>
-          </li> */}
+          </li>
         </ul>
       </Flex>
     </MenuContainer>
   );
 };
 
-export default withTheme(MainMenu);
+const mapStateToProps = ({ config }) => ({
+  theme: config.theme,
+});
+
+const mapActionToProps = {
+  toggleTheme: configActions.toggleTheme,
+};
+
+export default connect(mapStateToProps, mapActionToProps)(MainMenu);

@@ -1,11 +1,20 @@
-import React, { Component } from 'react';
-import { Helmet } from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import React from 'react';
+import { graphql } from 'gatsby';
 import { MainLayout } from '../../layouts';
 import PostListing from '../../../components/PostListing';
-import { Box, SectionTitle, SEO } from '../../components';
-import config from '../../../../data/SiteConfig';
-import { Pager } from '../../components';
+import { SectionTitle, SEO, Pager } from '../../components';
+
+const BlogArchive = ({ data, pageContext }) => {
+  const postEdges = data.allMarkdownRemark.edges;
+  return (
+    <MainLayout variant="fixed">
+      <SEO pageTitle="লেখাসমূহ" />
+      <SectionTitle title="আমাদের প্রকাশিত লেখাসমূহ" />
+      <PostListing postEdges={postEdges} />
+      <Pager pageContext={pageContext} />
+    </MainLayout>
+  );
+};
 
 export const pageQuery = graphql`
   query($skip: Int!, $limit: Int!) {
@@ -34,20 +43,5 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-const BlogArchive = ({ data, pageContext, location }) => {
-  const postEdges = data.allMarkdownRemark.edges;
-  return (
-    <MainLayout>
-      <Box maxWidth={960} margin="0 auto">
-        <Helmet title={config.siteTitle} />
-        <SEO pageTitle="লেখাসমূহ" />
-        <SectionTitle title="আমাদের প্রকাশিত লেখাসমূহ" />
-        <PostListing postEdges={postEdges} />
-        <Pager pageContext={pageContext} />
-      </Box>
-    </MainLayout>
-  );
-};
 
 export default BlogArchive;
