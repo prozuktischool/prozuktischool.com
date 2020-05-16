@@ -103,7 +103,8 @@
     "write-good": "write-good $(glob 'content/posts/**/*.md')",
     "format:js": "prettier '**/*.{js,jsx}' --write",
     "create": "node scripts/newpost.js",
-    "test": "jest --update-snapshot"
+    "test": "jest --update-snapshot",
+    "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "remarkConfig": {
     "plugins": [
