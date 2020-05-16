@@ -120,11 +120,9 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const postPage = path.resolve('src/views/pages/Post/index.js');
     const authorsPage = path.resolve('src/views/pages/Authors/index.js');
-    const tagsPage = path.resolve('src/templates/Tags/index.jsx');
-    const tagPage = path.resolve('src/templates/Tag/index.jsx');
-    const categoryPage = path.resolve('src/templates/Category/index.jsx');
-    const categoriesPage = path.resolve('src/templates/Categories/index.jsx');
-    const authorPage = path.resolve('src/templates/Author/index.jsx');
+    const tagsPage = path.resolve('src/views/pages/Tags/index.js');
+    const tagPage = path.resolve('src/views/pages/Tag/index.js');
+    const authorPage = path.resolve('src/views/pages/Author/index.js');
     const seriesPage = path.resolve('src/views/pages/Series/index.js');
     resolve(
       graphql(
@@ -135,7 +133,6 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   frontmatter {
                     tags
-                    category
                     title
                     series
                   }
@@ -156,7 +153,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const tagSet = new Set();
-        const categorySet = new Set();
         const authorSet = new Set();
         const seriesSet = new Set();
         const posts = result.data.allMarkdownRemark.edges;
@@ -165,10 +161,6 @@ exports.createPages = ({ graphql, actions }) => {
             edge.node.frontmatter.tags.forEach((tag) => {
               tagSet.add(tag);
             });
-          }
-
-          if (edge.node.frontmatter.category) {
-            categorySet.add(edge.node.frontmatter.category);
           }
 
           if (edge.node.fields.authorId) {
@@ -209,17 +201,6 @@ exports.createPages = ({ graphql, actions }) => {
           });
         });
 
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach((category) => {
-          createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
-            component: categoryPage,
-            context: {
-              category,
-            },
-          });
-        });
-
         createPage({
           path: `/authors/`,
           component: authorsPage,
@@ -230,14 +211,8 @@ exports.createPages = ({ graphql, actions }) => {
           component: tagsPage,
         });
 
-        createPage({
-          path: `/categories/`,
-          component: categoriesPage,
-        });
-
         const authorList = Array.from(authorSet);
         authorList.forEach((author) => {
-          console.log(author);
           createPage({
             path: `/authors/${author}/`,
             component: authorPage,
@@ -253,7 +228,7 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/series/${_.kebabCase(series)}/`,
             component: seriesPage,
             context: {
-              series: series,
+              series,
             },
           });
         });
