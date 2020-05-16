@@ -3,6 +3,10 @@
   "description": "An open source blog platform for Bangali technology lovers",
   "version": "1.2.1",
   "author": "Shahidul Islam Majumder <hello@shahid.pro>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdTechies/prozuktischool.com.git"
+  },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.1",
     "@mdx-js/react": "^1.6.1",
