@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { MainLayout } from '../../layouts';
-import { Box, NoticeBox, Text } from '../../components';
+import { Box, NoticeBox, SEO, Text } from '../../components';
 
 import AuthorList from './AuthorList';
 
@@ -20,6 +20,7 @@ const Authors = ({
         margin="0 auto"
         padding={{ xs: 3, sm: 4 }}
       >
+        <SEO pageTitle="লেখকগণ" />
         <Text variant="h4">লেখকগণ:</Text>
         <AuthorList authors={authors} />
         <NoticeBox variant="notice">

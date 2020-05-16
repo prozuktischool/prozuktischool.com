@@ -1,31 +1,36 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MainLayout } from '../../views/layouts';
-import { Box, Text } from '../../views/components';
+import { MainLayout } from '../../layouts';
+import { Box, Divider, SEO, Text } from '../../components';
 
 export default ({
   data: {
-    authorYaml: { id, bio, twitter },
+    authorYaml: { fullName, bio, twitter },
     allMarkdownRemark: { edges: postNodes },
   },
 }) => (
   <MainLayout>
     <Box maxWidth={960} margin="0 auto" padding={{ xs: 3, sm: 4 }}>
-      <Text variant="h4">লেখক: {id}</Text>
+      <SEO pageTitle={fullName} />
+      <Text variant="h4">{`লেখক: ${fullName}`}</Text>
       <Text>
         Twitter:{' '}
-        <a href={`https://twitter.com/${twitter}/`} target="_blank">
+        <a
+          href={`https://twitter.com/${twitter}/`}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           {`@${twitter}`}
         </a>
       </Text>
       <Text>
         <em>{bio}</em>
       </Text>
-      <hr />
-      <Text>{`${id} এর লেখাসমূহ: `}</Text>
+      <Divider height={2} />
+      <Text>{`${fullName} এর লেখাসমূহ: `}</Text>
       <ul>
-        {postNodes.map(({ node: post }, idx) => (
-          <li key={post.id}>
+        {postNodes.map(({ node: post }) => (
+          <li key={post.fields.slug}>
             <a href={post.fields.slug}>{post.frontmatter.title}</a>
           </li>
         ))}
@@ -60,6 +65,7 @@ export const pageQuery = graphql`
     }
     authorYaml(id: { eq: $authorId }) {
       id
+      fullName
       bio
       twitter
     }

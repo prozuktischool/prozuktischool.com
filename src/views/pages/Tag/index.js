@@ -1,10 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import { convertNumbers } from 'bn-number-utils';
 import { MainLayout } from '../../layouts';
-import { Box, PostList, Text } from '../../components';
-import config from '../../../../data/SiteConfig';
+import { Box, PostList, SEO, Text } from '../../components';
 
 const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -13,7 +11,7 @@ const TagTemplate = ({ pageContext, data }) => {
   return (
     <MainLayout>
       <Box maxWidth={960} margin="0 auto" padding={{ xs: 3, sm: 4 }}>
-        <Helmet title={`${tag} | ${config.siteTitle}`} />
+        <SEO pageTitle={tag} />
         <Text variant="h4">
           {`ট্যাগ: ${tag} (${convertNumbers(postNodes.length)}
 টি লেখা)`}

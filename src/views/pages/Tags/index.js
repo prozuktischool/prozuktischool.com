@@ -1,46 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
-// Utilities
 import kebabCase from 'lodash/kebabCase';
-
-// Components
-import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
+import { convertNumbers } from 'bn-number-utils';
+import { MainLayout } from '../../layouts';
+import { Box, SEO, Text } from '../../components';
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
   },
 }) => (
-  <div>
-    <div>
-      <h1>Tags</h1>
+  <MainLayout>
+    <Box maxWidth={960} margin="0 auto" padding={{ xs: 3, sm: 4 }}>
+      <SEO pageTitle="ট্যাগসমূহ" />
+      <Text variant="h4">
+        {`ট্যাগসমূহ (${convertNumbers(group.length)}
+টি)`}
+      </Text>
       <ul>
-        {group.map(tag => (
+        {group.map((tag) => (
           <li key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
+              {`${tag.fieldValue} (${convertNumbers(tag.totalCount)} টি লেখা)`}
             </Link>
           </li>
         ))}
       </ul>
-    </div>
-  </div>
+    </Box>
+  </MainLayout>
 );
-
-TagsPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      group: PropTypes.arrayOf(
-        PropTypes.shape({
-          fieldValue: PropTypes.string.isRequired,
-          totalCount: PropTypes.number.isRequired,
-        }).isRequired
-      ),
-    }),
-  }),
-};
 
 export default TagsPage;
 
