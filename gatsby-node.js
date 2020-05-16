@@ -121,7 +121,7 @@ exports.createPages = ({ graphql, actions }) => {
     const postPage = path.resolve('src/views/pages/Post/index.js');
     const authorsPage = path.resolve('src/views/pages/Authors/index.js');
     const tagsPage = path.resolve('src/templates/Tags/index.jsx');
-    const tagPage = path.resolve('src/templates/Tag/index.jsx');
+    const tagPage = path.resolve('src/views/pages/Tag/index.js');
     const categoryPage = path.resolve('src/templates/Category/index.jsx');
     const categoriesPage = path.resolve('src/templates/Categories/index.jsx');
     const authorPage = path.resolve('src/templates/Author/index.jsx');
@@ -237,7 +237,6 @@ exports.createPages = ({ graphql, actions }) => {
 
         const authorList = Array.from(authorSet);
         authorList.forEach((author) => {
-          console.log(author);
           createPage({
             path: `/authors/${author}/`,
             component: authorPage,
@@ -253,7 +252,7 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/series/${_.kebabCase(series)}/`,
             component: seriesPage,
             context: {
-              series: series,
+              series,
             },
           });
         });

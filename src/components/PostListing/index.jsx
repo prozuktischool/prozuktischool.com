@@ -5,7 +5,7 @@ import { SummaryCard, Box, Flex } from '../../views/components';
 class PostListing extends React.Component {
   getPostList() {
     let postList = [];
-    const limit = this.props.limit;
+    const { limit } = this.props;
     this.props.postEdges.forEach((postEdge, index) => {
       postList.push({
         path: postEdge.node.fields.slug,

@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { convertNumbers } from 'bn-number-utils';
 import { MainLayout } from '../../layouts';
-import { Box, Text } from '../../components';
+import { Box, PostList, Text } from '../../components';
 
 export default ({
   data: {
@@ -13,17 +13,11 @@ export default ({
     <MainLayout>
       <Box maxWidth={960} margin="0 auto" padding={{ xs: 3, sm: 4 }}>
         <Text variant="h4">
-          সিরিজ: {seriesInfo[0].fieldValue} (
-          {convertNumbers(seriesInfo[0].totalCount)} পর্ব)
+          {`সিরিজ: ${seriesInfo[0].fieldValue} ${convertNumbers(
+            seriesInfo[0].totalCount
+          )} পর্ব`}
         </Text>
-
-        <ul>
-          {postNodes.map(({ node: post }, idx) => (
-            <li key={post.id}>
-              <a href={post.fields.slug}>{post.frontmatter.title}</a>
-            </li>
-          ))}
-        </ul>
+        <PostList postNodes={postNodes} />
       </Box>
     </MainLayout>
   );
