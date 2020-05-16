@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { MainLayout } from '../../layouts';
-import { Box, Divider, SEO, Text } from '../../components';
+import { Divider, SEO, Text } from '../../components';
 
 export default ({
   data: {
@@ -9,33 +9,31 @@ export default ({
     allMarkdownRemark: { edges: postNodes },
   },
 }) => (
-  <MainLayout>
-    <Box maxWidth={960} margin="0 auto" padding={{ xs: 3, sm: 4 }}>
-      <SEO pageTitle={fullName} />
-      <Text variant="h4">{`লেখক: ${fullName}`}</Text>
-      <Text>
-        Twitter:{' '}
-        <a
-          href={`https://twitter.com/${twitter}/`}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          {`@${twitter}`}
-        </a>
-      </Text>
-      <Text>
-        <em>{bio}</em>
-      </Text>
-      <Divider height={2} />
-      <Text>{`${fullName} এর লেখাসমূহ: `}</Text>
-      <ul>
-        {postNodes.map(({ node: post }) => (
-          <li key={post.fields.slug}>
-            <a href={post.fields.slug}>{post.frontmatter.title}</a>
-          </li>
-        ))}
-      </ul>
-    </Box>
+  <MainLayout variant="fixed">
+    <SEO pageTitle={fullName} />
+    <Text variant="h4">{`লেখক: ${fullName}`}</Text>
+    <Text>
+      Twitter:{' '}
+      <a
+        href={`https://twitter.com/${twitter}/`}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {`@${twitter}`}
+      </a>
+    </Text>
+    <Text>
+      <em>{bio}</em>
+    </Text>
+    <Divider height={2} />
+    <Text>{`${fullName} এর লেখাসমূহ: `}</Text>
+    <ul>
+      {postNodes.map(({ node: post }) => (
+        <li key={post.fields.slug}>
+          <a href={post.fields.slug}>{post.frontmatter.title}</a>
+        </li>
+      ))}
+    </ul>
   </MainLayout>
 );
 

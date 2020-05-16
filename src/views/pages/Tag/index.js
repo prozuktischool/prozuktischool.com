@@ -2,22 +2,20 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { convertNumbers } from 'bn-number-utils';
 import { MainLayout } from '../../layouts';
-import { Box, PostList, SEO, Text } from '../../components';
+import { PostList, SEO, Text } from '../../components';
 
 const TagTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const postNodes = data.allMarkdownRemark.edges;
 
   return (
-    <MainLayout>
-      <Box maxWidth={960} margin="0 auto" padding={{ xs: 3, sm: 4 }}>
-        <SEO pageTitle={tag} />
-        <Text variant="h4">
-          {`ট্যাগ: ${tag} (${convertNumbers(postNodes.length)}
+    <MainLayout variant="fixed">
+      <SEO pageTitle={tag} />
+      <Text variant="h4">
+        {`ট্যাগ: ${tag} (${convertNumbers(postNodes.length)}
 টি লেখা)`}
-        </Text>
-        <PostList postNodes={postNodes} />
-      </Box>
+      </Text>
+      <PostList postNodes={postNodes} />
     </MainLayout>
   );
 };
