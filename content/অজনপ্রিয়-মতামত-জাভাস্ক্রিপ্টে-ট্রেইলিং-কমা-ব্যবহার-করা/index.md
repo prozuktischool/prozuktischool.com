@@ -8,6 +8,7 @@ date: '2020-05-20'
 published: true
 tags:
   - 'মতামত'
+language: 'JavaScript'
 cover: ''
 ---
 
