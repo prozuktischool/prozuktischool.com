@@ -12,7 +12,7 @@ const Container = styled(Box)`
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: ${({ theme }) => theme.colors.light1};
+  color: ${({ theme }) => theme.colors.light2};
   border-radius: 4px;
   position: relative;
   padding: 32px;

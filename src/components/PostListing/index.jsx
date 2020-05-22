@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { SummaryCard, Box, Flex } from '../../views/components';
 
-class PostListing extends React.Component {
-  getPostList() {
+const PostListing = ({ limit = 0, postEdges = [] }) => {
+  const getPostList = () => {
     let postList = [];
-    const { limit } = this.props;
-    this.props.postEdges.forEach((postEdge, index) => {
+    postEdges.forEach((postEdge) => {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
@@ -22,26 +21,24 @@ class PostListing extends React.Component {
       postList = postList.splice(0, limit);
     }
     return postList;
-  }
+  };
 
-  render() {
-    const postList = this.getPostList();
+  const postList = getPostList();
 
-    return (
-      <Flex mx={[0, -2]} flexWrap="wrap">
-        {
-          /* Your post list here. */
-          postList.map((post) => (
-            <Box key={post.title} width={[1, 1 / 3]} px={3} py={3}>
-              <Link to={post.path}>
-                <SummaryCard language={post.language}>{post.title}</SummaryCard>
-              </Link>
-            </Box>
-          ))
-        }
-      </Flex>
-    );
-  }
-}
+  return (
+    <Flex mx={[0, -2]} flexWrap="wrap">
+      {
+        /* Your post list here. */
+        postList.map((post) => (
+          <Box key={post.title} width={[1, 1 / 3]} px={3} py={3}>
+            <Link to={post.path}>
+              <SummaryCard language={post.language}>{post.title}</SummaryCard>
+            </Link>
+          </Box>
+        ))
+      }
+    </Flex>
+  );
+};
 
 export default PostListing;

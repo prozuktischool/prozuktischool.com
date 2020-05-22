@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { MainLayout } from '../views/layouts';
-import { HeroSection, SectionTitle } from '../views/components';
 import PostListing from '../components/PostListing';
-import { Box, SEO, TagList } from '../views/components';
+import {
+  Box,
+  HeroSection,
+  SectionTitle,
+  SEO,
+  TagList,
+} from '../views/components';
 import config from '../../data/SiteConfig';
 
 const Index = ({ data }) => {
   const postEdges = data.allMarkdownRemark.edges;
-  const tags = data.allMarkdownRemark.tags;
+  const { tags } = data.allMarkdownRemark;
 
   return (
     <MainLayout>
