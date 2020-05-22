@@ -23,9 +23,9 @@ const Index = ({ data }) => {
       <HeroSection />
       <Box maxWidth={960} margin="0 auto">
         <SectionTitle title="সাম্প্রতিক লেখা" />
-        <PostListing postEdges={postEdges} limit={6} />
+        <PostListing postEdges={postEdges} limit={6} showAllPostButton />
         <SectionTitle title="বিষয়সমূহ" />
-        <TagList tags={tags} />
+        <TagList tags={tags} showAllTagsButton />
       </Box>
     </MainLayout>
   );

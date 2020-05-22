@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { SummaryCard, Box, Flex } from '../../views/components';
+import { SummaryCard, Box, Button, Flex } from '../../views/components';
 
-const PostListing = ({ limit = 0, postEdges = [] }) => {
+const PostListing = ({
+  limit = 0,
+  postEdges = [],
+  showAllPostButton = false,
+}) => {
   const getPostList = () => {
     let postList = [];
     postEdges.forEach((postEdge) => {
@@ -30,13 +34,20 @@ const PostListing = ({ limit = 0, postEdges = [] }) => {
       {
         /* Your post list here. */
         postList.map((post) => (
-          <Box key={post.title} width={[1, 1 / 3]} px={3} py={3}>
+          <Box key={post.title} width={[1, 1 / 3]} p={3}>
             <Link to={post.path}>
               <SummaryCard language={post.language}>{post.title}</SummaryCard>
             </Link>
           </Box>
         ))
       }
+      {postEdges.length > limit && showAllPostButton && (
+        <Box p={3} width={1} display="block" textAlign="center">
+          <Link to="/posts">
+            <Button variant="primary">সকল লেখা পড়ুন</Button>
+          </Link>
+        </Box>
+      )}
     </Flex>
   );
 };
