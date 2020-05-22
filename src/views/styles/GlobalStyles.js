@@ -146,7 +146,7 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
 
     p, h1, h2, h3, h4, h5, h6 {
-      color: ${({ theme }) => theme.colors.light1};
+      color: ${({ theme }) => theme.colors.light2};
       font-size: 1.2rem;
     }
 

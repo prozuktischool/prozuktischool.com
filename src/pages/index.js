@@ -1,28 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { MainLayout } from '../views/layouts';
-import { HeroSection, SectionTitle } from '../views/components';
 import PostListing from '../components/PostListing';
-import { Box, SEO } from '../views/components';
+import {
+  Box,
+  HeroSection,
+  SectionTitle,
+  SEO,
+  TagList,
+} from '../views/components';
 import config from '../../data/SiteConfig';
 
-class Index extends Component {
-  render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
-    return (
-      <MainLayout>
-        <HeroSection />
+const Index = ({ data }) => {
+  const postEdges = data.allMarkdownRemark.edges;
+  const { tags } = data.allMarkdownRemark;
+
+  return (
+    <MainLayout>
+      <Helmet title={config.siteTitle} />
+      <SEO />
+      <HeroSection />
+      <Box maxWidth={960} margin="0 auto">
         <SectionTitle title="সাম্প্রতিক লেখা" />
-        <Box maxWidth={960} margin="0 auto">
-          <Helmet title={config.siteTitle} />
-          <SEO />
-          <PostListing postEdges={postEdges} limit={6} />
-        </Box>
-      </MainLayout>
-    );
-  }
-}
+        <PostListing postEdges={postEdges} limit={6} showAllPostButton />
+        <SectionTitle title="বিষয়সমূহ" />
+        <TagList tags={tags} showAllTagsButton />
+      </Box>
+    </MainLayout>
+  );
+};
 
 export default Index;
 
@@ -50,6 +57,10 @@ export const pageQuery = graphql`
             language
           }
         }
+      }
+      tags: group(field: frontmatter___tags) {
+        title: fieldValue
+        totalCount
       }
     }
   }
