@@ -12,7 +12,7 @@ const Pager = ({ pageContext }) => {
       <Box mr={3}>
         {previousPagePath && (
           <Link to={previousPagePath}>
-            <Button>⯇ নতুন লেখা</Button>
+            <Button variant="primary">⯇ নতুন লেখা</Button>
           </Link>
         )}
       </Box>
@@ -20,7 +20,7 @@ const Pager = ({ pageContext }) => {
       <Box>
         {nextPagePath && (
           <Link to={nextPagePath}>
-            <Button>আগের লেখা ⯈</Button>
+            <Button variant="primary">আগের লেখা ⯈</Button>
           </Link>
         )}
       </Box>

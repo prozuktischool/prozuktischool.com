@@ -1,6 +1,4 @@
-import languageColors from '../languageColors.json';
-
-languageColors['React'] = '#61DAFB';
+import colors from './colors';
 
 const breakpoints = ['576px', '768px', '992px', '1200px'];
 
@@ -58,19 +56,9 @@ export default {
     },
   },
   colors: {
-    primary3: '#7950F2',
-    primary2: '#845EF7',
-    primary1: '#9775FA',
-    dark2: '#212529',
-    dark1: '#495057',
-    light2: '#F1F3F5',
-    light1: '#f8f9fa',
-    error: '#FA5252',
-    success: '#51CF66',
-    warning: '#FFD43B',
-    text: '#f8f9fa',
-    background: '#212529',
-    ...languageColors,
+    ...colors,
+    text: colors.light2,
+    background: colors.dark2,
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   breakpoints,
