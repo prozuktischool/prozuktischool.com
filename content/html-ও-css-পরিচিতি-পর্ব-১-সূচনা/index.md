@@ -9,6 +9,7 @@ tags:
   - 'HTML'
   - 'ওয়েব ডেভেলপমেন্ট'
 series: 'HTML ও CSS পরিচিতি'
+language: 'HTML'
 cover: ''
 ---
 
