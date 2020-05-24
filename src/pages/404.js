@@ -51,7 +51,7 @@ const Container = styled.div`
     border-radius: 50%;
     position: absolute;
     background: ${({ theme }) => theme.colors.dark1};
-    color: ${({ theme }) => theme.colors.light1};
+    color: ${({ theme }) => theme.colors.light2};
     width: 80%;
     padding-bottom: 80%;
     top: 10%;
