@@ -23,6 +23,7 @@ const MainLayout = (props) => {
           maxWidth={variant === 'fixed' ? 960 : '100%'}
           margin="0 auto"
           p={variant === 'fixed' ? { xs: 3, sm: 4 } : 0}
+          pt={{ xs: 48, sm: 48 }}
           minHeight="70vh"
         >
           {children}
