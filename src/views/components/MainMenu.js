@@ -12,6 +12,10 @@ import Moon from '../assets/icons/moon.svg';
 const MenuContainer = styled.div`
   margin: 0;
   padding: 0;
+  position: fixed;
+  top: -1px;
+  width: 100%;
+  z-index: 1000;
   background-color: ${({ theme }) => theme.colors.background};
   box-shadow: 0 0 2px ${({ theme }) => theme.colors.dark2};
   border-bottom: 1px solid ${({ theme }) => theme.colors.dark1};

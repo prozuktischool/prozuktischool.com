@@ -34,70 +34,64 @@ const PostTemplate = ({ pageContext, data }) => {
 
   return (
     <MainLayout>
-      <div>
-        <SEO postPath={slug} postNode={postNode} postSEO />
-        <ArticleLayout>
-          <Text variant="h2" textAlign="center">
-            {post.title}
-          </Text>
-          <Divider />
+      <SEO postPath={slug} postNode={postNode} postSEO />
+      <ArticleLayout>
+        <Text variant="h2" textAlign="center">
+          {post.title}
+        </Text>
+        <Divider />
 
-          <Box textAlign="center">
-            <Box
-              display={{ sm: 'block', md: 'inline' }}
-              mr={{ sm: 0, md: 3, lg: 3, xl: 3 }}
-              className="post-meta"
-            >
-              <User />
-              <Text variant="h6" display="inline-box" ml={2} mb={{ xs: 0 }}>
-                <a href={`/authors/${post.author.id}`}>
-                  {post.author.fullName}
-                </a>
-              </Text>
-            </Box>
-            <Box
-              display={{ xs: 'block', sm: 'inline' }}
-              mr={[0, 0, 3, 3, 3]}
-              className="post-meta"
-            >
-              <Calendar />
-              <Text variant="h6" display="inline-box" ml={2}>
-                {convertNumbers(
-                  format(new Date(post.date), 'MMMM dd, yyyy GGGG', {
-                    locale: bn,
-                  })
-                )}
-              </Text>
-            </Box>
+        <Box textAlign="center">
+          <Box
+            display={{ sm: 'block', md: 'inline' }}
+            mr={{ sm: 0, md: 3, lg: 3, xl: 3 }}
+            className="post-meta"
+          >
+            <User />
+            <Text variant="h6" display="inline-box" ml={2} mb={{ xs: 0 }}>
+              <a href={`/authors/${post.author.id}`}>{post.author.fullName}</a>
+            </Text>
           </Box>
-          <Divider />
-          <Text variant="raw" html={postNode.html} />
-          {post.series && (
-            <>
-              <Text my={0} pt={3} variant="h6">
-                সিরিজ:{' '}
-                <a href={`/series/${_.kebabCase(post.series)}`}>
-                  {post.series}
-                </a>
-              </Text>
-            </>
+          <Box
+            display={{ xs: 'block', sm: 'inline' }}
+            mr={[0, 0, 3, 3, 3]}
+            className="post-meta"
+          >
+            <Calendar />
+            <Text variant="h6" display="inline-box" ml={2}>
+              {convertNumbers(
+                format(new Date(post.date), 'MMMM dd, yyyy GGGG', {
+                  locale: bn,
+                })
+              )}
+            </Text>
+          </Box>
+        </Box>
+        <Divider />
+        <Text variant="raw" html={postNode.html} />
+        {post.series && (
+          <>
+            <Text my={0} pt={3} variant="h6">
+              সিরিজ:{' '}
+              <a href={`/series/${_.kebabCase(post.series)}`}>{post.series}</a>
+            </Text>
+          </>
+        )}
+        <Divider display="inline-block" width="8rem" />
+        <Text mt={0} variant="caption">
+          সর্বশেষ আপডেট:{' '}
+          {convertNumbers(
+            format(new Date(post.updatedAt), 'MMMM dd, yyyy GGGG', {
+              locale: bn,
+            })
           )}
-          <Divider display="inline-block" width="8rem" />
-          <Text mt={0} variant="caption">
-            সর্বশেষ আপডেট:{' '}
-            {convertNumbers(
-              format(new Date(post.updatedAt), 'MMMM dd, yyyy GGGG', {
-                locale: bn,
-              })
-            )}
-          </Text>
+        </Text>
 
-          <SocialShareLinks title={post.title} link={`${siteUrl}${slug}/`} />
-          <div className="post-meta">
-            <PostTags tags={post.tags} />
-          </div>
-        </ArticleLayout>
-      </div>
+        <SocialShareLinks title={post.title} link={`${siteUrl}${slug}/`} />
+        <div className="post-meta">
+          <PostTags tags={post.tags} />
+        </div>
+      </ArticleLayout>
     </MainLayout>
   );
 };
