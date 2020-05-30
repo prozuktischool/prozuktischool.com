@@ -44,6 +44,7 @@ export const pageQuery = graphql`
         fields: { authorId: { eq: $authorId } }
         frontmatter: { published: { eq: true } }
       }
+      sort: { fields: frontmatter___date }
     ) {
       edges {
         node {
