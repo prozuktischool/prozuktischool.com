@@ -28,6 +28,7 @@ export const pageQuery = graphql`
       filter: {
         frontmatter: { series: { eq: $series }, published: { eq: true } }
       }
+      sort: { fields: frontmatter___date }
     ) {
       edges {
         node {
