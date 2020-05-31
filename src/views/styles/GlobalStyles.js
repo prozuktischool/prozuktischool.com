@@ -181,6 +181,10 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .gatsby-resp-image-wrapper {
+    max-width: 100% !important;
+  }
+
   @media only screen and (max-width: 576px) {
 
     h1, h2, h3, h4, h5, h6 {
