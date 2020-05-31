@@ -1,4 +1,131 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[প্রযুক্তি স্কুল]]></title><description><![CDATA[বাংলা ভাষাভাষী মানুষদের জন্য প্রযুক্তি শেখার ও শেখানোর পাঠশালা]]></description><link>https://prozuktischool.com</link><image><url>https://prozuktischool.com/logos/logo-512.png</url><title>প্রযুক্তি স্কুল</title><link>https://prozuktischool.com</link></image><generator>GatsbyJS Advanced Starter</generator><lastBuildDate>Sat, 30 May 2020 13:43:51 GMT</lastBuildDate><atom:link href="https://prozuktischool.com/rss.xml" rel="self" type="application/rss+xml"/><copyright><![CDATA[Copyright © 2019. Advanced User]]></copyright><item><title><![CDATA[অজনপ্রিয় মতামত: জাভাস্ক্রিপ্টে ট্রেইলিং কমা ব্যবহার করা]]></title><description><![CDATA[…]]></description><link>https://prozuktischool.com/2020/05/20/অজনপ্রিয়-মতামত-জাভাস্ক্রিপ্টে-ট্রেইলিং-কমা-ব্যবহার-করা</link><guid isPermaLink="false">https://prozuktischool.com/2020/05/20/অজনপ্রিয়-মতামত-জাভাস্ক্রিপ্টে-ট্রেইলিং-কমা-ব্যবহার-করা</guid><category><![CDATA[মতামত]]></category><category><![CDATA[জাভাস্ক্রিপ্ট]]></category><pubDate>Wed, 20 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;গত পর্বে জাভাস্ক্রিপ্ট কোড ফরম্যাটিং নিয়ে আমি আমার একটি স্বৈরাচারী মতামতের কথা উল্লেখ করেছিলাম। এই পর্বে আলোচনা করবো আরেকটি মতামত নিয়ে।&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[প্রযুক্তি স্কুল]]></title><description><![CDATA[বাংলা ভাষাভাষী মানুষদের জন্য প্রযুক্তি শেখার ও শেখানোর পাঠশালা]]></description><link>https://prozuktischool.com</link><image><url>https://prozuktischool.com/logos/logo-512.png</url><title>প্রযুক্তি স্কুল</title><link>https://prozuktischool.com</link></image><generator>GatsbyJS Advanced Starter</generator><lastBuildDate>Sun, 31 May 2020 16:04:13 GMT</lastBuildDate><atom:link href="https://prozuktischool.com/rss.xml" rel="self" type="application/rss+xml"/><copyright><![CDATA[Copyright © 2019. Advanced User]]></copyright><item><title><![CDATA[ওয়েব ডেভেলপারদের জন্যে সেরা কয়েকটি গিটহাব রিপোজিটরি]]></title><description><![CDATA[…]]></description><link>https://prozuktischool.com/2020/05/27/ওয়েব-ডেভেলপারদের-জন্যে-সেরা-কয়েকটি-গিটহাব-রিপোজিটরি</link><guid isPermaLink="false">https://prozuktischool.com/2020/05/27/ওয়েব-ডেভেলপারদের-জন্যে-সেরা-কয়েকটি-গিটহাব-রিপোজিটরি</guid><category><![CDATA[গিটহাব]]></category><category><![CDATA[ওয়েব ডেভেলপমেন্ট]]></category><category><![CDATA[জাভাস্ক্রিপ্ট]]></category><pubDate>Wed, 27 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;একজন ভালো কোড লেখক হিসেবে আমারদের কাজ শুধুমাত্র এই না যে আমরা শুধুমাত্র কোড লিখেই যাব, এবং দিনের পর দিন ব্যয় করব শুধুমাত্র বয়লারপ্লেট এবং repeating কাজ করে যেতে। বরং আমাদের দায়িত্ব হচ্ছে নতুন নতুন &lt;code class=&quot;language-text&quot;&gt;architecture&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;best practices&lt;/code&gt; এবং ডিজাইন প্যাটার্ন সম্পর্কে বিশদ জ্ঞান রাখা। নিজেকে কোডিং জগতে টিকিয়ে রাখতে আমি মনে করি এই জিনিসটার গুরুত্ব সবচেয়ে বেশি।&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;আমি সব সময় চেষ্টা করি প্রচুর পরিমাণ রিসোর্স সংগ্রহ করতে। ইন্টারনেট ঘেঁটে ঘেঁটে ওয়েব ডেভেলপমেন্ট এর জন্যে আমি বেশ ভালো ভালো রিসোর্স্ফুল কিছু রিপজিটরি পেয়েছি সেগুলোই এই ডায়েরিতে তুলে ধরছি।&lt;/p&gt;
+&lt;h3 id=&quot;nodejs-best-practices&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nodejs-best-practices&quot; aria-label=&quot;nodejs best practices permalink&quot; class=&quot;header-anchor-icon before&quot;&gt;&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 162.656 162.656&quot; xml:space=&quot;preserve&quot; width=&quot;0.6em&quot; height=&quot;0.6em&quot; fill=&quot;#7950F2&quot; stroke=&quot;#7950F2&quot; stroke-width=&quot;0&quot;&gt;&lt;path d=&quot;M151.764,10.894c-14.522-14.522-38.152-14.525-52.676-0.008l0.003,0.003L76.112,33.872l10.607,10.605l22.983-22.988 l-0.002-0.002c8.678-8.663,22.785-8.658,31.457,0.014c8.673,8.672,8.672,22.786,0,31.461l-34.486,34.484 c-4.201,4.202-9.787,6.516-15.729,6.516c-5.942,0-11.529-2.314-15.73-6.516L64.605,98.052c7.035,7.035,16.389,10.91,26.338,10.91 c9.949,0,19.303-3.875,26.335-10.91l34.487-34.484C166.284,49.043,166.284,25.413,151.764,10.894z&quot;&gt;&lt;/path&gt; &lt;path d=&quot;M52.96,141.162L52.96,141.162c-8.675,8.67-22.788,8.668-31.461-0.005c-8.673-8.675-8.673-22.791-0.001-31.465L55.98,75.21 c8.675-8.674,22.789-8.674,31.462,0L98.05,64.604c-14.524-14.523-38.154-14.524-52.676,0L10.89,99.086 c-14.519,14.523-14.519,38.154,0.001,52.678c7.263,7.262,16.801,10.893,26.341,10.892c9.536,0,19.074-3.629,26.333-10.887 l0.002-0.001l22.984-22.99l-10.608-10.606L52.96,141.162z&quot;&gt;&lt;/path&gt; &lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices&quot;&gt;Node.js Best Practices&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 690px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/41dc8d0b387111cbee783017c21e0d26/01a87/nodejs-best-practices.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.31791907514452%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAAB+UlEQVQoz4WSTW/TQBCG8w/5DfwHJA490Eqo4sKtFz5ubQVUHJCqComvqm3aUGibqCSx4zh2HK8TJ/Z6/bG2195dm3WsigSpMHoPs9I8M6PZtxEn6QIinKSUl5QXQjkrSE7/rTSjjPMGpXRm264LoedBCBFCHvIYY0XBiyp4pbKsVOciqlyoaHDOF47rOK4HIx9FyAt9RBjj5f+igpeNSsYJxP2IACEDfk1zT198icnc9m/mwa0oyFmM4pEddGAk12QNV0Ni4rz/8eC49/h88PRSfd4cbJ1KG63hs6P2Q2n6ThRgYovnt96jtvFyFa4mJ5l7Mdw+k590zV1R1AV7VQ72TqSNnrlv+9d98KZjvOqZu2fy5t3Wd7DYU1t8msBTAM+V2Qcn7HbBvoUuTdjUF5+Hs0Nt/nHqfR/ah8BrrcLV2lFqNeWta22nM34NYEs0kqyDK23nQtlW7SPDOZbAQd962zZeiNVq5M/k+nHPXfn6kdnf165KeDEZG4oxvZniHoCaqpm27CZtMBuN1LGmawP/14xM1r5KGAsTyjkjhCiKequCn2bYt9yxbgBbcvCVOVW0ka7rIxm1rURfgxkv3AAHQeAHQZzSEOdZRpcO4ksblUXtr3tMwjNSRZplBOM48FCIhSEw8v0gCZM8ijPsxzilSUaLlTYC/g0bl9GDBslfDQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image.png&quot;
+        title=&quot;image.png&quot;
+        src=&quot;/static/41dc8d0b387111cbee783017c21e0d26/1e043/nodejs-best-practices.png&quot;
+        srcset=&quot;/static/41dc8d0b387111cbee783017c21e0d26/991de/nodejs-best-practices.png 173w,
+/static/41dc8d0b387111cbee783017c21e0d26/e4d6b/nodejs-best-practices.png 345w,
+/static/41dc8d0b387111cbee783017c21e0d26/1e043/nodejs-best-practices.png 690w,
+/static/41dc8d0b387111cbee783017c21e0d26/e3189/nodejs-best-practices.png 1035w,
+/static/41dc8d0b387111cbee783017c21e0d26/01a87/nodejs-best-practices.png 1288w&quot;
+        sizes=&quot;(max-width: 690px) 100vw, 690px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Nodejs বিশ্বের সাথে নিজেকে সংযুক্ত রাখার জন্যে আমার দেখা সেরা জায়গা হচ্ছে এই repository। ৪০ হাজার এর উপরে star এবং ১৩০ এর উপরে কন্ট্রিবিউটর আছেন এই রিপোতে ইতোমধ্যে। বলতে গেলে প্রায় প্রতিদিনই হালনাগাদ করা হচ্ছে রিপোটি। Nodejs এর best practice সমূহ এবং বিভিন্ন architecture এবং tips প্রতিনিয়ত দেয়া হচ্ছে এই রিপোতে।&lt;/p&gt;
+&lt;p&gt;এই রিপোজিটরির বেশ কয়েকটি best practices আমার নজর কেড়েছে।
+যেমন:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices#1-project-structure-practices&quot;&gt;Project Structure Practices (5)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices#2-error-handling-practices&quot;&gt;Error Handling Practices (11)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices#3-code-style-practices&quot;&gt;Code Style Practices (12)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices#4-testing-and-overall-quality-practices&quot;&gt;Testing And Overall Quality Practices (13)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices#5-going-to-production-practices&quot;&gt;Going To Production Practices (19)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices#6-security-best-practices&quot;&gt;Security Practices (25)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/goldbergyoni/nodebestpractices#7-draft-performance-best-practices&quot;&gt;Performance Practices (2) (Work In Progress️ ✍️)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;you-dont-know-js&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#you-dont-know-js&quot; aria-label=&quot;you dont know js permalink&quot; class=&quot;header-anchor-icon before&quot;&gt;&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 162.656 162.656&quot; xml:space=&quot;preserve&quot; width=&quot;0.6em&quot; height=&quot;0.6em&quot; fill=&quot;#7950F2&quot; stroke=&quot;#7950F2&quot; stroke-width=&quot;0&quot;&gt;&lt;path d=&quot;M151.764,10.894c-14.522-14.522-38.152-14.525-52.676-0.008l0.003,0.003L76.112,33.872l10.607,10.605l22.983-22.988 l-0.002-0.002c8.678-8.663,22.785-8.658,31.457,0.014c8.673,8.672,8.672,22.786,0,31.461l-34.486,34.484 c-4.201,4.202-9.787,6.516-15.729,6.516c-5.942,0-11.529-2.314-15.73-6.516L64.605,98.052c7.035,7.035,16.389,10.91,26.338,10.91 c9.949,0,19.303-3.875,26.335-10.91l34.487-34.484C166.284,49.043,166.284,25.413,151.764,10.894z&quot;&gt;&lt;/path&gt; &lt;path d=&quot;M52.96,141.162L52.96,141.162c-8.675,8.67-22.788,8.668-31.461-0.005c-8.673-8.675-8.673-22.791-0.001-31.465L55.98,75.21 c8.675-8.674,22.789-8.674,31.462,0L98.05,64.604c-14.524-14.523-38.154-14.524-52.676,0L10.89,99.086 c-14.519,14.523-14.519,38.154,0.001,52.678c7.263,7.262,16.801,10.893,26.341,10.892c9.536,0,19.074-3.629,26.333-10.887 l0.002-0.001l22.984-22.99l-10.608-10.606L52.96,141.162z&quot;&gt;&lt;/path&gt; &lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/README.md&quot;&gt;You don&apos;t know js&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 690px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/610d9b081dead27da40b627206e5d6bb/187fa/you-dont-know-js.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.849710982658955%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABfklEQVQoz32Sy0rDQBSG+3ruBbdScCO492F8B12IYEW7KJZaEJRaaVFaaTvGJnPLXDNJ03gmqUqr9eNk+A/MmXNLjTI5Q5gyTamKcMy4xlTy2DCmCFNC2MUiX5Tk+UpUFEVRc2Yy6J2/vd4Mni5ATEat3v3Z+KU57F+Fs/aw34RLS6D4g5pAJ83TnUG3/tiqP1zvPXeO7i53e7eHncbBqLvfbhxXwcWfwUrScD6mBDGCSDQhBGE4MSJ4hqMpjhBlnPOYMsZjaIqD8EYZdFFTSs9DjDGLoHEujXXGJMa4SmhvRnuMsabU3lVa++AkSeIv4O1YALKSK09IIT1MpjZdL5sxyIlXU1kDnl73S/vGB2dZJqH0sjCV5MouvNBG2tzYJLHWlKXCDefc5sAgmFCKCYExEJGGPCWxw1RERGBudeLXW/F75tCzC4IAwfcRBtRNIzfDLggpep9PQ5+/2I7PDJvgfkSCqYyKLJbWb0VYZSFd8V9wOaofv5TLbb/UBp85W6me0u8/VgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;you-dont-know-js&quot;
+        title=&quot;you-dont-know-js&quot;
+        src=&quot;/static/610d9b081dead27da40b627206e5d6bb/1e043/you-dont-know-js.png&quot;
+        srcset=&quot;/static/610d9b081dead27da40b627206e5d6bb/991de/you-dont-know-js.png 173w,
+/static/610d9b081dead27da40b627206e5d6bb/e4d6b/you-dont-know-js.png 345w,
+/static/610d9b081dead27da40b627206e5d6bb/1e043/you-dont-know-js.png 690w,
+/static/610d9b081dead27da40b627206e5d6bb/e3189/you-dont-know-js.png 1035w,
+/static/610d9b081dead27da40b627206e5d6bb/187fa/you-dont-know-js.png 1194w&quot;
+        sizes=&quot;(max-width: 690px) 100vw, 690px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;জাভাস্ক্রিপ্ট এর খুটিনাটি বিষয় খুব ভালোভাবে এবং গভীরভাবে শিখতে আমার দেখা সব চেয়ে ভালো বই সিরিজ হচ্ছে &lt;a href=&quot;https://twitter.com/getify&quot;&gt;কাইল সিম্পসন&lt;/a&gt; এর You dont&apos;t know js বা তুমি জাভাস্ক্রিপ্ট জানো না 🤣😂 ।&lt;/p&gt;
+&lt;p&gt;ঠিক তাই এই বই পড়ার সময় আমার এটাই মনে হচ্ছিল, আমি জাভাস্ক্রিপ্ট এর কিছুই জানি না 🤔😓।&lt;/p&gt;
+&lt;p&gt;এই সিরিজ এর সবগুলি বই আপনি এই গিটহাব এ রিপোতে ফ্রিতে পড়তে পারবেন।&lt;/p&gt;
+&lt;h3 id=&quot;airbnb-javascript-style-guide&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#airbnb-javascript-style-guide&quot; aria-label=&quot;airbnb javascript style guide permalink&quot; class=&quot;header-anchor-icon before&quot;&gt;&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 162.656 162.656&quot; xml:space=&quot;preserve&quot; width=&quot;0.6em&quot; height=&quot;0.6em&quot; fill=&quot;#7950F2&quot; stroke=&quot;#7950F2&quot; stroke-width=&quot;0&quot;&gt;&lt;path d=&quot;M151.764,10.894c-14.522-14.522-38.152-14.525-52.676-0.008l0.003,0.003L76.112,33.872l10.607,10.605l22.983-22.988 l-0.002-0.002c8.678-8.663,22.785-8.658,31.457,0.014c8.673,8.672,8.672,22.786,0,31.461l-34.486,34.484 c-4.201,4.202-9.787,6.516-15.729,6.516c-5.942,0-11.529-2.314-15.73-6.516L64.605,98.052c7.035,7.035,16.389,10.91,26.338,10.91 c9.949,0,19.303-3.875,26.335-10.91l34.487-34.484C166.284,49.043,166.284,25.413,151.764,10.894z&quot;&gt;&lt;/path&gt; &lt;path d=&quot;M52.96,141.162L52.96,141.162c-8.675,8.67-22.788,8.668-31.461-0.005c-8.673-8.675-8.673-22.791-0.001-31.465L55.98,75.21 c8.675-8.674,22.789-8.674,31.462,0L98.05,64.604c-14.524-14.523-38.154-14.524-52.676,0L10.89,99.086 c-14.519,14.523-14.519,38.154,0.001,52.678c7.263,7.262,16.801,10.893,26.341,10.892c9.536,0,19.074-3.629,26.333-10.887 l0.002-0.001l22.984-22.99l-10.608-10.606L52.96,141.162z&quot;&gt;&lt;/path&gt; &lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/airbnb/javascript&quot;&gt;Airbnb JavaScript Style Guide&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;জাভাস্ক্রিপ্ট কোড লিখার সময় আমরা অনেক সময় চিন্তা করি আমরা যে কোড লিখছি সেগুলি কি আসলেই প্রফেশনাল মানের হচ্ছে? বা বড় বড় কোম্পানি যেমন গুগল/ফেসবুক এর প্রোগ্রামাররা কীভাবে কোড লিখে?&lt;/p&gt;
+&lt;p&gt;আমাদের কোড লিখার ধরনে একটা standard আনার জন্যে AIRBNB একটি স্টাইল গাইড সুপারিশ করেছে। এই রিপজিটরিতে দেখানো হয়েছে আপনি কীভাবে ভেরিয়েবল ডিক্লেয়ার করবেন, কীভাবে কার্লিব্রেস দিবেন এইরকম অনেক সিনট্যাক্স লিখার ধরন।&lt;/p&gt;
+&lt;p&gt;তাঁদের দ্বারা সুপারিশকৃত উল্লেখযোগ্য কিছু স্টাইল গাইড:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Arrow Functions&lt;/li&gt;
+&lt;li&gt;Hoisting&lt;/li&gt;
+&lt;li&gt;Type Casting &amp;#x26; Coercion&lt;/li&gt;
+&lt;li&gt;ECMAScript 6+ (ES 2015+) Styles&lt;/li&gt;
+&lt;li&gt;Testing&lt;/li&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;front-end-checklist&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#front-end-checklist&quot; aria-label=&quot;front end checklist permalink&quot; class=&quot;header-anchor-icon before&quot;&gt;&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 162.656 162.656&quot; xml:space=&quot;preserve&quot; width=&quot;0.6em&quot; height=&quot;0.6em&quot; fill=&quot;#7950F2&quot; stroke=&quot;#7950F2&quot; stroke-width=&quot;0&quot;&gt;&lt;path d=&quot;M151.764,10.894c-14.522-14.522-38.152-14.525-52.676-0.008l0.003,0.003L76.112,33.872l10.607,10.605l22.983-22.988 l-0.002-0.002c8.678-8.663,22.785-8.658,31.457,0.014c8.673,8.672,8.672,22.786,0,31.461l-34.486,34.484 c-4.201,4.202-9.787,6.516-15.729,6.516c-5.942,0-11.529-2.314-15.73-6.516L64.605,98.052c7.035,7.035,16.389,10.91,26.338,10.91 c9.949,0,19.303-3.875,26.335-10.91l34.487-34.484C166.284,49.043,166.284,25.413,151.764,10.894z&quot;&gt;&lt;/path&gt; &lt;path d=&quot;M52.96,141.162L52.96,141.162c-8.675,8.67-22.788,8.668-31.461-0.005c-8.673-8.675-8.673-22.791-0.001-31.465L55.98,75.21 c8.675-8.674,22.789-8.674,31.462,0L98.05,64.604c-14.524-14.523-38.154-14.524-52.676,0L10.89,99.086 c-14.519,14.523-14.519,38.154,0.001,52.678c7.263,7.262,16.801,10.893,26.341,10.892c9.536,0,19.074-3.629,26.333-10.887 l0.002-0.001l22.984-22.99l-10.608-10.606L52.96,141.162z&quot;&gt;&lt;/path&gt; &lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/thedaviddias/Front-End-Checklist&quot;&gt;Front-End Checklist&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 690px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dec7c40d75c82a7821a027fb0a0706d8/89048/front-end-checklist.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.64739884393063%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAABIElEQVQoz5WR207DMAyG+/4PwxXSQAIx2O64QhrTYIOu7UoPa5LGOTdNShDSNAqTmGVFzm9/jpNEhEKel8CE6Xpt7LEH5bd47NFwwrz3rg9mQ3CqIPpTDWvdoFWcrLbpHuGD+F94lybP99eLu0mepWfDGCGUvDXbDcboPFhrLaQkwEBIxrlS6ow7l2VZFGWWZVVVJ0mafxSH5A/YOQfAKEBLWyGk4jpsTdcx4BgT0rbhWGc9UM65YFyF7Hd9AKPQ4OtDehuard/XN9kFMtXyaXX7eJU0m9nDfDadT9eXsV6+LF8X8aT3JlQHcjy2MUY4Km1HWrFvCZWqbmiDoALEOtlpoww9TD6GrbUEg9AD0x6kqxue7SkRVuqBSyeMHz3NJ9cufQEb7jalAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image.png&quot;
+        title=&quot;image.png&quot;
+        src=&quot;/static/dec7c40d75c82a7821a027fb0a0706d8/1e043/front-end-checklist.png&quot;
+        srcset=&quot;/static/dec7c40d75c82a7821a027fb0a0706d8/991de/front-end-checklist.png 173w,
+/static/dec7c40d75c82a7821a027fb0a0706d8/e4d6b/front-end-checklist.png 345w,
+/static/dec7c40d75c82a7821a027fb0a0706d8/1e043/front-end-checklist.png 690w,
+/static/dec7c40d75c82a7821a027fb0a0706d8/e3189/front-end-checklist.png 1035w,
+/static/dec7c40d75c82a7821a027fb0a0706d8/89048/front-end-checklist.png 1242w&quot;
+        sizes=&quot;(max-width: 690px) 100vw, 690px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;em&gt;অসমাপ্ত ডায়েরি, চলবে ...&lt;/em&gt;]&lt;/p&gt;</content:encoded><author>editor@prozuktischool.com</author></item><item><title><![CDATA[অজনপ্রিয় মতামত: জাভাস্ক্রিপ্টে ট্রেইলিং কমা ব্যবহার করা]]></title><description><![CDATA[…]]></description><link>https://prozuktischool.com/2020/05/20/অজনপ্রিয়-মতামত-জাভাস্ক্রিপ্টে-ট্রেইলিং-কমা-ব্যবহার-করা</link><guid isPermaLink="false">https://prozuktischool.com/2020/05/20/অজনপ্রিয়-মতামত-জাভাস্ক্রিপ্টে-ট্রেইলিং-কমা-ব্যবহার-করা</guid><category><![CDATA[মতামত]]></category><category><![CDATA[জাভাস্ক্রিপ্ট]]></category><pubDate>Wed, 20 May 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;গত পর্বে জাভাস্ক্রিপ্ট কোড ফরম্যাটিং নিয়ে আমি আমার একটি স্বৈরাচারী মতামতের কথা উল্লেখ করেছিলাম। এই পর্বে আলোচনা করবো আরেকটি মতামত নিয়ে।&lt;/p&gt;
 &lt;h3 id=&quot;ট্রেইলিং-কমা-ব্যবহার-করা&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E0%A6%9F%E0%A7%8D%E0%A6%B0%E0%A7%87%E0%A6%87%E0%A6%B2%E0%A6%BF%E0%A6%82-%E0%A6%95%E0%A6%AE%E0%A6%BE-%E0%A6%AC%E0%A7%8D%E0%A6%AF%E0%A6%AC%E0%A6%B9%E0%A6%BE%E0%A6%B0-%E0%A6%95%E0%A6%B0%E0%A6%BE&quot; aria-label=&quot;ট্রেইলিং কমা ব্যবহার করা permalink&quot; class=&quot;header-anchor-icon before&quot;&gt;&lt;svg version=&quot;1.1&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 162.656 162.656&quot; xml:space=&quot;preserve&quot; width=&quot;0.6em&quot; height=&quot;0.6em&quot; fill=&quot;#7950F2&quot; stroke=&quot;#7950F2&quot; stroke-width=&quot;0&quot;&gt;&lt;path d=&quot;M151.764,10.894c-14.522-14.522-38.152-14.525-52.676-0.008l0.003,0.003L76.112,33.872l10.607,10.605l22.983-22.988 l-0.002-0.002c8.678-8.663,22.785-8.658,31.457,0.014c8.673,8.672,8.672,22.786,0,31.461l-34.486,34.484 c-4.201,4.202-9.787,6.516-15.729,6.516c-5.942,0-11.529-2.314-15.73-6.516L64.605,98.052c7.035,7.035,16.389,10.91,26.338,10.91 c9.949,0,19.303-3.875,26.335-10.91l34.487-34.484C166.284,49.043,166.284,25.413,151.764,10.894z&quot;&gt;&lt;/path&gt; &lt;path d=&quot;M52.96,141.162L52.96,141.162c-8.675,8.67-22.788,8.668-31.461-0.005c-8.673-8.675-8.673-22.791-0.001-31.465L55.98,75.21 c8.675-8.674,22.789-8.674,31.462,0L98.05,64.604c-14.524-14.523-38.154-14.524-52.676,0L10.89,99.086 c-14.519,14.523-14.519,38.154,0.001,52.678c7.263,7.262,16.801,10.893,26.341,10.892c9.536,0,19.074-3.629,26.333-10.887 l0.002-0.001l22.984-22.99l-10.608-10.606L52.96,141.162z&quot;&gt;&lt;/path&gt; &lt;/svg&gt;&lt;/a&gt;ট্রেইলিং কমা ব্যবহার করা&lt;/h3&gt;
 &lt;p&gt;জাভাস্ক্রিপ্টে &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Trailing_commas&quot;&gt;ট্রেইলিং কমা&lt;/a&gt; বলতে বোঝায় মাল্টিলাইন অবজেক্ট, অ্যারে, ফাংশান প্যারামিটারস্‌, ইমপোর্ট-এক্সপোর্ট এর সর্বশেষ আইটেমের পর একটা অতিরিক্ত কমা ব্যবহার করা। উদাহরণ হিসেবে নিচের কোডটি দেখুন:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; person &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -75,11 +202,72 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;I&apos;m superman!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Because I&apos;ve the power of JavaScript!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;সেইভ করার পর আপনার কোডগুলো অনেকটা নিচের মতো দেখাবে। হুবহু এক রকম নাও দেখাতে পারে। ভয় পাবার কিছু নেই। কোড তোলায় ভুল না করলেই হলো।&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.staticaly.com/gh/bdTechies/prozuktischool-cdn/13672e30c247f5b31d23e1561ec15d313ec46be7/images/ex001_01.png&quot; alt=&quot;javascript code&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 690px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9205808e84d060a8f9ea2d219c4d5d6b/03046/ex001_01.webp&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17.91907514450867%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAADwAgCdASoUAAQAPtFUo0uoJKMhsAgBABoJaQDKADKUAAD+75zV0g9PUKsUAAAA&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;javascript code&quot;
+        title=&quot;javascript code&quot;
+        src=&quot;/static/9205808e84d060a8f9ea2d219c4d5d6b/8efd0/ex001_01.webp&quot;
+        srcset=&quot;/static/9205808e84d060a8f9ea2d219c4d5d6b/53f4b/ex001_01.webp 173w,
+/static/9205808e84d060a8f9ea2d219c4d5d6b/50aa2/ex001_01.webp 345w,
+/static/9205808e84d060a8f9ea2d219c4d5d6b/8efd0/ex001_01.webp 690w,
+/static/9205808e84d060a8f9ea2d219c4d5d6b/77d2c/ex001_01.webp 1035w,
+/static/9205808e84d060a8f9ea2d219c4d5d6b/445df/ex001_01.webp 1380w,
+/static/9205808e84d060a8f9ea2d219c4d5d6b/03046/ex001_01.webp 1919w&quot;
+        sizes=&quot;(max-width: 690px) 100vw, 690px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;এবার কমান্ড লাইন (লিনাক্স হলে টার্মিনাল) এ আমাদের আগের পর্বে বানানো ফোল্ডারটি ওপেন করুন। কমান্ড লাইনের নাম শুনে ঘাবরাবার কিছু নেই। এটা নিয়ে আমরা খুব বেশি ঘাটাঘাটি করবো না আপাতত। নিচের কমান্ডটি লিখে &lt;code class=&quot;language-text&quot;&gt;Enter&lt;/code&gt; বাটনটি ক্লিক করুন। সবকিছু ঠিকঠাক থাকলে আপনার প্রথম (আগে না লিখে থাকলে) জাভাস্ক্রিপ্ট কোডটি রান হয়ে যাবে।&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ node ex001.js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;ঠিকঠাকভাবে করে থকলে নিচের ছবির মতো আউটপুট দেখাবে কমান্ড লাইনে।&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.staticaly.com/gh/bdTechies/prozuktischool-cdn/13672e30c247f5b31d23e1561ec15d313ec46be7/images/ex001_02.png&quot; alt=&quot;terminal output&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 690px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ef1a81e797929d43a96604722393eb7a/3deba/ex001_02.webp&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 35.83815028901734%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoUAAcAPtFYpEwoJSOiMAgBABoJZQCdMoADYrCid7P6a9AA/uTlBX6NLqzeBQ2AdxdnFFCtejFJGE93rCuBle+4AAA=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;terminal output&quot;
+        title=&quot;terminal output&quot;
+        src=&quot;/static/ef1a81e797929d43a96604722393eb7a/8efd0/ex001_02.webp&quot;
+        srcset=&quot;/static/ef1a81e797929d43a96604722393eb7a/53f4b/ex001_02.webp 173w,
+/static/ef1a81e797929d43a96604722393eb7a/50aa2/ex001_02.webp 345w,
+/static/ef1a81e797929d43a96604722393eb7a/8efd0/ex001_02.webp 690w,
+/static/ef1a81e797929d43a96604722393eb7a/77d2c/ex001_02.webp 1035w,
+/static/ef1a81e797929d43a96604722393eb7a/3deba/ex001_02.webp 1237w&quot;
+        sizes=&quot;(max-width: 690px) 100vw, 690px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;কোনো কারণে সমস্যা হলে নিচের মতো &lt;code class=&quot;language-text&quot;&gt;Error Message&lt;/code&gt; দেখাবে।&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ node ex001.js
 &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;./learning-js/ex001.js:6
