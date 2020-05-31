@@ -28,7 +28,7 @@ console.log("Because I've the power of JavaScript!");
 
 সেইভ করার পর আপনার কোডগুলো অনেকটা নিচের মতো দেখাবে। হুবহু এক রকম নাও দেখাতে পারে। ভয় পাবার কিছু নেই। কোড তোলায় ভুল না করলেই হলো।
 
-![javascript code](https://cdn.staticaly.com/gh/bdTechies/prozuktischool-cdn/13672e30c247f5b31d23e1561ec15d313ec46be7/images/ex001_01.png)
+![javascript code](./ex001_01.webp)
 
 এবার কমান্ড লাইন (লিনাক্স হলে টার্মিনাল) এ আমাদের আগের পর্বে বানানো ফোল্ডারটি ওপেন করুন। কমান্ড লাইনের নাম শুনে ঘাবরাবার কিছু নেই। এটা নিয়ে আমরা খুব বেশি ঘাটাঘাটি করবো না আপাতত। নিচের কমান্ডটি লিখে `Enter` বাটনটি ক্লিক করুন। সবকিছু ঠিকঠাক থাকলে আপনার প্রথম (আগে না লিখে থাকলে) জাভাস্ক্রিপ্ট কোডটি রান হয়ে যাবে।
 
@@ -38,7 +38,7 @@ $ node ex001.js
 
 ঠিকঠাকভাবে করে থকলে নিচের ছবির মতো আউটপুট দেখাবে কমান্ড লাইনে।
 
-![terminal output](https://cdn.staticaly.com/gh/bdTechies/prozuktischool-cdn/13672e30c247f5b31d23e1561ec15d313ec46be7/images/ex001_02.png)
+![terminal output](./ex001_02.webp)
 
 কোনো কারণে সমস্যা হলে নিচের মতো `Error Message` দেখাবে।
 
