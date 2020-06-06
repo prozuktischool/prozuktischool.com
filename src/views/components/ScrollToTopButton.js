@@ -50,20 +50,28 @@ const ScrollToTopButton = () => {
   const [showScroll, setShowScroll] = useState(false);
 
   const checkScrollTop = () => {
-    if (!showScroll && window && window.pageYOffset > 400) {
+    if (
+      !showScroll &&
+      typeof window !== 'undefined' &&
+      window.pageYOffset > 400
+    ) {
       setShowScroll(true);
-    } else if (showScroll && window && window.pageYOffset <= 400) {
+    } else if (
+      showScroll &&
+      typeof window !== 'undefined' &&
+      window.pageYOffset <= 400
+    ) {
       setShowScroll(false);
     }
   };
 
   const scrollTop = () => {
-    if (window) {
+    if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
-  if (window) {
+  if (typeof window !== 'undefined') {
     window.addEventListener('scroll', checkScrollTop);
   }
 
