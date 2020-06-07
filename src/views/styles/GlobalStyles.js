@@ -112,7 +112,7 @@ const GlobalStyle = createGlobalStyle`
 
   :not(pre) > code[class*='language-'] {
     padding: 0.2em .5em;
-    border-bottom: 4px solid;
+    border-bottom: 2px solid;
     border-color: ${({ theme }) => theme.colors.primary3};
   }
 
@@ -144,6 +144,8 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
     border-radius: 4px;
     position: relative;
+    padding: 16px;
+    margin: 64px 0;
 
     p, h1, h2, h3, h4, h5, h6 {
       color: ${({ theme }) => theme.colors.light2};
