@@ -1,7 +1,7 @@
 {
   "name": "prozuktischool",
   "description": "An open source blog platform for Bangali technology lovers",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "author": "Shahidul Islam Majumder <hello@shahid.pro>",
   "repository": {
     "type": "git",
