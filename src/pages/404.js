@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import { Link } from 'gatsby';
 import { SEO, Text } from '../views/components';
 import GlobalStyle from '../views/styles/GlobalStyles';
-import { dark, light } from '../views/styles/themes';
+import { dark } from '../views/styles/themes';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -13,6 +13,10 @@ const Container = styled.div`
   align-items: center;
   overflow: hidden;
   padding: 32px;
+
+  h2 {
+    font-size: 1.32rem;
+  }
 
   .circle_filling,
   .outside_circle .outside_filling,
@@ -275,10 +279,10 @@ const FourOFour = () => {
           </div>
         </div>
         <Text className="not_north" variant="h2">
-          সাইটে ফিরে যেতে
-          <Link to="/">এখানে</Link>
-          ক্লিক করুন।
-        </Text>
+          সাইটে ফিরে যেতে <Link to="/">এখানে</Link>
+{' '}
+ক্লিক করুন।
+</Text>
       </Container>
     </ThemeProvider>
   );

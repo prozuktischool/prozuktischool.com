@@ -14,11 +14,10 @@ const ButtonContainer = styled.span`
   z-index: 1000;
   cursor: pointer;
   animation: fadeIn 0.3s;
-  transition: opacity 0.4s;
   opacity: 0.5;
   background: ${({ theme }) => theme.colors.background};
   border-radius: 4px;
-  transition: all ease-in-out 0.3s;
+  transition: opacity 0.4s, color ease-in-out 0.2s, background ease-in-out 0.2s;
 
   svg {
     stroke: ${({ theme }) => theme.colors.primary3};
