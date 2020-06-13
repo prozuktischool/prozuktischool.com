@@ -17,7 +17,7 @@ const PostTemplate = ({ pageContext, data }) => {
   const { slug } = pageContext;
   const {
     site: {
-      siteMetadata: { siteUrl },
+      siteMetadata: { siteUrl, baseEditURL },
     },
   } = data;
   const postNode = data.markdownRemark;
@@ -78,13 +78,17 @@ const PostTemplate = ({ pageContext, data }) => {
           </>
         )}
         <Divider display="inline-block" width="8rem" />
-        <Text mt={0} variant="caption">
+        <Text my={0} variant="caption">
           সর্বশেষ আপডেট:{' '}
           {convertNumbers(
             format(new Date(post.updatedAt), 'MMMM dd, yyyy GGGG', {
               locale: bn,
             })
           )}
+        </Text>
+        <Text my={0} variant="caption">
+          লেখাটি সম্পাদনা করুন{' '}
+          <a href={`${baseEditURL}${slug.slice(11)}/index.md`}>এখানে</a>
         </Text>
 
         <SocialShareLinks title={post.title} link={`${siteUrl}${slug}/`} />
@@ -102,6 +106,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         siteUrl
+        baseEditURL
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

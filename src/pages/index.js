@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { MainLayout } from '../views/layouts';
 import PostListing from '../components/PostListing';
 import {
@@ -9,6 +9,8 @@ import {
   SectionTitle,
   SEO,
   TagList,
+  NoticeBox,
+  Text,
 } from '../views/components';
 import config from '../../data/SiteConfig';
 
@@ -26,6 +28,14 @@ const Index = ({ data }) => {
         <PostListing postEdges={postEdges} limit={6} showAllPostButton />
         <SectionTitle title="বিষয়সমূহ" />
         <TagList tags={tags} showAllTagsButton />
+        <Box p={{ xs: 3, sm: 2 }}>
+          <NoticeBox variant="notice">
+            <Text>
+              আপনিও লিখতে চান?{' '}
+              <Link to="/contribution-guide">এখানে বিস্তারিত দেখুন</Link>
+            </Text>
+          </NoticeBox>
+        </Box>
       </Box>
     </MainLayout>
   );
