@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import ArrowUp from '../assets/icons/arrow-up.svg';
@@ -70,9 +70,17 @@ const ScrollToTopButton = () => {
     }
   };
 
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', checkScrollTop);
-  }
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', checkScrollTop);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('scroll', checkScrollTop);
+      }
+    };
+  }, []);
 
   return (
     <ButtonContainer
