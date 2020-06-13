@@ -77,7 +77,7 @@ const ScrollToTopButton = () => {
 
     return () => {
       if (typeof window !== 'undefined') {
-        window.removeEventListener('scroll', () => {});
+        window.removeEventListener('scroll', checkScrollTop);
       }
     };
   }, []);
