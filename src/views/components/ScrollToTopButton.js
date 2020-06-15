@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
+import { isBrowser } from '../../config';
 import ArrowUp from '../assets/icons/arrow-up.svg';
 
 const ButtonContainer = styled.span`
@@ -49,38 +49,32 @@ const ScrollToTopButton = () => {
   const [showScroll, setShowScroll] = useState(false);
 
   const checkScrollTop = () => {
-    if (
-      !showScroll &&
-      typeof window !== 'undefined' &&
-      window.pageYOffset > 400
-    ) {
-      setShowScroll(true);
-    } else if (
-      showScroll &&
-      typeof window !== 'undefined' &&
-      window.pageYOffset <= 400
-    ) {
-      setShowScroll(false);
+    if (isBrowser) {
+      if (!showScroll && window.pageYOffset > 400) {
+        setShowScroll(true);
+      } else if (showScroll && window.pageYOffset <= 400) {
+        setShowScroll(false);
+      }
     }
   };
 
   const scrollTop = () => {
-    if (typeof window !== 'undefined') {
+    if (isBrowser) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (isBrowser) {
       window.addEventListener('scroll', checkScrollTop);
     }
 
     return () => {
-      if (typeof window !== 'undefined') {
+      if (isBrowser) {
         window.removeEventListener('scroll', checkScrollTop);
       }
     };
-  }, []);
+  }, [showScroll]);
 
   return (
     <ButtonContainer
