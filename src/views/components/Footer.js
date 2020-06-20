@@ -3,9 +3,9 @@ import styled, { withTheme } from 'styled-components';
 import { convertNumbers } from 'bn-number-utils';
 import { Link } from 'gatsby';
 
+import Box from './Box';
 import Flex from './Flex';
 import Text from './Text';
-import Divider from './Divider';
 
 const MenuContainer = styled.div`
   margin: 64px 0 0 0;
@@ -79,14 +79,30 @@ const Footer = ({ theme }) => {
         justifyContent="space-between"
         pl={3}
         pr={3}
+        flexWrap="wrap"
       >
-        <Text textAlign="center" display="block" width="100%">
-          লেখস্বত্ব &copy;{' '}
-          {`${convertNumbers(2016)} - ${convertNumbers(
-            new Date().getFullYear()
-          )} `}
-          <a href="https://prozuktischool.com/">প্রযুক্তি স্কুল</a>
-        </Text>
+        <Box width={1}>
+          <Text textAlign="center" variant="caption" mb={0}>
+            এই প্রজেক্টের সম্পূর্ণ সোর্স কোড পাবেন আমাদের{' '}
+            <a
+              href="https://github.com/bdTechies/prozuktischool.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              গিটহাব রিপোজিটরিতে
+            </a>
+            ।
+          </Text>
+        </Box>
+        <Box width={1}>
+          <Text textAlign="center" variant="caption" mt={1}>
+            লেখস্বত্ব &copy;{' '}
+            {`${convertNumbers(2016)} - ${convertNumbers(
+              new Date().getFullYear()
+            )} `}
+            <a href="https://prozuktischool.com/">প্রযুক্তি স্কুল</a>
+          </Text>
+        </Box>
       </Flex>
     </MenuContainer>
   );
