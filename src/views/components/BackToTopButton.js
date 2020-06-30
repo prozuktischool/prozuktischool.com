@@ -18,6 +18,7 @@ const ButtonContainer = styled.span`
   background: ${({ theme }) => theme.colors.background};
   border-radius: 4px;
   transition: opacity 0.4s, color ease-in-out 0.2s, background ease-in-out 0.2s;
+  display: ${({ isButtonVisible }) => (isButtonVisible ? 'flex' : 'none')};
 
   svg {
     stroke: ${({ theme }) => theme.colors.primary3};
@@ -45,45 +46,42 @@ const ButtonContainer = styled.span`
   }
 `;
 
-const ScrollToTopButton = () => {
-  const [showScroll, setShowScroll] = useState(false);
+const BackToTopButton = () => {
+  const [showButton, setShowButton] = useState(false);
 
-  const checkScrollTop = () => {
-    if (isBrowser) {
-      if (!showScroll && window.pageYOffset > 400) {
-        setShowScroll(true);
-      } else if (showScroll && window.pageYOffset <= 400) {
-        setShowScroll(false);
-      }
-    }
-  };
-
-  const scrollTop = () => {
+  const scrollToTop = () => {
     if (isBrowser) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   useEffect(() => {
+    const checkScrollHeight = () => {
+      if (isBrowser) {
+        if (!showButton && window.pageYOffset > 400) {
+          setShowButton(true);
+        } else if (showButton && window.pageYOffset <= 400) {
+          setShowButton(false);
+        }
+      }
+    };
+
     if (isBrowser) {
-      window.addEventListener('scroll', checkScrollTop);
+      window.addEventListener('scroll', checkScrollHeight);
     }
 
     return () => {
       if (isBrowser) {
-        window.removeEventListener('scroll', checkScrollTop);
+        window.removeEventListener('scroll', checkScrollHeight);
       }
     };
-  }, [showScroll]);
+  }, [showButton]);
 
   return (
-    <ButtonContainer
-      style={{ display: showScroll ? 'flex' : 'none' }}
-      onClick={scrollTop}
-    >
+    <ButtonContainer isButtonVisible={showButton} onClick={scrollToTop}>
       <ArrowUp />
     </ButtonContainer>
   );
 };
 
-export default ScrollToTopButton;
+export default BackToTopButton;
