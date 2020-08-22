@@ -128,7 +128,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   div.notice-box {
-    background-color: ${({ theme }) => theme.colors.dark1};
+    background-color: ${({ theme }) =>
+      theme.name === 'dark' ? theme.colors.dark1 : theme.colors.light2};
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     text-align: center;
     border-radius: 4px;
     position: relative;
@@ -136,7 +138,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 64px 0;
 
     p, h1, h2, h3, h4, h5, h6 {
-      color: ${({ theme }) => theme.colors.light2};
+      color: ${({ theme }) => theme.colors.text};
       font-size: 1.2rem;
     }
 
