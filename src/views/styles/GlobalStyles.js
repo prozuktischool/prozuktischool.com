@@ -1,17 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-
-  /* fira-code-regular - latin */
-  @font-face {
-    font-family: 'Kalpurush';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('/assets/fonts/kalpurush.woff2') format('woff2'),
-         url('/assets/fonts/kalpurush.woff') format('woff');
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -20,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     font-family: 'Kalpurush', 'PT Serif', serif;
-    // font-size: 20px;
     font-size: calc(16px + (20 - 16) * ((100vw - 400px) / (1600 - 400)));
     line-height: calc(16px + 1.2vw);
     color: ${({ theme }) => theme.colors.text};
