@@ -1,17 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-
-  /* fira-code-regular - latin */
-  @font-face {
-    font-family: 'Kalpurush';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-         url('/assets/fonts/kalpurush.woff2') format('woff2'),
-         url('/assets/fonts/kalpurush.woff') format('woff');
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -20,7 +9,6 @@ const GlobalStyle = createGlobalStyle`
 
   html, body {
     font-family: 'Kalpurush', 'PT Serif', serif;
-    // font-size: 20px;
     font-size: calc(16px + (20 - 16) * ((100vw - 400px) / (1600 - 400)));
     line-height: calc(16px + 1.2vw);
     color: ${({ theme }) => theme.colors.text};
@@ -140,7 +128,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   div.notice-box {
-    background-color: ${({ theme }) => theme.colors.dark1};
+    background-color: ${({ theme }) =>
+      theme.name === 'dark' ? theme.colors.dark1 : theme.colors.light2};
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     text-align: center;
     border-radius: 4px;
     position: relative;
@@ -148,7 +138,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 64px 0;
 
     p, h1, h2, h3, h4, h5, h6 {
-      color: ${({ theme }) => theme.colors.light2};
+      color: ${({ theme }) => theme.colors.text};
       font-size: 1.2rem;
     }
 
