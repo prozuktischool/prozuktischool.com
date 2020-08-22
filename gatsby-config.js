@@ -226,6 +226,7 @@ module.exports = {
         attributes: {
           rel: 'stylesheet preload',
           onload: "this.onload=null;this.rel='stylesheet'",
+          as: 'style',
         },
       },
     },

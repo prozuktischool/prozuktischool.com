@@ -181,6 +181,7 @@ const MainMenu = ({ theme, toggleTheme }) => {
             type="button"
             className="menu-toggle"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Menu"
           >
             <Menu />
           </button>
