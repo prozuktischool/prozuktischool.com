@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import { connect } from 'react-redux';
 import { configActions } from '../../state/config';
@@ -8,6 +8,7 @@ import LogoDark from '../assets/images/logo-dark.svg';
 import LogoLight from '../assets/images/logo-light.svg';
 import Sun from '../assets/icons/sun.svg';
 import Moon from '../assets/icons/moon.svg';
+import Menu from '../assets/icons/menu.svg';
 
 const MenuContainer = styled.div`
   margin: 0;
@@ -48,35 +49,100 @@ const MenuContainer = styled.div`
         width: 100%;
       }
 
-      .theme-toggle {
-        background: none;
-        border: none;
-        outline: none;
-        cursor: pointer;
-
-        svg {
-          position: relative;
-          top: 6px;
-        }
-      }
-
-      &:last-child {
-        margin-left: 4px;
-        margin-right: 0;
-        border-left: 1px solid ${({ theme }) => theme.colors.dark1};
-      }
-
       &::before,
       &::after {
         content: '';
+        margin: 0;
+        padding: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+        border-right: 1px solid ${({ theme }) => theme.colors.dark1};
+
+        &::after {
+          content: '';
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px;
+
+    svg {
+      position: relative;
+      top: 6px;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  @media only screen and (max-width: 576px) {
+    .menu-toggle {
+      display: inline-flex;
+    }
+
+    ul {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      background-color: ${({ theme }) => theme.colors.background};
+      left: 0;
+      top: 48px;
+      display: block;
+      clip-path: circle(100px at 96% -16%);
+      transition: all 0.4s ease-out;
+
+      ${({ isMenuOpen }) =>
+        isMenuOpen
+          ? css`
+              clip-path: circle(124vh at 96% -16%);
+            `
+          : ''};
+
+      li {
+        margin: 0;
+        display: block;
+
+        &:last-child {
+          border-right: none;
+
+          &::after {
+            margin-right: 0;
+          }
+        }
+
+        a {
+          font-size: 1.1rem;
+          display: block;
+          padding: 8px;
+          text-align: center;
+          border-bottom: 1px solid
+            ${({ theme }) =>
+              theme.name === 'light'
+                ? theme.colors.light1
+                : theme.colors.dark1};
+          color: ${({ theme }) => theme.colors.text};
+        }
       }
     }
   }
 `;
 
 const MainMenu = ({ theme, toggleTheme }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <MenuContainer>
+    <MenuContainer isMenuOpen={isMenuOpen}>
       <Flex
         maxWidth={960}
         margin="0 auto"
@@ -92,26 +158,33 @@ const MainMenu = ({ theme, toggleTheme }) => {
           )}
           <span className="site-title">প্রযুক্তি স্কুল</span>
         </Link>
-        <ul>
-          <li>
-            <Link to="/">নীড়পাতা</Link>
-          </li>
-          <li>
-            <Link to="/posts">লেখাসমূহ</Link>
-          </li>
-          <li>
-            <button
-              className="theme-toggle"
-              type="button"
-              title={theme.name === 'dark' ? 'Toggle Light' : 'Toggle Dark'}
-              onClick={() => {
-                toggleTheme(theme.name === 'dark' ? 'light' : 'dark');
-              }}
-            >
-              {theme.name === 'dark' ? <Sun /> : <Moon />}
-            </button>
-          </li>
-        </ul>
+        <span>
+          <ul>
+            <li>
+              <Link to="/">নীড়পাতা</Link>
+            </li>
+            <li>
+              <Link to="/posts">লেখাসমূহ</Link>
+            </li>
+          </ul>
+          <button
+            className="theme-toggle"
+            type="button"
+            title={theme.name === 'dark' ? 'Toggle Light' : 'Toggle Dark'}
+            onClick={() => {
+              toggleTheme(theme.name === 'dark' ? 'light' : 'dark');
+            }}
+          >
+            {theme.name === 'dark' ? <Sun /> : <Moon />}
+          </button>
+          <button
+            type="button"
+            className="menu-toggle"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <Menu />
+          </button>
+        </span>
       </Flex>
     </MenuContainer>
   );
