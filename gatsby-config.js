@@ -219,10 +219,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-with-attributes`,
       options: {
         fonts: [`PT Serif`, `Fira Code`],
         display: 'swap',
+        attributes: {
+          rel: 'stylesheet preload',
+          onLoad: "this.onload=null;this.rel='stylesheet'",
+          as: 'style',
+        },
       },
     },
     `gatsby-plugin-styled-components`,
