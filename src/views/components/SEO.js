@@ -100,18 +100,10 @@ const SEO = (props) => {
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link
-        rel="preload"
-        href="/assets/fonts/kalpurush.woff2"
-        as="font"
-        type="font/woff2"
+        href="https://cdn.statically.io/gh/sh4hids/bangla-web-fonts/d91f12d0c0e4ef8545149e705cd3cf858e307d44/kalpurush/kalpurush.css"
+        rel="stylesheet preload"
         crossOrigin="anonymous"
-      />
-      <link
-        rel="preload"
-        href="/assets/fonts/kalpurush.woff"
-        as="font"
-        type="font/woff"
-        crossOrigin="anonymous"
+        as="style"
       />
     </Helmet>
   );
