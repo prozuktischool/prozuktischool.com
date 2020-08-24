@@ -58,12 +58,8 @@ const MenuContainer = styled.div`
 
       &:last-child {
         margin-right: 0;
+        padding-right: 8px;
         border-right: 1px solid ${({ theme }) => theme.colors.dark1};
-
-        &::after {
-          content: '';
-          margin-right: 8px;
-        }
       }
     }
   }
@@ -100,7 +96,7 @@ const MenuContainer = styled.div`
       top: 48px;
       display: block;
       clip-path: circle(100px at 96% -16%);
-      transition: all 0.4s ease-out;
+      transition: all 0.3s ease-out;
 
       ${({ isMenuOpen }) =>
         isMenuOpen

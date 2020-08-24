@@ -225,7 +225,7 @@ module.exports = {
         display: 'swap',
         attributes: {
           rel: 'stylesheet preload',
-          onload: "this.onload=null;this.rel='stylesheet'",
+          onLoad: "this.onload=null;this.rel='stylesheet'",
           as: 'style',
         },
       },
