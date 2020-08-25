@@ -89,6 +89,20 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.text};
   }
 
+  code[class*='language-'], pre[class*='language-'] {
+    background-color: ${({ theme }) => theme.colors.dark1};
+
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: ${({ theme }) => theme.colors.primary1};
+    }
+  }
+
   pre {
     border-radius: 8px;
   }
