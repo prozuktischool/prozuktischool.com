@@ -100,7 +100,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     }
 
     const date = moment(node.frontmatter.date).format('YYYY/MM/DD');
-    slug = `/${date}${slug}`;
+    slug = `/${date}${slug}/`;
     createNodeField({ node, name: 'slug', value: slug });
     postNodes.push(node);
   }
@@ -186,7 +186,8 @@ exports.createPages = ({ graphql, actions }) => {
           createPage,
           items: posts,
           itemsPerPage: 12,
-          pathPrefix: '/posts',
+          pathPrefix: ({ pageNumber }) =>
+            pageNumber === 0 ? '/posts/' : '/posts',
           component: path.resolve('src/views/pages/Archive/index.js'),
         });
 
