@@ -48,7 +48,7 @@ const PostTemplate = ({ pageContext, data }) => {
             className="post-meta"
           >
             <User />
-            <Text variant="h6" display="inline-box" ml={2} mb={{ xs: 0 }}>
+            <Text variant="p" display="inline-box" ml={2} mb={{ xs: 0 }}>
               <a href={`/authors/${post.author.id}`}>{post.author.fullName}</a>
             </Text>
           </Box>
@@ -58,7 +58,7 @@ const PostTemplate = ({ pageContext, data }) => {
             className="post-meta"
           >
             <Calendar />
-            <Text variant="h6" display="inline-box" ml={2}>
+            <Text variant="p" display="inline-box" ml={2}>
               {convertNumbers(
                 format(new Date(post.date), 'MMMM dd, yyyy GGGG', {
                   locale: bn,

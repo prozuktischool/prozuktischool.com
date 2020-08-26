@@ -89,8 +89,17 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.text};
   }
 
-  pre {
-    border-radius: 8px;
+  code[class*='language-'], pre[class*='language-'] {
+    background-color: ${({ theme }) => theme.colors.dark1};
+
+    &::-webkit-scrollbar {
+      width: 0.4rem;
+      height: 0.4rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: ${({ theme }) => theme.colors.primary3};
+    }
   }
 
   code[class*='language-']::selection, pre[class*='language-']::selection, code[class*='language-'] ::selection, pre[class*='language-'] ::selection {
@@ -100,8 +109,6 @@ const GlobalStyle = createGlobalStyle`
 
   :not(pre) > code[class*='language-'] {
     padding: 0.2em .5em;
-    border-bottom: 2px solid;
-    border-color: ${({ theme }) => theme.colors.primary3};
   }
 
   .header-anchor-icon.before {
@@ -192,8 +199,6 @@ const GlobalStyle = createGlobalStyle`
 
   .gatsby-highlight {
     pre {
-      border-bottom: 4px solid;
-      border-color: ${({ theme }) => theme.colors.primary3};
 
       code {
         font-family: 'Fira Code', monospace;
