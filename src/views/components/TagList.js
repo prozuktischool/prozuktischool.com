@@ -23,20 +23,20 @@ const TagList = ({ tags = [], showAllTagsButton = false }) => {
     <Flex mx={[0, -2]} flexWrap="wrap">
       {tags.map(
         (tag, index) =>
-          index < 6 && (
-            <Box key={tag.title} width={[1, 1 / 3]} px={3} py={3}>
-              <Link to={`/tags/${kebabCase(tag.title)}/`}>
-                <SummaryCard height={100}>
-                  <ColoredHash />
-                  {tag.title}
-                </SummaryCard>
-              </Link>
-            </Box>
-          )
+        index < 6 && (
+          <Box key={tag.title} width={[1, 1 / 3]} px={3} py={3}>
+            <Link to={`/tags/${kebabCase(tag.title)}/`}>
+              <SummaryCard height={100}>
+                <ColoredHash />
+                {tag.title}
+              </SummaryCard>
+            </Link>
+          </Box>
+        )
       )}
       {tags.length > showAllTagsButton && (
         <Box p={3} width={1} display="block" textAlign="center">
-          <Link to="/tags">
+          <Link to="/tags/">
             <Button variant="primary">সকল ট্যাগ দেখুন</Button>
           </Link>
         </Box>

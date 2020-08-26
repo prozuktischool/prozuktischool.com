@@ -7,7 +7,7 @@ const AuthorList = ({ authors = [] }) => {
     <ul>
       {authors.map((author, index) => (
         <li key={index}>
-          <Link to={`/authors/${author.id}`}>{author.fullName}</Link>
+          <Link to={`/authors/${author.id}/`}>{author.fullName}</Link>
         </li>
       ))}
     </ul>
