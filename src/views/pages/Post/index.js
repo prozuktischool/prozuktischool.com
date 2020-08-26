@@ -88,10 +88,10 @@ const PostTemplate = ({ pageContext, data }) => {
         </Text>
         <Text my={0} variant="caption">
           লেখাটি সম্পাদনা করুন{' '}
-          <a href={`${baseEditURL}${slug.slice(11)}/index.md`}>এখানে</a>
+          <a href={`${baseEditURL}${slug.slice(11)}index.md`}>এখানে</a>
         </Text>
 
-        <SocialShareLinks title={post.title} link={`${siteUrl}${slug}/`} />
+        <SocialShareLinks title={post.title} link={`${siteUrl}${slug}`} />
         <div className="post-meta">
           <PostTags tags={post.tags} />
         </div>
