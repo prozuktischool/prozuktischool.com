@@ -32,7 +32,7 @@ const Index = ({ data }) => {
           <NoticeBox variant="notice">
             <Text>
               আপনিও লিখতে চান?{' '}
-              <Link to="/contribution-guide">এখানে বিস্তারিত দেখুন</Link>
+              <Link to="/contribution-guide/">এখানে বিস্তারিত দেখুন</Link>
             </Text>
           </NoticeBox>
         </Box>

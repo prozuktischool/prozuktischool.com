@@ -63,13 +63,13 @@ const Footer = ({ theme }) => {
       >
         <ul className="mini-site-map">
           <li>
-            <Link to="/about">পরিচিতি</Link>
+            <Link to="/about/">পরিচিতি</Link>
           </li>
           <li>
-            <Link to="/contact">যোগাযোগ</Link>
+            <Link to="/contact/">যোগাযোগ</Link>
           </li>
           <li>
-            <Link to="/contribution-guide">নির্দেশনা</Link>
+            <Link to="/contribution-guide/">নির্দেশনা</Link>
           </li>
         </ul>
       </Flex>
@@ -96,8 +96,8 @@ const Footer = ({ theme }) => {
         </Box>
         <Box width={1}>
           <Text textAlign="center" variant="caption" mt={1}>
-            লেখস্বত্ব &copy;{' '}
-            {`${convertNumbers(2016)} - ${convertNumbers(
+            লেখস্বত্ব &copy;
+            {` ${convertNumbers(2016)} - ${convertNumbers(
               new Date().getFullYear()
             )} `}
             <a href="https://prozuktischool.com/">প্রযুক্তি স্কুল</a>
