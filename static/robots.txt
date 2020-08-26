@@ -1,5 +1,1 @@
-User-agent: *
-Disallow: */tags/
-Disallow: */categories/
-
-sitemap: https://vagr9k.github.io/gatsby-advanced-starter/sitemap.xml
+sitemap: https://prozuktischool.com/sitemap.xml

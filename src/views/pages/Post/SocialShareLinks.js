@@ -45,6 +45,7 @@ const SocialShareLinks = ({ title, link }) => (
   <Container>
     <li>
       <SocialShareIcon
+        ariaLabel="twitter-share"
         link={`https://twitter.com/intent/tweet/?text=${title}&amp;url=${link}`}
       >
         <Twitter />
@@ -52,6 +53,7 @@ const SocialShareLinks = ({ title, link }) => (
     </li>
     <li>
       <SocialShareIcon
+        ariaLabel="facebook-share"
         link={`https://facebook.com/sharer/sharer.php?u=${link}`}
       >
         <Facebook />
@@ -59,6 +61,7 @@ const SocialShareLinks = ({ title, link }) => (
     </li>
     <li>
       <SocialShareIcon
+        ariaLabel="hackernews-share"
         link={`https://news.ycombinator.com/submitlink?u=${link}&amp;t=${title}`}
       >
         <Hackernews />
@@ -66,6 +69,7 @@ const SocialShareLinks = ({ title, link }) => (
     </li>
     <li>
       <SocialShareIcon
+        ariaLabel="reddit-share"
         link={`https://reddit.com/submit/?url=${link}&amp;resubmit=true&amp;title=${title}`}
       >
         <Reddit />
