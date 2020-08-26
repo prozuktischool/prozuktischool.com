@@ -41,7 +41,7 @@ const MenuContainer = styled.div`
     align-items: center;
 
     li {
-      margin-right: 8px;
+      margin-right: 24px;
 
       a {
         display: inline-box;
@@ -57,8 +57,8 @@ const MenuContainer = styled.div`
       }
 
       &:last-child {
-        margin-right: 0;
-        padding-right: 8px;
+        margin-right: 20px;
+        padding-right: 24px;
         border-right: 1px solid ${({ theme }) => theme.colors.dark1};
       }
     }
@@ -70,7 +70,7 @@ const MenuContainer = styled.div`
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 8px;
+    margin-top: 8px;
 
     svg {
       position: relative;
@@ -85,6 +85,7 @@ const MenuContainer = styled.div`
   @media only screen and (max-width: 576px) {
     .menu-toggle {
       display: inline-flex;
+      margin-left: 16px;
     }
 
     ul {
@@ -111,6 +112,8 @@ const MenuContainer = styled.div`
 
         &:last-child {
           border-right: none;
+          margin-right: 0;
+          padding-right: 0;
 
           &::after {
             margin-right: 0;
@@ -160,7 +163,13 @@ const MainMenu = ({ theme, toggleTheme }) => {
               <Link to="/">নীড়পাতা</Link>
             </li>
             <li>
-              <Link to="/posts">লেখাসমূহ</Link>
+              <Link to="/posts/">লেখাসমূহ</Link>
+            </li>
+            <li>
+              <Link to="/about/">পরিচিতি</Link>
+            </li>
+            <li>
+              <Link to="/contact/">যোগাযোগ</Link>
             </li>
           </ul>
           <button

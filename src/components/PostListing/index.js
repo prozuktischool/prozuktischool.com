@@ -43,7 +43,7 @@ const PostListing = ({
       }
       {postEdges.length > limit && showAllPostButton && (
         <Box p={3} width={1} display="block" textAlign="center">
-          <Link to="/posts">
+          <Link to="/posts/">
             <Button variant="primary">সকল লেখা পড়ুন</Button>
           </Link>
         </Box>
