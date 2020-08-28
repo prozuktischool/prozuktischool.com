@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import _ from 'lodash';
+import { kebabCase } from 'lodash';
 import { Link } from 'gatsby';
 import { Text } from '../../components';
 import Hash from '../../assets/icons/hash.svg';
@@ -26,7 +26,7 @@ class PostTags extends Component {
       <TagsContainer>
         {tags &&
           tags.map((tag) => (
-            <Link key={tag} to={`/tags/${_.kebabCase(tag)}`}>
+            <Link key={tag} to={`/tags/${kebabCase(tag)}`}>
               <Hash />
               {tag}
             </Link>

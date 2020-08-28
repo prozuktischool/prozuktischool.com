@@ -21,7 +21,7 @@ const Index = ({ data }) => {
   return (
     <MainLayout>
       <Helmet title={config.siteTitle} />
-      <SEO />
+      <SEO pageType="WebSite" />
       <HeroSection />
       <Box maxWidth={960} margin="0 auto">
         <SectionTitle title="সাম্প্রতিক লেখা" />

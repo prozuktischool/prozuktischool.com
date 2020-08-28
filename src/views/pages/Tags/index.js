@@ -11,7 +11,7 @@ const TagsPage = ({
   },
 }) => (
   <MainLayout variant="fixed">
-    <SEO pageTitle="ট্যাগসমূহ" />
+    <SEO pageTitle="ট্যাগসমূহ" pagePath="/tags/" />
     <Text variant="h4">
       {`ট্যাগসমূহ (${convertNumbers(group.length)}
 টি)`}

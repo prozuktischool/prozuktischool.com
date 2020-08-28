@@ -2,21 +2,36 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import urljoin from 'url-join';
 import config from '../../../data/SiteConfig';
+import { generateSchema } from '../../utils';
 
 const SEO = (props) => {
-  const { postNode, postPath, postSEO, pageTitle } = props;
-  let title = pageTitle;
-  let description;
-  let image;
-  let postURL;
+  const { postNode, postSEO, pageType } = props;
+
+  let {
+    pagePath: url = '/',
+    pageTitle: title,
+    author,
+    description,
+    image,
+    keywords,
+    createdAt,
+    updatedAt,
+  } = props;
+
   if (postSEO) {
     const postMeta = postNode.frontmatter;
-    ({ title } = postMeta);
+    ({
+      title,
+      date: createdAt,
+      updatedAt,
+      author,
+      tags: keywords,
+      id: url,
+    } = postMeta);
     description = postMeta.description
       ? postMeta.description
       : postNode.excerpt;
     image = postMeta.cover || config.siteImage;
-    postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
   } else {
     title = title || config.siteSlogan;
     description = config.siteDescription;
@@ -24,49 +39,24 @@ const SEO = (props) => {
   }
 
   image = urljoin(config.siteUrl, config.pathPrefix, image);
-  const blogURL = urljoin(config.siteUrl, config.pathPrefix);
-  const schemaOrgJSONLD = [
-    {
-      '@context': 'http://schema.org',
-      '@type': 'WebSite',
-      url: blogURL,
-      name: title,
-      alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
-    },
-  ];
-  if (postSEO) {
-    schemaOrgJSONLD.push(
-      {
-        '@context': 'http://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            item: {
-              '@id': postURL,
-              name: title,
-              image,
-            },
-          },
-        ],
-      },
-      {
-        '@context': 'http://schema.org',
-        '@type': 'BlogPosting',
-        url: blogURL,
-        name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
-        headline: title,
-        image: {
-          '@type': 'ImageObject',
-          url: image,
-        },
-        description,
-      }
-    );
-  }
+  url = urljoin(config.siteUrl, config.pathPrefix, url);
+
   title = `${config.siteTitle} ⌇ ${title}`;
+
+  const schemaOrgJSONLD = generateSchema({
+    author,
+    image,
+    description,
+    url,
+    title,
+    keywords,
+    updatedAt,
+    createdAt,
+    type: pageType,
+  });
+
+  console.log(keywords);
+
   return (
     <Helmet htmlAttributes={{ lang: 'bn' }}>
       {/* General tags */}
@@ -80,11 +70,12 @@ const SEO = (props) => {
       </script>
 
       {/* OpenGraph tags */}
-      <meta property="og:url" content={`${postSEO ? postURL : blogURL}/`} />
+      <meta property="og:url" content={`${url}`} />
       {postSEO ? <meta property="og:type" content="article" /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      {keywords && <meta name="keywords" content={keywords.join(', ')} />}
       <meta
         property="fb:app_id"
         content={config.siteFBAppID ? config.siteFBAppID : ''}
