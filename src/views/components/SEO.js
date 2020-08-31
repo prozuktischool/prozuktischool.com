@@ -55,8 +55,6 @@ const SEO = (props) => {
     type: pageType,
   });
 
-  console.log(keywords);
-
   return (
     <Helmet htmlAttributes={{ lang: 'bn' }}>
       {/* General tags */}
