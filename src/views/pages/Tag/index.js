@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { convertNumbers } from 'bn-number-utils';
+import { kebabCase } from 'lodash';
 import { MainLayout } from '../../layouts';
 import { PostList, SEO, Text } from '../../components';
 
@@ -10,7 +11,7 @@ const TagTemplate = ({ pageContext, data }) => {
 
   return (
     <MainLayout variant="fixed">
-      <SEO pageTitle={tag} />
+      <SEO pageTitle={tag} pagePath={`/tags/${kebabCase(tag)}/`} />
       <Text variant="h4">
         {`ট্যাগ: ${tag} (${convertNumbers(postNodes.length)}
 টি লেখা)`}

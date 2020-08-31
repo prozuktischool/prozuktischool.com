@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { convertNumbers } from 'bn-number-utils';
+import { kebabCase } from 'lodash';
 import { MainLayout } from '../../layouts';
 import { PostList, SEO, Text } from '../../components';
 
@@ -11,7 +12,10 @@ export default ({
 }) => {
   return (
     <MainLayout variant="fixed">
-      <SEO pageTitle={seriesInfo[0].fieldValue} />
+      <SEO
+        pageTitle={seriesInfo[0].fieldValue}
+        pagePath={`/series/${kebabCase(seriesInfo[0].fieldValue)}/`}
+      />
       <Text variant="h4">
         {`সিরিজ: ${seriesInfo[0].fieldValue} (${convertNumbers(
           seriesInfo[0].totalCount

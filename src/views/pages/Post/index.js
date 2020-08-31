@@ -49,7 +49,7 @@ const PostTemplate = ({ pageContext, data }) => {
           >
             <User />
             <Text variant="p" display="inline-box" ml={2} mb={{ xs: 0 }}>
-              <a href={`/authors/${post.author.id}`}>{post.author.fullName}</a>
+              <a href={`/authors/${post.author.id}/`}>{post.author.fullName}</a>
             </Text>
           </Box>
           <Box
