@@ -8,7 +8,7 @@ const BlogArchive = ({ data, pageContext }) => {
   const postEdges = data.allMarkdownRemark.edges;
   return (
     <MainLayout variant="fixed">
-      <SEO pageTitle="লেখাসমূহ" />
+      <SEO pageTitle="লেখাসমূহ" pagePath="/posts/" />
       <SectionTitle title="আমাদের প্রকাশিত লেখাসমূহ" />
       <PostListing postEdges={postEdges} />
       <Pager pageContext={pageContext} />

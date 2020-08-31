@@ -5,12 +5,17 @@ import { Divider, SEO, Text } from '../../components';
 
 export default ({
   data: {
-    authorYaml: { fullName, bio, twitter },
+    authorYaml: { id, fullName, bio, twitter },
     allMarkdownRemark: { edges: postNodes },
   },
 }) => (
   <MainLayout variant="fixed">
-    <SEO pageTitle={fullName} />
+    <SEO
+      pageTitle={fullName}
+      pagePath={`/authors/${id}/`}
+      pageType="Person"
+      author={{ fullName, twitter, id }}
+    />
     <Text variant="h4">{`লেখক: ${fullName}`}</Text>
     <Text>
       Twitter:{' '}
