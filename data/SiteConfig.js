@@ -1,3 +1,5 @@
+const { convertNumbers } = require('bn-number-utils');
+
 const config = {
   siteTitle: 'প্রযুক্তি স্কুল',
   siteTitleShort: 'প্রযুক্তি স্কুল',
@@ -20,6 +22,9 @@ const config = {
   backgroundColor: '#1c1826',
   baseEditURL:
     'https://github.com/bdTechies/prozuktischool.com/edit/develop/content',
+  copyright: `লেখস্বত্ব &copy;
+  ${convertNumbers(2016)} - ${convertNumbers(new Date().getFullYear())}
+  <a href="https://prozuktischool.com/">প্রযুক্তি স্কুল</a>`,
 };
 
 if (config.pathPrefix === '/') {
