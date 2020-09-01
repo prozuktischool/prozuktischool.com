@@ -13,7 +13,7 @@ const config = {
   siteDescription:
     'বাংলা ভাষাভাষী মানুষদের জন্য প্রযুক্তি শেখার ও শেখানোর পাঠশালা',
   siteRss: '/rss.xml',
-  siteFBAppID: '',
+  siteFBAppID: '265319551346158',
   googleAnalyticsID: 'UA-129538625-1',
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
   dateFormat: 'DD/MM/YYYY',
