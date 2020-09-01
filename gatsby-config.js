@@ -150,7 +150,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = 'GatsbyJS Advanced Starter';
+          ret.generator = 'প্রযুক্তি স্কুল';
           return ret;
         },
         query: `
@@ -214,6 +214,7 @@ module.exports = {
             }
           `,
             output: config.siteRss,
+            title: config.siteTitle,
           },
         ],
       },
