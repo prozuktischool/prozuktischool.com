@@ -99,6 +99,7 @@ const GlobalStyle = createGlobalStyle`
 
     &::-webkit-scrollbar-thumb {
       background: ${({ theme }) => theme.colors.primary3};
+
     }
   }
 
