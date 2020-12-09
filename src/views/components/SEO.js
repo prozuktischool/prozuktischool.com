@@ -41,7 +41,7 @@ const SEO = (props) => {
   image = urljoin(config.siteUrl, config.pathPrefix, image);
   url = urljoin(config.siteUrl, config.pathPrefix, url);
 
-  title = `${config.siteTitle} ⌇ ${title}`;
+  title = `${title} «|» ${config.siteTitle}`;
 
   const schemaOrgJSONLD = generateSchema({
     author,
