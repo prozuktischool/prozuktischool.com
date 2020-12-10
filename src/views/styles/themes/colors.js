@@ -1,6 +1,7 @@
 import languageColors from '../languageColors.json';
 
 languageColors.React = '#61DAFB';
+languageColors.AWS = '#EC7211';
 
 const colors = {
   primary3: '#7950F2',
