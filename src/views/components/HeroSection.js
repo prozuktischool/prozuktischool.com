@@ -1,33 +1,50 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import styled from 'styled-components';
-import HeroLogo from '../assets/images/hero-logo.svg';
+import BackgroundImage from 'gatsby-background-image';
+import { Image } from '.';
 
-const HeroContainer = styled.div`
+const HeroContainer = styled(BackgroundImage)`
   min-height: 420px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 32px;
 
-  background-image: url('/assets/images/hero-bg.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  svg {
-    height: 25vh;
-    width: 84vw;
-  }
-
   @media screen and (max-width: 576px) {
     min-height: 220px;
+
+    &::before,
+    &::after {
+      background-size: cover !important;
+    }
   }
 `;
 
 const HeroSection = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "hero-large.png" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const imageData = data.desktop.childImageSharp.fluid;
+
   return (
-    <HeroContainer>
-      <HeroLogo />
+    <HeroContainer fluid={imageData} style={{ backgroundSize: 'contain' }}>
+      <Image
+        src="ps-logo_sticker.png"
+        width={['60vw', '30vw']}
+        alignment="center"
+      />
     </HeroContainer>
   );
 };

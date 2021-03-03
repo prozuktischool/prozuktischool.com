@@ -40,6 +40,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/images/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
@@ -110,6 +117,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sharp',
+    'gatsby-plugin-image',
     'gatsby-transformer-sharp',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-twitter',

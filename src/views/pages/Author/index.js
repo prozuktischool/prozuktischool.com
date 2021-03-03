@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { MainLayout } from '../../layouts';
 import { Divider, SEO, Text } from '../../components';
 
-export default ({
+const AuthorPage = ({
   data: {
     authorYaml: { id, fullName, bio, twitter },
     allMarkdownRemark: { edges: postNodes },
@@ -75,3 +75,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default AuthorPage;
