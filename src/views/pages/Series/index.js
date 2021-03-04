@@ -5,26 +5,24 @@ import { kebabCase } from 'lodash';
 import { MainLayout } from '../../layouts';
 import { PostList, SEO, Text } from '../../components';
 
-export default ({
+const SeriesPage = ({
   data: {
     allMarkdownRemark: { edges: postNodes, group: seriesInfo },
   },
-}) => {
-  return (
-    <MainLayout variant="fixed">
-      <SEO
-        pageTitle={seriesInfo[0].fieldValue}
-        pagePath={`/series/${kebabCase(seriesInfo[0].fieldValue)}/`}
-      />
-      <Text variant="h4">
-        {`সিরিজ: ${seriesInfo[0].fieldValue} (${convertNumbers(
-          seriesInfo[0].totalCount
-        )} পর্ব)`}
-      </Text>
-      <PostList postNodes={postNodes} />
-    </MainLayout>
-  );
-};
+}) => (
+  <MainLayout variant="fixed">
+    <SEO
+      pageTitle={seriesInfo[0].fieldValue}
+      pagePath={`/series/${kebabCase(seriesInfo[0].fieldValue)}/`}
+    />
+    <Text variant="h4">
+      {`সিরিজ: ${seriesInfo[0].fieldValue} (${convertNumbers(
+        seriesInfo[0].totalCount
+      )} পর্ব)`}
+    </Text>
+    <PostList postNodes={postNodes} />
+  </MainLayout>
+);
 
 export const pageQuery = graphql`
   query PostsBySeries($series: String!) {
@@ -53,3 +51,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default SeriesPage;

@@ -4,6 +4,7 @@ export { default as Divider } from './Divider';
 export { default as Flex } from './Flex';
 export { default as Footer } from './Footer';
 export { default as HeroSection } from './HeroSection';
+export { default as Image } from './Image';
 export { default as MainMenu } from './MainMenu';
 export { default as NoticeBox } from './NoticeBox';
 export { default as Pager } from './Pager';
