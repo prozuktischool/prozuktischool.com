@@ -105,9 +105,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-gtag',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: config.googleAnalyticsID,
+        trackingIds: [config.googleAnalyticsID],
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+        },
       },
     },
     {
