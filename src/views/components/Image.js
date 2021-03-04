@@ -1,28 +1,24 @@
 import React, { useMemo } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, StaticImage } from 'gatsby-plugin-image';
 import styled, { css } from 'styled-components';
 import { space, layout, borders } from 'styled-system';
 
-const ImageExtended = styled(GatsbyImage)`
+const GatsbyImageImageExtended = styled(GatsbyImage)`
+  ${({ isCentered }) =>
+    isCentered
+      ? css`
+          margin: auto;
+        `
+      : ''};
+
   img {
-    max-width: 100%;
     height: auto;
-
-    ${({ alignment }) =>
-      alignment === 'center' &&
-      css`
-        margin: auto;
-        display: block;
-      `};
-
-    ${space};
-    ${borders};
     ${layout};
   }
 `;
 
-export default function Image({ src, ...rest }) {
+export default function Image({ src, ...props }) {
   const data = useStaticQuery(graphql`
     query {
       images: allFile(
@@ -35,7 +31,7 @@ export default function Image({ src, ...rest }) {
             publicURL
             childImageSharp {
               gatsbyImageData(
-                layout: FIXED
+                layout: CONSTRAINED
                 placeholder: BLURRED
                 formats: [AUTO]
               )
@@ -56,14 +52,14 @@ export default function Image({ src, ...rest }) {
   const { node: { childImageSharp, publicURL, extension } = {} } = match;
 
   if (extension === 'svg' || !childImageSharp) {
-    return <img src={publicURL} {...rest} />;
+    return <img src={publicURL} {...props} />;
   }
 
   return (
-    <ImageExtended
+    <GatsbyImageImageExtended
       image={childImageSharp.gatsbyImageData}
-      alt={rest.alt || ''}
-      {...rest}
+      alt={props.alt || ''}
+      {...props}
     />
   );
 }
