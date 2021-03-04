@@ -120,6 +120,7 @@ module.exports = {
         color: config.themeColor,
       },
     },
+    'gatsby-plugin-preact',
     'gatsby-plugin-sharp',
     'gatsby-plugin-image',
     'gatsby-transformer-sharp',
