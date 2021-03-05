@@ -13,17 +13,29 @@ const HeroContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+
   svg {
     height: 25vh;
     width: 84vw;
   }
+
   @media screen and (max-width: 576px) {
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%);
     min-height: 220px;
 
     svg {
       width: 64vw;
+      position: relative;
+      top: -3vh;
     }
+  }
+
+  @media screen and (max-width: 1150px) {
+    background-image: url('/assets/images/hero_tab.jpg');
+  }
+
+  @media screen and (max-width: 480px) {
+    background-image: url('/assets/images/hero_mobile.jpg');
   }
 `;
 

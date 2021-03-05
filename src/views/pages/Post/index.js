@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { graphql } from 'gatsby';
 import { Calendar, User } from 'react-feather';
 import { format } from 'date-fns';
-import { bn } from 'date-fns/locale';
+import bn from 'date-fns/locale/bn';
 import { convertNumbers } from 'bn-number-utils';
 
 import config from '../../../../data/SiteConfig';
