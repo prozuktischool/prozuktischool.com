@@ -104,16 +104,16 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: [config.googleAnalyticsID],
-        pluginConfig: {
-          head: false,
-          respectDNT: true,
-        },
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-google-gtag',
+    //   options: {
+    //     trackingIds: [config.googleAnalyticsID],
+    //     pluginConfig: {
+    //       head: false,
+    //       respectDNT: true,
+    //     },
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
