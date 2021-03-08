@@ -8,15 +8,28 @@ const HeroContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 32px;
-  background-image: url('/assets/images/hero.jpg');
+  background-image: linear-gradient(
+    to bottom,
+    #1c1826,
+    #1e1a29,
+    #211c2d,
+    #231e30,
+    #262034
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
 
   svg {
-    height: 25vh;
+    position: relative;
     width: 84vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    svg {
+      top: -4vh;
+    }
   }
 
   @media screen and (max-width: 576px) {
@@ -25,17 +38,8 @@ const HeroContainer = styled.div`
 
     svg {
       width: 64vw;
-      position: relative;
       top: -3vh;
     }
-  }
-
-  @media screen and (max-width: 1150px) {
-    background-image: url('/assets/images/hero_tab.jpg');
-  }
-
-  @media screen and (max-width: 480px) {
-    background-image: url('/assets/images/hero_mobile.jpg');
   }
 `;
 
